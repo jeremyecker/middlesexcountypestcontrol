@@ -8,7 +8,7 @@ export const TAGLINE = 'Serving Middlesex County Since 2018';
 export const COUNTY = 'Middlesex County';
 export const STATE = 'NJ';
 export const WEBHOOK_URL = 'https://omcdxpqhnrhgnkxafgtn.supabase.co/functions/v1/webhook-middlesex';
-export const GA4_ID = 'G-MCPC2026NJ';
+export const GA4_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-78JJTPVFRD';
 
 export const towns = [
   { name: 'Carteret', slug: 'carteret', county: 'Middlesex County', state: 'NJ', population: 24000, description: 'Industrial borough near Raritan Bay with unique waterfront pest challenges.' },

@@ -75,15 +75,15 @@ const serviceDetails: Record<string, {
     process: ['Property assessment to identify breeding and resting sites', 'Treatment of vegetation and harborage areas with backpack mist blower', 'Larvicide application to standing water sources where appropriate', 'Monthly treatments throughout mosquito season (May–October)', 'Recommendations for source reduction on your property'],
     faqs: [
       { q: 'How many treatments do I need per season?', a: 'Monthly treatments throughout the mosquito season (typically May through October) provide continuous control. Many clients see 80–90% reduction in mosquito activity.' },
-      { q: 'Is mosquito treatment family-friendly?', a: 'Yes — our professional mosquito treatments use EPA-registered products and are applied by licensed technicians. Treated areas are safe for re-entry within 30 minutes when dry.' },
+      { q: 'Is mosquito treatment family-friendly?', a: 'Yes — our professional mosquito treatments use EPA-registered products and are applied by licensed technicians. Treated areas are ready for re-entry within 30 minutes when dry.' },
       { q: 'Can you treat a specific event like a backyard party?', a: 'Yes — we offer one-time event treatments in addition to seasonal programs.' },
     ],
   },
   'wasps': {
     heroDesc: 'Wasp nest removal and bee control in Middlesex County, NJ.',
-    intro: 'Yellow jackets, paper wasps, and bald-faced hornets build nests throughout Middlesex County — under eaves, in shrubs, underground, and in wall voids. Disturbing a nest without professional protection is dangerous and often ineffective without proper treatment of the nest itself. Middlesex County Pest Control provides professional wasp and bee nest identification and removal, treating nests fully and removing them when safe to do so.',
+    intro: 'Yellow jackets, paper wasps, and bald-faced hornets build nests throughout Middlesex County — under eaves, in shrubs, underground, and in wall voids. Disturbing a nest without professional protection is dangerous and often ineffective without proper treatment of the nest itself. Middlesex County Pest Control provides professional wasp and bee nest identification and removal, treating nests fully and removing them when conditions allow.',
     signs: ['Visible nest under eaves, in shrubs, or on structures', 'Wasps entering and exiting a hole in the ground', 'Increased wasp activity near a specific area', 'Wasps entering through a gap in siding or soffit'],
-    process: ['Identification of species and nest location', 'Treatment of nest with professional-grade insecticide', 'Removal of nest structure when safe and accessible', 'Sealing entry points where appropriate', 'Same-day or next-day service available'],
+    process: ['Identification of species and nest location', 'Treatment of nest with professional-grade insecticide', 'Removal of nest structure when conditions allow', 'Sealing entry points where appropriate', 'Same-day or next-day service available'],
     faqs: [
       { q: 'Should I remove a wasp nest myself?', a: 'DIY removal without proper equipment and product is dangerous, especially for yellow jackets and hornets. A single nest can contain thousands of stinging insects.' },
       { q: 'What is the difference between yellow jackets and paper wasps?', a: 'Yellow jackets are more aggressive and often nest underground or in wall voids. Paper wasps build open umbrella-shaped nests under eaves and are less aggressive.' },
@@ -123,7 +123,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   if (!service) return {};
 
   return {
-    title: `${service.title} in Middlesex County, NJ | ${SITE_NAME}`,
+    title: `${service.title} in Middlesex County, NJ`,
     description: `Professional ${service.title.toLowerCase()} services in Middlesex County, NJ. Licensed and insured. Call ${PHONE} for same-day service.`,
     alternates: { canonical: `${DOMAIN}/services/${service.slug}` },
   };

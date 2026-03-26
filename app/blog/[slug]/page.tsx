@@ -219,7 +219,7 @@ We also offer one-time treatment for specific events — backyard parties, outdo
 The Middlesex County Mosquito Control Commission monitors for West Nile virus and Eastern Equine Encephalitis (EEE) throughout the season. Professional mosquito control reduces your family's exposure to these pathogens. If you are concerned about mosquito activity near your home in Edison or Piscataway, contact Middlesex County Pest Control for a free yard assessment.`,
     faqs: [
       { q: 'How often do I need mosquito treatment?', a: 'Monthly treatments from May through October provide continuous control. Some clients opt for every-3-week service during peak summer months.' },
-      { q: 'Is the treatment family-friendly?', a: 'Yes. Our professional mosquito barrier treatments use EPA-registered products applied by licensed technicians. Treated areas are safe for re-entry when dry, typically 30 minutes.' },
+      { q: 'Is the treatment family-friendly?', a: 'Yes. Our professional mosquito barrier treatments use EPA-registered products applied by licensed technicians. Treated areas are ready for re-entry when dry, typically 30 minutes.' },
       { q: 'Can you eliminate all mosquitoes on my property?', a: 'No treatment eliminates 100% of mosquitoes, but professional programs consistently achieve 80–90% reduction. New mosquitoes can fly in from untreated areas.' },
       { q: 'Do you treat retention ponds?', a: 'Yes — we offer larvicide treatment for retention ponds, ditches, and other standing water sources on residential and commercial properties.' },
     ],
@@ -406,7 +406,7 @@ Professional wasp nest removal includes:
 1. Identification of species and nest location
 2. Treatment with professional-grade insecticide directly into or around the nest
 3. Allowing time for residual activity to kill foragers returning to the nest
-4. Removal of the nest structure when safe to do so
+4. Removal of the nest structure when conditions allow
 5. Sealing of entry points to prevent new nests in the same location
 
 Same-day service is typically available for wasp nest calls throughout Middlesex County.`,
@@ -696,7 +696,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   if (!post) return {};
 
   return {
-    title: `${post.title} | ${SITE_NAME}`,
+    title: `${post.title}`,
     description: post.excerpt,
     alternates: { canonical: `${DOMAIN}/blog/${post.slug}` },
   };

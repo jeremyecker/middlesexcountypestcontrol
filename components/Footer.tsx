@@ -63,7 +63,7 @@ export default function Footer() {
               </a>
               <div className="flex items-center gap-2 text-gray-300">
                 <Clock size={14} className="text-primary flex-shrink-0" />
-                24/7 Emergency Service
+                Same-Day Emergency Service
               </div>
               <div className="flex items-center gap-2 text-gray-300">
                 <Shield size={14} className="text-primary flex-shrink-0" />

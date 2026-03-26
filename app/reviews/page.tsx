@@ -4,7 +4,7 @@ import { Star } from 'lucide-react';
 import { PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: `Customer Reviews | ${SITE_NAME}`,
+  title: `Customer Reviews`,
   description: `Read reviews from Middlesex County homeowners and businesses. Trusted pest control serving Edison, Woodbridge, New Brunswick, Piscataway, and all 25 Middlesex County municipalities.`,
   alternates: { canonical: `${DOMAIN}/reviews` },
 };

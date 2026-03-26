@@ -4,7 +4,7 @@ import { MapPin } from 'lucide-react';
 import { towns, PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: `Pest Control Locations in Middlesex County, NJ | ${SITE_NAME}`,
+  title: `Pest Control Locations in Middlesex County, NJ`,
   description: `Middlesex County Pest Control serves all 25 municipalities in Middlesex County, NJ. Find your town and book same-day pest control service.`,
   alternates: { canonical: `${DOMAIN}/locations` },
 };

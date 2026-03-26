@@ -195,8 +195,8 @@ export default function ContactPage() {
                     <div className="bg-primary rounded-full p-3"><Clock size={20} /></div>
                     <div>
                       <p className="text-sm text-blue-200">Hours</p>
-                      <p className="font-bold">24/7 Emergency Service</p>
-                      <p className="text-blue-100 text-sm">Monday–Sunday, all hours</p>
+                      <p className="font-bold">Same-Day Emergency Service</p>
+                      <p className="text-blue-100 text-sm">Monday–Saturday</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">

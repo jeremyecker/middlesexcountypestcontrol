@@ -116,7 +116,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   if (!service) return {};
 
   return {
-    title: `${service.title} in Middlesex County, NJ | ${SITE_NAME}`,
+    title: `${service.title} in Middlesex County, NJ`,
     description: `Professional ${service.title.toLowerCase()} in Middlesex County, NJ. Licensed and insured. Call ${PHONE} for same-day service.`,
     alternates: { canonical: `${DOMAIN}/wildlife/${service.slug}` },
   };

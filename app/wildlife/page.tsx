@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { wildlifeServices, PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: `Wildlife Removal in Middlesex County, NJ | ${SITE_NAME}`,
+  title: `Wildlife Removal in Middlesex County, NJ`,
   description: `Humane wildlife removal services in Middlesex County, NJ. Squirrel removal, raccoon removal, bird control. Licensed and insured. Call ${PHONE}.`,
   alternates: { canonical: `${DOMAIN}/wildlife` },
 };

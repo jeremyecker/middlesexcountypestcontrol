@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { blogPosts, PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: `Pest Control Blog | ${SITE_NAME}`,
+  title: `Pest Control Blog`,
   description: `Expert pest control tips, guides, and advice for Middlesex County, NJ homeowners and businesses. Learn about bed bugs, rodents, termites, and more.`,
   alternates: { canonical: `${DOMAIN}/blog` },
 };

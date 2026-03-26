@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: { params: { town: string } })
   if (!town) return {};
 
   return {
-    title: `Pest Control in ${town.name}, NJ | ${SITE_NAME}`,
+    title: `Pest Control in ${town.name}, NJ`,
     description: `Expert pest control services in ${town.name}, NJ. Bed bugs, rodents, termites, mosquitoes & more. Licensed and insured. Call ${PHONE} for same-day service in ${town.name}.`,
     alternates: { canonical: `${DOMAIN}/${town.slug}` },
   };

@@ -34,7 +34,7 @@ export default function Header() {
             <span className="hidden sm:inline text-blue-300 mx-2">|</span>
             <span className="hidden sm:inline text-blue-100">{TAGLINE}</span>
           </div>
-          <div className="text-white font-semibold text-xs">24/7 Emergency Service</div>
+          <div className="text-white font-semibold text-xs">Same-Day Emergency Service</div>
         </div>
       </div>
 
