@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #C41230;
+  --dark: #1A1A1A;
+  --lightgray: #F8F8F8;
+  --ctahover: #A50F27;
+  --badge: #F5C400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  color: #1A1A1A;
+  background: #ffffff;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 rounded font-semibold hover:bg-ctahover transition-colors duration-200;
+}
+
+.section-light {
+  @apply bg-white py-16;
+}
+
+.section-gray {
+  @apply bg-lightgray py-16;
+}
+
+.container-main {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
