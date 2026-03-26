@@ -73,7 +73,7 @@ const localBusinessSchema = {
   },
 };
 
-export const serviceEmojiMap: Record<string, string> = {
+const serviceEmojiMap: Record<string, string> = {
   'bed-bugs':    '\uD83D\uDECF\uFE0F',
   'rodents':     '\uD83D\uDC00',
   'cockroaches': '\uD83E\uDEB3',
