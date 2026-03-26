@@ -54,7 +54,6 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'South River, NJ' },
     { '@type': 'City', name: 'Spotswood, NJ' },
     { '@type': 'City', name: 'Woodbridge, NJ' },
-    { '@type': 'City', name: 'Plainsboro, NJ' },
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -74,15 +73,15 @@ const localBusinessSchema = {
 };
 
 const serviceEmojiMap: Record<string, string> = {
-  'bed-bugs':    '\uD83D\uDECF\uFE0F',
-  'rodents':     '\uD83D\uDC00',
-  'cockroaches': '\uD83E\uDEB3',
-  'ants':        '\uD83D\uDC1C',
-  'termites':    '\uD83E\uDEB5',
-  'mosquitoes':  '\uD83E\uDD9F',
-  'wasps':       '\uD83D\uDC1D',
-  'ticks':       '\uD83D\uDD77\uFE0F',
-  'fleas':       '\uD83E\uDDA7',
+  'bed-bugs':    '🛏️',
+  'rodents':     '🐀',
+  'cockroaches': '🪳',
+  'ants':        '🐜',
+  'termites':    '🪵',
+  'mosquitoes':  '🦟',
+  'wasps':       '🐝',
+  'ticks':       '🕷️',
+  'fleas':       '🦗',
 };
 
 export default function HomePage() {
@@ -99,7 +98,7 @@ export default function HomePage() {
       <section className="relative min-h-[600px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80"
+            src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1600&q=80"
             alt="Residential neighborhood in Middlesex County, NJ"
             fill
             className="object-cover object-center"
@@ -160,7 +159,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map(service => {
-              const emoji = serviceEmojiMap[service.slug] ?? '\uD83D\uDC1B';
+              const emoji = serviceEmojiMap[service.slug] ?? '🐛';
               return (
                 <div key={service.slug} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
                   <div className="bg-navy flex items-center justify-center h-28">
