@@ -5,6 +5,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { SITE_NAME, DOMAIN, PHONE, GA4_ID } from '@/lib/data';
 
+const OG_IMAGE = 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&h=630&fit=crop&q=80';
+
 export const metadata: Metadata = {
   metadataBase: new URL(DOMAIN),
   title: {
@@ -17,9 +19,18 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: DOMAIN,
     siteName: SITE_NAME,
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'Middlesex County NJ residential neighborhood',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
+    images: [OG_IMAGE],
   },
 };
 
