@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { CheckCircle, ArrowRight } from 'lucide-react';
-import { services, PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
+import { services, towns, PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
 
 const serviceDetails: Record<string, {
   heroDesc: string;
@@ -124,8 +124,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   return {
     title: `${service.title} | Middlesex County, NJ`,
-    description: `Professional ${service.title.toLowerCase()} in Middlesex County, NJ. Licensed and insured. Call ${PHONE} for same-day service throughout all 25 municipalities.`,
+    description: `Professional ${service.title.toLowerCase()} in Middlesex County, NJ. Licensed & insured. Call ${PHONE} for same-day service.`,
     alternates: { canonical: `${DOMAIN}/services/${service.slug}` },
+    openGraph: { url: `/services/${service.slug}` },
   };
 }
 
@@ -271,6 +272,20 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                 <span>{serviceEmojiMap[s.slug]}</span>
                 <span>{s.title}</span>
                 <ArrowRight size={12} />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-gray">
+        <div className="container-main">
+          <h2 className="text-2xl font-bold text-dark text-center mb-6">{service.title} by Town</h2>
+          <p className="text-gray-600 text-center mb-6">Serving all 25 municipalities in Middlesex County, NJ.</p>
+          <div className="flex flex-wrap justify-center gap-2">
+            {towns.map(t => (
+              <Link key={t.slug} href={`/services/${service.slug}/${t.slug}`} className="bg-white border border-gray-200 text-dark text-sm px-3 py-2 rounded hover:bg-navy hover:text-white hover:border-navy transition-colors">
+                {t.name}
               </Link>
             ))}
           </div>
