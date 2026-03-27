@@ -10,8 +10,8 @@ const OG_IMAGE = 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w
 export const metadata: Metadata = {
   metadataBase: new URL(DOMAIN),
   title: {
-    default: `${SITE_NAME} | Licensed Pest Exterminators in Middlesex County, NJ`,
-    template: `%s | ${SITE_NAME}`,
+    default: 'Middlesex County Pest Control | Licensed Exterminators NJ',
+    template: '%s',
   },
   description: `Expert pest control services in Middlesex County, NJ. Bed bugs, rodents, termites, mosquitoes and more. Call ${PHONE} for same-day service.`,
   openGraph: {

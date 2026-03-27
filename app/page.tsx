@@ -9,12 +9,12 @@ import { PHONE, PHONE_RAW, SITE_NAME, DOMAIN, TAGLINE, services, towns, testimon
 import PhoneLink from '@/components/PhoneLink';
 
 export const metadata: Metadata = {
-  title: `${SITE_NAME} | Expert Pest Exterminators in Middlesex County, NJ`,
-  description: `Middlesex County's trusted pest control company since 2018. Same-day service for bed bugs, rodents, termites, mosquitoes & more. Call ${PHONE} now.`,
+  title: 'Middlesex County Pest Control | Exterminators in NJ',
+  description: `Middlesex County's trusted pest control company since 2018. Same-day service for bed bugs, rodents, termites, mosquitoes & more. Call ${PHONE}.`,
   alternates: { canonical: DOMAIN },
   openGraph: {
-    title: `${SITE_NAME} | Expert Pest Exterminators in Middlesex County, NJ`,
-    description: `Middlesex County's trusted pest control company since 2018. Same-day service for bed bugs, rodents, termites, mosquitoes & more.`,
+    title: 'Middlesex County Pest Control | Exterminators in NJ',
+    description: `Middlesex County's trusted pest control company since 2018. Same-day service for bed bugs, rodents, termites & more.`,
     url: DOMAIN,
   },
 };
@@ -28,7 +28,7 @@ const localBusinessSchema = {
   foundingDate: '2018',
   description: 'Licensed and insured pest control services serving all of Middlesex County, NJ since 2018.',
   priceRange: '$$',
-  openingHours: 'Mo-Su 00:00-24:00',
+  openingHours: 'Mo-Sa 08:00-18:00',
   areaServed: [
     { '@type': 'City', name: 'Carteret, NJ' },
     { '@type': 'City', name: 'Cranbury, NJ' },
@@ -39,6 +39,7 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Highland Park, NJ' },
     { '@type': 'City', name: 'Jamesburg, NJ' },
     { '@type': 'City', name: 'Middlesex, NJ' },
+    { '@type': 'City', name: 'Metuchen, NJ' },
     { '@type': 'City', name: 'Milltown, NJ' },
     { '@type': 'City', name: 'Monroe, NJ' },
     { '@type': 'City', name: 'New Brunswick, NJ' },
@@ -72,6 +73,35 @@ const localBusinessSchema = {
   },
 };
 
+const homepageFaqs = [
+  {
+    q: 'What pests are most common in Middlesex County, NJ?',
+    a: 'The most common pest complaints in Middlesex County include ants, mice, rats, bed bugs, cockroaches, termites, mosquitoes, and ticks. Waterfront communities like Perth Amboy and Sayreville also experience significant rodent pressure.',
+  },
+  {
+    q: 'How much does pest control cost in Middlesex County?',
+    a: 'Most residential pest control treatments in Middlesex County range from $150–$400 depending on pest type and infestation size. Termite treatment and bed bug heat treatments are typically higher. Contact us for a free inspection and quote.',
+  },
+  {
+    q: 'Do you offer same-day pest control in Middlesex County?',
+    a: 'Yes — we offer same-day and next-day appointments throughout all 25 municipalities in Middlesex County. Call (732) 856-5142 or book online.',
+  },
+  {
+    q: 'Are your pest control treatments family-friendly?',
+    a: 'Yes. We use EPA-registered products applied by NJ DEP licensed technicians. We advise on any re-entry times and precautions appropriate to your specific treatment.',
+  },
+];
+
+const homepageFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: homepageFaqs.map(faq => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: { '@type': 'Answer', text: faq.a },
+  })),
+};
+
 const serviceEmojiMap: Record<string, string> = {
   'bed-bugs':    '🛏️',
   'rodents':     '🐀',
@@ -92,6 +122,10 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageFaqSchema) }}
       />
 
       {/* Hero */}
@@ -335,6 +369,24 @@ export default function HomePage() {
             <Link href="/blog" className="bg-primary text-white px-8 py-3 rounded font-semibold hover:bg-ctahover transition-colors">
               View All Articles
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="section-gray">
+        <div className="container-main">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">Frequently Asked Questions</h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">Common questions from Middlesex County homeowners and businesses.</p>
+          </div>
+          <div className="max-w-3xl mx-auto flex flex-col gap-4">
+            {homepageFaqs.map(faq => (
+              <div key={faq.q} className="bg-white rounded-lg p-6 shadow-sm">
+                <h3 className="text-lg font-bold text-dark mb-2">{faq.q}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

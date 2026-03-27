@@ -26,6 +26,7 @@ const townIntros: Record<string, string> = {
   'highland-park': 'Highland Park is an urban borough directly across the Raritan River from New Brunswick, with dense residential blocks, historic housing stock, and a close proximity to Rutgers University. The older housing in Highland Park creates significant entry opportunities for rodents and cockroaches, and the borough\'s density creates conditions favorable to bed bug spread. Middlesex County Pest Control is experienced in the pest challenges specific to Highland Park.',
   'jamesburg': 'Jamesburg is a small historic borough in central Middlesex County with a traditional downtown and residential neighborhoods that have served the community for generations. Older housing stock in Jamesburg creates common pest entry points for rodents and insects. Middlesex County Pest Control provides thorough inspection and targeted treatment for every pest challenge Jamesburg homeowners face.',
   'middlesex': 'The Borough of Middlesex sits at the geographic center of Middlesex County, a well-established residential community with a mix of older and newer housing. Middlesex County Pest Control serves this central borough with the full range of pest management services — from rodent control to bed bug treatment to seasonal mosquito programs — backed by our county-wide expertise since 2018.',
+  'metuchen': 'Metuchen is a historic borough in central Middlesex County known for its well-preserved Victorian and Edwardian architecture, walkable downtown, and strong community character. The older housing stock — much of it from the late 19th and early 20th centuries — creates elevated risk for rodents, carpenter ants, and wood-damaging insects including termites. Middlesex County Pest Control provides expert pest management throughout Metuchen, protecting these historic homes and businesses with thorough, locally-knowledgeable service.',
   'milltown': 'Milltown is a small borough situated along the South River in eastern Middlesex County. The proximity to the South River creates moisture-related pest pressure including moisture-seeking insects and rodents that follow waterways. Middlesex County Pest Control understands the specific pest challenges of riverside communities and provides targeted solutions for Milltown homeowners and businesses.',
   'monroe': 'Monroe Township is one of Middlesex County\'s largest and fastest-growing communities, with a mix of active adult retirement communities, new development neighborhoods, and substantial green space in its southern reaches. Middlesex County Pest Control serves all of Monroe Township\'s diverse housing types, from the Concordia retirement community to newer residential developments, with expert pest management across all seasons.',
   'new-brunswick': 'New Brunswick is the county seat of Middlesex County and the home of Rutgers University — a dense, urban city with high-rise apartments, historic row houses, student housing, and a major hospital corridor along French Street. The combination of urban density, transient student population, and older housing stock makes New Brunswick one of Middlesex County\'s most challenging environments for bed bugs, cockroaches, and rodents. Middlesex County Pest Control provides expert, urban-focused pest management throughout New Brunswick.',
@@ -52,8 +53,8 @@ export async function generateMetadata({ params }: { params: { town: string } })
   if (!town) return {};
 
   return {
-    title: `Pest Control in ${town.name}, NJ`,
-    description: `Expert pest control services in ${town.name}, NJ. Bed bugs, rodents, termites, mosquitoes & more. Licensed and insured. Call ${PHONE} for same-day service in ${town.name}.`,
+    title: `Pest Control in ${town.name}, NJ | Middlesex County`,
+    description: `Expert pest control in ${town.name}, NJ. Bed bugs, rodents, termites, mosquitoes & more. Licensed and insured. Call ${PHONE} for same-day service.`,
     alternates: { canonical: `${DOMAIN}/${town.slug}` },
   };
 }
@@ -63,6 +64,41 @@ export default function TownPage({ params }: { params: { town: string } }) {
   if (!town) notFound();
 
   const intro = townIntros[town.slug] ?? `Middlesex County Pest Control provides expert pest management services throughout ${town.name}, NJ. Our licensed technicians are familiar with the specific pest challenges in this part of Middlesex County and deliver effective, targeted treatment for residential and commercial properties.`;
+
+  const townFaqs = [
+    {
+      q: `What pests are most common in ${town.name}, NJ?`,
+      a: `The most common pest issues in ${town.name} include ants, rodents (mice and rats), bed bugs, cockroaches, and mosquitoes. Termites are also a concern in older homes. Middlesex County Pest Control provides expert treatment for all of these pests throughout ${town.name}.`,
+    },
+    {
+      q: `How much does pest control cost in ${town.name}?`,
+      a: `Pest control costs in ${town.name} vary by pest type and infestation size. Most residential treatments range from $150–$400. We offer free inspections — call ${PHONE} or book online for an upfront quote.`,
+    },
+    {
+      q: `How quickly can you reach ${town.name} for pest control?`,
+      a: `We offer same-day and next-day service throughout ${town.name} and all 25 municipalities of Middlesex County. Call ${PHONE} for the fastest response.`,
+    },
+  ];
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: townFaqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: DOMAIN },
+      { '@type': 'ListItem', position: 2, name: 'Locations', item: `${DOMAIN}/locations` },
+      { '@type': 'ListItem', position: 3, name: town.name, item: `${DOMAIN}/${town.slug}` },
+    ],
+  };
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
@@ -83,6 +119,8 @@ export default function TownPage({ params }: { params: { town: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
       <section className="bg-navy text-white py-16">
@@ -168,6 +206,21 @@ export default function TownPage({ params }: { params: { town: string } }) {
               <div key={item} className="flex items-start gap-3 bg-lightgray p-4 rounded-lg">
                 <CheckCircle size={18} className="text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-gray-700">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="section-gray">
+        <div className="container-main">
+          <h2 className="text-2xl font-bold text-dark text-center mb-8">Pest Control FAQ — {town.name}, NJ</h2>
+          <div className="max-w-3xl mx-auto flex flex-col gap-4">
+            {townFaqs.map(faq => (
+              <div key={faq.q} className="bg-white rounded-lg p-6 shadow-sm">
+                <h3 className="text-lg font-bold text-dark mb-2">{faq.q}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

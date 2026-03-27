@@ -123,8 +123,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   if (!service) return {};
 
   return {
-    title: `${service.title} in Middlesex County, NJ`,
-    description: `Professional ${service.title.toLowerCase()} services in Middlesex County, NJ. Licensed and insured. Call ${PHONE} for same-day service.`,
+    title: `${service.title} | Middlesex County, NJ`,
+    description: `Professional ${service.title.toLowerCase()} in Middlesex County, NJ. Licensed and insured. Call ${PHONE} for same-day service throughout all 25 municipalities.`,
     alternates: { canonical: `${DOMAIN}/services/${service.slug}` },
   };
 }
@@ -151,9 +151,39 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
     })),
   };
 
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.title,
+    description: details.heroDesc,
+    provider: {
+      '@type': 'LocalBusiness',
+      name: SITE_NAME,
+      telephone: PHONE,
+      url: DOMAIN,
+    },
+    areaServed: {
+      '@type': 'AdministrativeArea',
+      name: 'Middlesex County, NJ',
+    },
+    serviceType: service.title,
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: DOMAIN },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: `${DOMAIN}/services` },
+      { '@type': 'ListItem', position: 3, name: service.title, item: `${DOMAIN}/services/${service.slug}` },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <section className="bg-dark text-white py-16">
         <div className="container-main">

@@ -4,8 +4,8 @@ import { ArrowRight } from 'lucide-react';
 import { services, wildlifeServices, PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: `Pest Control Services in Middlesex County, NJ`,
-  description: `Full pest control services in Middlesex County, NJ: bed bugs, rodents, cockroaches, ants, termites, mosquitoes, wasps, ticks, fleas. Call ${PHONE} for same-day service.`,
+  title: 'Pest Control Services | Middlesex County, NJ',
+  description: `Complete pest control in Middlesex County NJ: bed bugs, rodents, cockroaches, ants, termites, mosquitoes, wasps, ticks, fleas. Call ${PHONE} for same-day service.`,
   alternates: { canonical: `${DOMAIN}/services` },
 };
 

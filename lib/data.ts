@@ -20,6 +20,7 @@ export const towns = [
   { name: 'Highland Park', slug: 'highland-park', county: 'Middlesex County', state: 'NJ', population: 14000, description: 'Borough situated on the Raritan River across from New Brunswick.' },
   { name: 'Jamesburg', slug: 'jamesburg', county: 'Middlesex County', state: 'NJ', population: 6500, description: 'Small historic borough in central Middlesex County.' },
   { name: 'Middlesex', slug: 'middlesex', county: 'Middlesex County', state: 'NJ', population: 14000, description: 'Central county borough with well-established residential neighborhoods.' },
+  { name: 'Metuchen', slug: 'metuchen', county: 'Middlesex County', state: 'NJ', population: 14000, description: 'Historic borough with Victorian-era homes and one of the most walkable downtowns in Middlesex County.' },
   { name: 'Milltown', slug: 'milltown', county: 'Middlesex County', state: 'NJ', population: 7200, description: 'Small borough situated along the South River in Middlesex County.' },
   { name: 'Monroe', slug: 'monroe', county: 'Middlesex County', state: 'NJ', population: 47000, description: 'Large township in the southern part of Middlesex County.' },
   { name: 'New Brunswick', slug: 'new-brunswick', county: 'Middlesex County', state: 'NJ', population: 57000, description: 'County seat of Middlesex County and home to Rutgers University.' },
