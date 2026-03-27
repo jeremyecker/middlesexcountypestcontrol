@@ -275,7 +275,7 @@ export const blogPosts = [
   {
     slug: 'termite-swarm-season-nj-what-to-do',
     title: 'Termite Swarm Season in NJ: What to Do If You See Swarmers',
-    excerpt: 'Winged termites indoors in spring is one of the most alarming pest discoveries a homeowner can make. Here's what it means and what to do.',
+    excerpt: 'Winged termites indoors in spring is one of the most alarming pest discoveries a homeowner can make. Here\'s what it means and what to do.',
     date: '2026-03-28',
     category: 'Termites',
     readTime: '6 min',
@@ -283,7 +283,7 @@ export const blogPosts = [
   {
     slug: 'rodent-proofing-your-home-fall-nj',
     title: 'Rodent-Proofing Your Middlesex County Home Before Winter',
-    excerpt: 'Every fall, mice and rats in Middlesex County seek warm shelter indoors. The prevention window closes fast — here's how to seal your home.',
+    excerpt: 'Every fall, mice and rats in Middlesex County seek warm shelter indoors. The prevention window closes fast — here\'s how to seal your home.',
     date: '2026-03-29',
     category: 'Rodents',
     readTime: '7 min',
@@ -315,7 +315,7 @@ export const blogPosts = [
   {
     slug: 'integrated-pest-management-middlesex-county',
     title: 'What Is Integrated Pest Management (IPM)? A Guide for NJ Homeowners',
-    excerpt: 'IPM is the professional standard for pest control in New Jersey — but most homeowners haven't heard of it. Here's what it means.',
+    excerpt: "IPM is the professional standard for pest control in New Jersey — but most homeowners haven't heard of it. Here's what it means.",
     date: '2026-04-02',
     category: 'General',
     readTime: '7 min',
