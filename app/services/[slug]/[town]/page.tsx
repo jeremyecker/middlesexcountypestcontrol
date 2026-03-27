@@ -134,7 +134,7 @@ export default function ServiceTownPage({
     '@type': 'Service',
     name: `${service.title} in ${town.name}, NJ`,
     description: `Professional ${service.title.toLowerCase()} in ${town.name}, NJ by ${SITE_NAME}.`,
-    provider: { '@type': 'LocalBusiness', name: SITE_NAME, url: DOMAIN, telephone: '(732) 856-5142' },
+    provider: { '@type': 'LocalBusiness', name: SITE_NAME, url: DOMAIN, telephone: '(732) 856-5142', address: { '@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US' } },
     areaServed: { '@type': 'City', name: `${town.name}, NJ` },
   };
 

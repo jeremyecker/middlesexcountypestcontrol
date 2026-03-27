@@ -24,6 +24,8 @@ const quickLinks = [
   { href: '/contact', label: 'Contact' },
   { href: '/reviews', label: 'Reviews' },
   { href: '/privacy', label: 'Privacy Policy' },
+  { href: '/credentials', label: 'Credentials' },
+  { href: '/residential', label: 'Residential' },
 ];
 
 const townLinks = [

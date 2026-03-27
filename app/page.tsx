@@ -29,6 +29,7 @@ const localBusinessSchema = {
   description: 'Licensed and insured pest control services serving all of Middlesex County, NJ since 2018.',
   priceRange: '$$',
   openingHours: 'Mo-Sa 08:00-18:00',
+  address: { '@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US' },
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '5.0',

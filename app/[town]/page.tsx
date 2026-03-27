@@ -108,6 +108,7 @@ export default function TownPage({ params }: { params: { town: string } }) {
     telephone: PHONE,
     url: `${DOMAIN}/${town.slug}`,
     description: `Pest control services in ${town.name}, NJ`,
+    address: { '@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US' },
     areaServed: {
       '@type': 'City',
       name: `${town.name}, NJ`,

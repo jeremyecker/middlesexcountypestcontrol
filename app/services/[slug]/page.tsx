@@ -162,6 +162,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       name: SITE_NAME,
       telephone: PHONE,
       url: DOMAIN,
+      address: { '@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US' },
     },
     areaServed: {
       '@type': 'AdministrativeArea',
