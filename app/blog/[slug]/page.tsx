@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { blogPosts, PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
+import { blogContentExtra } from '@/lib/blog-content-extra';
 
-const blogContent: Record<string, { body: string; faqs: { q: string; a: string }[] }> = {
+const blogContentBase: Record<string, { body: string; faqs: { q: string; a: string }[] }> = {
   'how-to-get-rid-of-bed-bugs-new-brunswick-nj': {
     body: `New Brunswick presents one of Middlesex County's most challenging environments for bed bug control. The city's combination of dense student housing near Rutgers University, multi-family apartment buildings in the downtown corridor, and a steady flow of transient residents creates conditions where bed bugs spread rapidly and persistently.
 
@@ -686,6 +687,8 @@ Middlesex County Pest Control provides expert residential and commercial pest ma
     ],
   },
 };
+
+const blogContent = { ...blogContentBase, ...blogContentExtra };
 
 export async function generateStaticParams() {
   return blogPosts.map(post => ({ slug: post.slug }));
