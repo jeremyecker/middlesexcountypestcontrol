@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getOpenGraph } from '@/lib/og';
 import Link from 'next/link';
 import { PHONE, SITE_NAME, DOMAIN } from '@/lib/data';
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: `Privacy Policy | Middlesex County Pest Control`,
   description: `Privacy Policy for ${SITE_NAME}. Learn how we collect, use, and protect your information.`,
   alternates: { canonical: `${DOMAIN}/privacy` },
-  openGraph: { url: '/privacy' },
+  openGraph: getOpenGraph('/privacy'),
 };
 
 export default function PrivacyPage() {

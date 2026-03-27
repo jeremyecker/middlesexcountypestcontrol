@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getOpenGraph } from '@/lib/og';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { MapPin, Phone, CheckCircle, ArrowRight } from 'lucide-react';
@@ -54,9 +55,9 @@ export async function generateMetadata({ params }: { params: { town: string } })
 
   return {
     title: `Pest Control in ${town.name}, NJ | Middlesex County`,
-    description: `Expert pest control in ${town.name}, NJ. Bed bugs, rodents, termites, mosquitoes & more. Licensed and insured. Call ${PHONE} for same-day service.`,
+    description: `Expert pest control in ${town.name}, NJ. Bed bugs, rodents, termites, mosquitoes & more. Licensed & insured. Call ${PHONE} for same-day service`,
     alternates: { canonical: `${DOMAIN}/${town.slug}` },
-    openGraph: { url: `/${town.slug}` },
+    openGraph: getOpenGraph(`/${town.slug}`),
   };
 }
 

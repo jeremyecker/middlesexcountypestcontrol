@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
+import { getOpenGraph } from '@/lib/og';
 import Link from 'next/link';
 import { PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: `Residential Pest Control in Middlesex County, NJ`,
-  description: `Expert home pest control for Middlesex County, NJ homeowners. Bed bugs, rodents, termites, mosquitoes, ants, and more. Licensed and insured. Call ${PHONE}.`,
+  description: `Expert home pest control for Middlesex County, NJ. Bed bugs, rodents, termites, mosquitoes, ants & more. Licensed & insured. Call ${PHONE}`,
   alternates: { canonical: `${DOMAIN}/residential` },
+  openGraph: getOpenGraph('/residential'),
 };
 
 const TOWNS = [

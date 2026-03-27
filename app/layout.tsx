@@ -4,8 +4,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { SITE_NAME, DOMAIN, PHONE, GA4_ID } from '@/lib/data';
-
-const OG_IMAGE = 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&h=630&fit=crop&q=80';
+import { OG_IMAGE } from '@/lib/og';
 
 export const metadata: Metadata = {
   metadataBase: new URL(DOMAIN),
@@ -17,7 +16,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: '/',
     siteName: SITE_NAME,
     images: [
       {

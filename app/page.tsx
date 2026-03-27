@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getOpenGraph } from '@/lib/og';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -12,11 +13,7 @@ export const metadata: Metadata = {
   title: 'Middlesex County Pest Control | Exterminators in NJ',
   description: `Middlesex County's trusted pest control company since 2018. Same-day service for bed bugs, rodents, termites, mosquitoes & more. Call ${PHONE}.`,
   alternates: { canonical: DOMAIN },
-  openGraph: {
-    title: 'Middlesex County Pest Control | Exterminators in NJ',
-    description: `Middlesex County's trusted pest control company since 2018. Same-day service for bed bugs, rodents, termites & more.`,
-    url: DOMAIN,
-  },
+  openGraph: getOpenGraph('/'),
 };
 
 const localBusinessSchema = {

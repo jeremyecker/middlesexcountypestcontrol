@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getOpenGraph } from '@/lib/og';
 import Link from 'next/link';
 import { Star } from 'lucide-react';
 import { PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   title: `Customer Reviews | Middlesex County Pest Control`,
   description: `Reviews from Middlesex County homeowners and businesses. Trusted pest control serving Edison, Woodbridge, New Brunswick, Piscataway, and more since 2018.`,
   alternates: { canonical: `${DOMAIN}/reviews` },
-  openGraph: { url: '/reviews' },
+  openGraph: getOpenGraph('/reviews'),
 };
 
 const reviews = [

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getOpenGraph } from '@/lib/og';
 import Link from 'next/link';
 import { CheckCircle } from 'lucide-react';
 import { PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   title: `Commercial Pest Control in Middlesex County, NJ`,
   description: `Commercial pest control for Middlesex County, NJ. Restaurants, healthcare, offices, warehouses & schools. NJ health code compliant. Call ${PHONE}.`,
   alternates: { canonical: `${DOMAIN}/commercial` },
-  openGraph: { url: '/commercial' },
+  openGraph: getOpenGraph('/commercial'),
 };
 
 export default function CommercialPage() {

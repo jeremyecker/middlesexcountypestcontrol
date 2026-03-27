@@ -211,7 +211,7 @@ export const blogPosts = [
   {
     slug: 'pest-control-tips-edison-woodbridge',
     title: 'Pest Control Tips for Edison and Woodbridge Homeowners',
-    excerpt: "Middlesex County's two largest communities face unique pest pressures from their size, density, and proximity to major waterways. Here's how to protect your home.",
+    excerpt: "Edison and Woodbridge face unique pest pressures from their size, density, and waterway proximity. Here's how to protect your home.",
     date: '2026-02-20',
     category: 'Prevention',
     readTime: '7 min',
@@ -219,7 +219,7 @@ export const blogPosts = [
   {
     slug: 'wildlife-removal-middlesex-county',
     title: 'Wildlife Removal in Middlesex County: Squirrels, Raccoons, and More',
-    excerpt: "Middlesex County's mix of suburban development and natural areas creates regular wildlife intrusion problems. Licensed removal is the only reliable solution.",
+    excerpt: "Middlesex County's suburban-natural mix creates regular wildlife intrusion problems. Licensed removal is the only reliable solution.",
     date: '2026-03-05',
     category: 'Wildlife',
     readTime: '6 min',
@@ -251,7 +251,7 @@ export const blogPosts = [
   {
     slug: 'spring-pest-control-checklist-middlesex-county',
     title: 'Spring Pest Control Checklist for Middlesex County Homeowners',
-    excerpt: 'As temperatures warm in Middlesex County, pest activity accelerates rapidly. This seasonal checklist helps you get ahead of ants, termites, mosquitoes, and more before infestations establish.',
+    excerpt: 'As temperatures warm in Middlesex County, pest activity ramps up fast. Get ahead of ants, termites, mosquitoes and more with this checklist.',
     date: '2026-03-25',
     category: 'Prevention',
     readTime: '7 min',
@@ -259,7 +259,7 @@ export const blogPosts = [
   {
     slug: 'stink-bugs-nj-how-to-keep-them-out',
     title: 'Stink Bugs in NJ: How to Keep Them Out This Fall',
-    excerpt: "Brown marmorated stink bugs invade Middlesex County homes every fall in large numbers. Here's exactly how they get in, why they come inside, and how to stop them.",
+    excerpt: "Brown marmorated stink bugs invade Middlesex County homes every fall. Here's how they get in, why they come inside, and how to stop them.",
     date: '2026-03-26',
     category: 'Prevention',
     readTime: '6 min',
@@ -267,7 +267,7 @@ export const blogPosts = [
   {
     slug: 'spider-control-middlesex-county-nj',
     title: 'Spider Control in Middlesex County: Which Species to Watch For',
-    excerpt: "Most spiders in NJ are harmless — but a few are not, and large indoor populations signal a broader pest problem. Here's what Middlesex County homeowners should know.",
+    excerpt: "Most NJ spiders are harmless — but a few aren't, and large indoor populations signal a broader pest problem. Here's what homeowners should know.",
     date: '2026-03-27',
     category: 'General',
     readTime: '6 min',
@@ -275,7 +275,7 @@ export const blogPosts = [
   {
     slug: 'termite-swarm-season-nj-what-to-do',
     title: 'Termite Swarm Season in NJ: What to Do If You See Swarmers',
-    excerpt: 'Seeing winged termites indoors in spring is one of the most alarming pest discoveries a homeowner can make. Here is exactly what it means and what to do next.',
+    excerpt: 'Winged termites indoors in spring is one of the most alarming pest discoveries a homeowner can make. Here's what it means and what to do.',
     date: '2026-03-28',
     category: 'Termites',
     readTime: '6 min',
@@ -283,7 +283,7 @@ export const blogPosts = [
   {
     slug: 'rodent-proofing-your-home-fall-nj',
     title: 'Rodent-Proofing Your Middlesex County Home Before Winter',
-    excerpt: 'Every fall, mice and rats across Middlesex County seek warm harborage inside homes. The window to prevent them closes quickly — here is how to seal your home before they move in.',
+    excerpt: 'Every fall, mice and rats in Middlesex County seek warm shelter indoors. The prevention window closes fast — here's how to seal your home.',
     date: '2026-03-29',
     category: 'Rodents',
     readTime: '7 min',
@@ -291,7 +291,7 @@ export const blogPosts = [
   {
     slug: 'pest-control-for-new-homeowners-middlesex-county',
     title: 'Pest Control Guide for New Homeowners in Middlesex County',
-    excerpt: "Buying a home in Edison, Woodbridge, or anywhere in Middlesex County? Here's what new homeowners need to know about pest inspections, common issues in NJ homes, and your first-year prevention plan.",
+    excerpt: "Buying a home in Middlesex County? What new homeowners need to know about pest inspections, common NJ issues, and first-year prevention.",
     date: '2026-03-30',
     category: 'Prevention',
     readTime: '8 min',
@@ -307,7 +307,7 @@ export const blogPosts = [
   {
     slug: 'bed-bugs-after-travel-what-to-do',
     title: 'How to Avoid Bringing Bed Bugs Home After Travel',
-    excerpt: 'Hotels, Airbnbs, and even cruise ships harbor bed bugs. This practical guide shows NJ travelers how to inspect, protect themselves, and respond if they bring bugs home.',
+    excerpt: 'Hotels, Airbnbs, and cruise ships can harbor bed bugs. A guide for NJ travelers on inspecting, protecting yourself, and responding.',
     date: '2026-04-01',
     category: 'Bed Bugs',
     readTime: '6 min',
@@ -315,7 +315,7 @@ export const blogPosts = [
   {
     slug: 'integrated-pest-management-middlesex-county',
     title: 'What Is Integrated Pest Management (IPM)? A Guide for NJ Homeowners',
-    excerpt: 'IPM is the professional standard for pest control in New Jersey — but most homeowners have never heard of it. Here is what it means and why it matters for your home.',
+    excerpt: 'IPM is the professional standard for pest control in New Jersey — but most homeowners haven't heard of it. Here's what it means.',
     date: '2026-04-02',
     category: 'General',
     readTime: '7 min',
