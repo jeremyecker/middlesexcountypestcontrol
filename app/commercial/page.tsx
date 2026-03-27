@@ -5,8 +5,9 @@ import { PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: `Commercial Pest Control in Middlesex County, NJ`,
-  description: `Professional commercial pest control for Middlesex County businesses. Restaurants, healthcare, offices, warehouses, schools. NJ health code compliant. Call ${PHONE}.`,
+  description: `Commercial pest control for Middlesex County, NJ. Restaurants, healthcare, offices, warehouses & schools. NJ health code compliant. Call ${PHONE}.`,
   alternates: { canonical: `${DOMAIN}/commercial` },
+  openGraph: { url: '/commercial' },
 };
 
 export default function CommercialPage() {

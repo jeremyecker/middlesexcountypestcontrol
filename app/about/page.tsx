@@ -4,9 +4,10 @@ import { Shield, Award, Users, CheckCircle, MapPin, Clock, Leaf } from 'lucide-r
 import { PHONE, PHONE_RAW, SITE_NAME, DOMAIN, TAGLINE } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: `About Us`,
-  description: `Middlesex County Pest Control — licensed NJ DEP pest management professionals serving all 25 municipalities of Middlesex County since 2018. Local experts, not a national chain.`,
+  title: `About Middlesex County Pest Control | NJ Exterminators`,
+  description: `Middlesex County Pest Control — licensed NJ DEP pest management professionals serving all 25 municipalities since 2018. Local experts, not a national chain.`,
   alternates: { canonical: `${DOMAIN}/about` },
+  openGraph: { url: '/about' },
 };
 
 const faqSchema = {

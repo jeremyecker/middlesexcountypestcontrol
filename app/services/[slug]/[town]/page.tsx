@@ -25,8 +25,9 @@ export async function generateMetadata({
   if (!service || !town) return {};
   return {
     title: `${service.title} in ${town.name}, NJ`,
-    description: `Professional ${service.title.toLowerCase()} in ${town.name}, NJ. ${SITE_NAME} — licensed and insured, serving ${town.name} and all of Middlesex County since 2018. Call ${PHONE}.`,
+    description: `Professional ${service.title.toLowerCase()} in ${town.name}, NJ. Licensed & insured. Serving Middlesex County since 2018. Call ${PHONE}.`,
     alternates: { canonical: `${DOMAIN}/services/${params.slug}/${params.town}` },
+    openGraph: { url: `/services/${params.slug}/${params.town}` },
   };
 }
 

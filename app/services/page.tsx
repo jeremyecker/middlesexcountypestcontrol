@@ -5,8 +5,9 @@ import { services, wildlifeServices, PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from 
 
 export const metadata: Metadata = {
   title: 'Pest Control Services | Middlesex County, NJ',
-  description: `Complete pest control in Middlesex County NJ: bed bugs, rodents, cockroaches, ants, termites, mosquitoes, wasps, ticks, fleas. Call ${PHONE} for same-day service.`,
+  description: `Pest control in Middlesex County NJ: bed bugs, rodents, cockroaches, ants, termites, mosquitoes, wasps, ticks, fleas. Licensed & insured. Call ${PHONE}.`,
   alternates: { canonical: `${DOMAIN}/services` },
+  openGraph: { url: '/services' },
 };
 
 const serviceEmojiMap: Record<string, string> = {

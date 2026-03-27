@@ -4,9 +4,10 @@ import { Star } from 'lucide-react';
 import { PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: `Customer Reviews`,
-  description: `Read reviews from Middlesex County homeowners and businesses. Trusted pest control serving Edison, Woodbridge, New Brunswick, Piscataway, and all 25 Middlesex County municipalities.`,
+  title: `Customer Reviews | Middlesex County Pest Control`,
+  description: `Reviews from Middlesex County homeowners and businesses. Trusted pest control serving Edison, Woodbridge, New Brunswick, Piscataway, and more since 2018.`,
   alternates: { canonical: `${DOMAIN}/reviews` },
+  openGraph: { url: '/reviews' },
 };
 
 const reviews = [
