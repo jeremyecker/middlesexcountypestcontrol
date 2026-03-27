@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${DOMAIN}/about`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 },
     { url: `${DOMAIN}/contact`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.9 },
     { url: `${DOMAIN}/reviews`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.6 },
+    { url: `${DOMAIN}/credentials`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.6 },
     { url: `${DOMAIN}/privacy`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.3 },
   ];
 
@@ -32,6 +33,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const serviceTownPages = services.flatMap(service =>
+    towns.map(town => ({
+      url: `${DOMAIN}/services/${service.slug}/${town.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    }))
+  );
+
   const wildlifePages = wildlifeServices.map(service => ({
     url: `${DOMAIN}/wildlife/${service.slug}`,
     lastModified: now,
@@ -46,5 +56,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...townPages, ...servicePages, ...wildlifePages, ...blogPages];
+  return [...staticPages, ...townPages, ...servicePages, ...serviceTownPages, ...wildlifePages, ...blogPages];
 }
