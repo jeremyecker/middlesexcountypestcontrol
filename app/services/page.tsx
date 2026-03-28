@@ -6,7 +6,7 @@ import { services, wildlifeServices, PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from 
 
 export const metadata: Metadata = {
   title: 'Pest Control Services | Middlesex County, NJ',
-  description: `Middlesex County, NJ pest control: bed bugs, rodents, cockroaches, ants, termites, mosquitoes, wasps, ticks, fleas. Licensed & insured. Call ${PHONE}`,
+  description: `Middlesex County, NJ pest control: bed bugs, rodents, cockroaches, termites, mosquitoes, wasps, ticks, fleas. Licensed & insured. Call ${PHONE}`,
   alternates: { canonical: `${DOMAIN}/services` },
   openGraph: getOpenGraph('/services'),
 };

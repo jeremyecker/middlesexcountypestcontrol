@@ -6,8 +6,22 @@ const nextConfig = {
       { protocol: 'https', hostname: 'images.unsplash.com' },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
+      // www → apex
+      { source: '/:path*', has: [{ type: 'host', value: 'www.middlesexcountypestcontrol.com' }], destination: 'https://middlesexcountypestcontrol.com/:path*', permanent: true },
       // Old WordPress blog post redirects
       { source: '/bugs-be-gone-commercial-pest-control/', destination: '/blog/commercial-pest-control-nj-restaurants', permanent: true },
       { source: '/bugs-be-gone-commercial-pest-control', destination: '/blog/commercial-pest-control-nj-restaurants', permanent: true },

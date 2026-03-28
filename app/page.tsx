@@ -11,7 +11,7 @@ import PhoneLink from '@/components/PhoneLink';
 
 export const metadata: Metadata = {
   title: 'Middlesex County Pest Control | Exterminators in NJ',
-  description: `Middlesex County's trusted pest control company since 2018. Same-day service for bed bugs, rodents, termites, mosquitoes & more. Call ${PHONE}.`,
+  description: `Middlesex County's trusted pest control since 2018. Same-day service for bed bugs, rodents, termites, mosquitoes & more. Call ${PHONE}.`,
   alternates: { canonical: DOMAIN },
   openGraph: getOpenGraph('/'),
 };
@@ -26,7 +26,7 @@ const localBusinessSchema = {
   description: 'Licensed and insured pest control services serving all of Middlesex County, NJ since 2018.',
   priceRange: '$$',
   openingHours: 'Mo-Sa 08:00-18:00',
-  address: { '@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US' },
+  address: { '@type': 'PostalAddress', addressLocality: 'New Brunswick', addressRegion: 'NJ', addressCountry: 'US' },
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '5.0',
