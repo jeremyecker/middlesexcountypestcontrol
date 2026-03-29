@@ -157,19 +157,19 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: service.title,
+    url: `${DOMAIN}/services/${service.slug}`,
     description: details.heroDesc,
     provider: {
       '@type': 'LocalBusiness',
       name: SITE_NAME,
       telephone: PHONE,
       url: DOMAIN,
-      address: { '@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US' },
+      address: { '@type': 'PostalAddress', addressLocality: 'New Brunswick', addressRegion: 'NJ', addressCountry: 'US' },
     },
     areaServed: {
       '@type': 'AdministrativeArea',
       name: 'Middlesex County, NJ',
     },
-    serviceType: service.title,
   };
 
   const breadcrumbSchema = {

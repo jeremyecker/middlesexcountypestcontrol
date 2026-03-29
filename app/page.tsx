@@ -85,7 +85,7 @@ const homepageFaqs = [
   },
   {
     q: 'How much does pest control cost in Middlesex County?',
-    a: 'Most residential pest control treatments in Middlesex County range from $150–$400 depending on pest type and infestation size. Termite treatment and bed bug heat treatments are typically higher. Contact us for a free inspection and quote.',
+    a: 'Most residential pest control treatments in Middlesex County range from $150–$400 depending on pest type and infestation size. Termite treatment and bed bug heat treatments are typically higher. Contact us for a free quote.',
   },
   {
     q: 'Do you offer same-day pest control in Middlesex County?',
@@ -118,6 +118,8 @@ const serviceEmojiMap: Record<string, string> = {
   'ticks':       '🕷️',
   'fleas':       '🦗',
 };
+
+const yearsInBusiness = new Date().getFullYear() - 2018;
 
 export default function HomePage() {
   const recentPosts = blogPosts.slice(0, 3);
@@ -178,7 +180,7 @@ export default function HomePage() {
       <section className="bg-navy py-4">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-3">
-            {['Licensed & Insured', 'Same-Day Service', 'Serving Middlesex County Since 2018', 'Free Inspections'].map(badge => (
+            {['Licensed & Insured', 'Same-Day Service', 'Serving Middlesex County Since 2018', 'Free Estimates'].map(badge => (
               <span key={badge} className="bg-white text-navy px-4 py-2 rounded-full text-sm font-bold">
                 {badge}
               </span>
@@ -249,7 +251,7 @@ export default function HomePage() {
               },
               {
                 icon: <CheckCircle size={40} className="text-navy" />,
-                title: '7+ Years Experience',
+                title: `${yearsInBusiness}+ Years Experience`,
                 desc: 'Serving Middlesex County since 2018, our team has handled thousands of pest cases across all property types, from apartments to commercial facilities.',
               },
             ].map(item => (
@@ -309,7 +311,7 @@ export default function HomePage() {
                   href="/commercial"
                   className="bg-primary text-white px-6 py-3 rounded font-semibold hover:bg-ctahover transition-colors self-start"
                 >
-                  Book a Commercial Inspection
+                  Get a Commercial Quote
                 </Link>
               </div>
             </div>
@@ -399,9 +401,9 @@ export default function HomePage() {
       {/* CTA Banner */}
       <section className="bg-navy py-16">
         <div className="container-main text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Get a Free Pest Inspection Today</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Get a Free Pest Control Quote Today</h2>
           <p className="text-gray-200 text-lg mb-8 max-w-2xl mx-auto">
-            Don&apos;t let pests take over your home or business. Contact Middlesex County Pest Control for a free inspection and same-day service.
+            Don&apos;t let pests take over your home or business. Contact Middlesex County Pest Control for a free quote and same-day service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
