@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { PHONE, PHONE_RAW, SITE_NAME, DOMAIN, TAGLINE, services, towns, testimonials, blogPosts } from '@/lib/data';
 import PhoneLink from '@/components/PhoneLink';
+import QuoteForm from '@/components/QuoteForm';
 
 export const metadata: Metadata = {
   title: 'Middlesex County Pest Control | Exterminators in NJ',
@@ -85,14 +86,14 @@ const homepageFaqs = [
   },
   {
     q: 'How much does pest control cost in Middlesex County?',
-    a: 'Most residential pest control treatments in Middlesex County range from $150–$400 depending on pest type and infestation size. Termite treatment and bed bug heat treatments are typically higher. Contact us for a free quote.',
+    a: 'Most residential pest control treatments in Middlesex County range from $150\u2013$400 depending on pest type and infestation size. Termite treatment and bed bug heat treatments are typically higher. Contact us for a free quote.',
   },
   {
     q: 'Do you offer same-day pest control in Middlesex County?',
-    a: 'Yes — we offer same-day and next-day appointments throughout all 25 municipalities in Middlesex County. Call (732) 856-5142 or book online.',
+    a: 'Yes \u2014 we offer same-day and next-day appointments throughout all 25 municipalities in Middlesex County. Call (732) 856-5142 or book online.',
   },
   {
-    q: 'Are your pest control treatments family-friendly?',
+    q: 'Are your pest control treatments low-impact for families and pets?',
     a: 'Yes. We use EPA-registered products applied by NJ DEP licensed technicians. We advise on any re-entry times and precautions appropriate to your specific treatment.',
   },
 ];
@@ -108,15 +109,15 @@ const homepageFaqSchema = {
 };
 
 const serviceEmojiMap: Record<string, string> = {
-  'bed-bugs':    '🛏️',
-  'rodents':     '🐀',
-  'cockroaches': '🪳',
-  'ants':        '🐜',
-  'termites':    '🪵',
-  'mosquitoes':  '🦟',
-  'wasps':       '🐝',
-  'ticks':       '🕷️',
-  'fleas':       '🦗',
+  'bed-bugs':    '\uD83D\uDECF\uFE0F',
+  'rodents':     '\uD83D\uDC00',
+  'cockroaches': '\uD83E\uDD5F',
+  'ants':        '\uD83D\uDC1C',
+  'termites':    '\uD83E\uDEB5',
+  'mosquitoes':  '\uD83E\uDD9F',
+  'wasps':       '\uD83D\uDC1D',
+  'ticks':       '\uD83D\uDD77\uFE0F',
+  'fleas':       '\uD83E\uDD97',
 };
 
 const yearsInBusiness = new Date().getFullYear() - 2018;
@@ -200,7 +201,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map(service => {
-              const emoji = serviceEmojiMap[service.slug] ?? '🐛';
+              const emoji = serviceEmojiMap[service.slug] ?? '\uD83D\uDC1B';
               return (
                 <div key={service.slug} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
                   <div className="bg-navy flex items-center justify-center h-28">
@@ -305,7 +306,7 @@ export default function HomePage() {
               <div className="p-10 flex flex-col justify-center">
                 <h2 className="text-3xl font-bold text-white mb-4">Commercial Pest Control</h2>
                 <p className="text-gray-200 leading-relaxed mb-6">
-                  Restaurants, office buildings, warehouses, schools — we provide comprehensive commercial pest management programs with full NJ DOH compliance documentation. Protect your Middlesex County business reputation.
+                  Restaurants, office buildings, warehouses, schools \u2014 we provide comprehensive commercial pest management programs with full NJ DOH compliance documentation. Protect your Middlesex County business reputation.
                 </p>
                 <Link
                   href="/commercial"
@@ -394,6 +395,21 @@ export default function HomePage() {
                 <p className="text-gray-600 leading-relaxed">{faq.a}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quote Form Section */}
+      <section className="section-light" id="quote">
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">Get a Free Pest Control Quote</h2>
+            <p className="text-gray-600 text-lg">
+              Fill out the form below or call <a href={`tel:${PHONE_RAW}`} className="text-primary font-semibold">{PHONE}</a> for same-day service.
+            </p>
+          </div>
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <QuoteForm />
           </div>
         </div>
       </section>
