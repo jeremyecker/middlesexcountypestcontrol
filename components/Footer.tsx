@@ -41,6 +41,15 @@ const townLinks = [
   { href: '/south-brunswick', label: 'South Brunswick' },
 ];
 
+const networkLinks = [
+  { href: 'https://essexcountypestcontrol.com', label: 'Essex County Pest Control' },
+  { href: 'https://buggedoutny.com', label: 'Bugged Out Pest Management' },
+  { href: 'https://resteasypestcontrol.com', label: 'Rest Easy Pest Control' },
+  { href: 'https://nycpestcontrolnearme.com', label: 'NYC Pest Control Near Me' },
+  { href: 'https://bronxcountypestcontrol.com', label: 'Bronx County Pest Control' },
+  { href: 'https://burlingtoncountypestcontrolnearme.com', label: 'Burlington County Pest Control' },
+];
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -115,8 +124,24 @@ export default function Footer() {
               ))}
             </ul>
             <Link href="/locations" className="text-primary text-sm hover:underline">
-              View All 25 Towns →
+              View All 25 Towns &rarr;
             </Link>
+          </div>
+        </div>
+
+        {/* Network */}
+        <div className="border-t border-gray-800 mt-10 pt-8">
+          <h3 className="font-bold text-white text-sm uppercase tracking-wider mb-4">Pest Control Network</h3>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            {networkLinks.map(link => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-gray-400 text-sm hover:text-primary transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
