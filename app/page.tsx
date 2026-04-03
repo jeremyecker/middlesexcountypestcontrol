@@ -23,9 +23,9 @@ const localBusinessSchema = {
   name: SITE_NAME,
   telephone: '(732) 856-5142',
   url: DOMAIN,
+  image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&h=630&fit=crop&q=80',
   foundingDate: '2018',
   description: 'Licensed and insured pest control services serving all of Middlesex County, NJ since 2018.',
-  priceRange: '$$',
   openingHours: 'Mo-Sa 08:00-18:00',
   address: { '@type': 'PostalAddress', addressLocality: 'New Brunswick', addressRegion: 'NJ', addressCountry: 'US' },
   aggregateRating: {

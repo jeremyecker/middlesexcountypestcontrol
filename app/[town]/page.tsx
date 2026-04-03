@@ -108,6 +108,7 @@ export default function TownPage({ params }: { params: { town: string } }) {
     name: SITE_NAME,
     telephone: PHONE,
     url: `${DOMAIN}/${town.slug}`,
+    image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&h=630&fit=crop&q=80',
     description: `Pest control services in ${town.name}, NJ`,
     address: { '@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US' },
     areaServed: {
@@ -180,7 +181,7 @@ export default function TownPage({ params }: { params: { town: string } }) {
                     <h3 className="text-lg font-bold text-dark mb-2">{service.title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed mb-3">{service.shortDesc}</p>
                     <Link
-                      href={`/services/${service.slug}`}
+                      href={`/services/${service.slug}/${town.slug}`}
                       className="text-primary font-semibold text-sm flex items-center gap-1"
                     >
                       Learn More <ArrowRight size={12} />
