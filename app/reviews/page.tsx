@@ -27,14 +27,17 @@ export default function ReviewsPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: SITE_NAME,
+    url: `${DOMAIN}/reviews`,
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5',
+      bestRating: '5',
+      worstRating: '1',
       reviewCount: String(reviews.length),
     },
     review: reviews.map(r => ({
       '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: String(r.rating) },
+      reviewRating: { '@type': 'Rating', ratingValue: String(r.rating), bestRating: '5', worstRating: '1' },
       author: { '@type': 'Person', name: r.name },
       reviewBody: r.text,
     })),
