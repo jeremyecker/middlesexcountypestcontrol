@@ -1,7 +1,7 @@
 export const PHONE = '(732) 856-5142';
 export const PHONE_RAW = '7328565142';
 export const SITE_NAME = 'Middlesex County Pest Control';
-export const DOMAIN = 'https://www.middlesexcountypestcontrol.com';
+export const DOMAIN = 'https://middlesexcountypestcontrol.com';
 export const YEAR_FOUNDED = '2018';
 export const FOUNDED = '2018';
 export const TAGLINE = 'Serving Middlesex County Since 2018';
