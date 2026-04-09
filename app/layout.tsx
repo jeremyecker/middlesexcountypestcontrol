@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     template: '%s',
   },
   description: `Expert pest control services in Middlesex County, NJ. Bed bugs, rodents, termites, mosquitoes and more. Call ${PHONE} for same-day service.`,
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
