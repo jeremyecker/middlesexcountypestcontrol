@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
+import { getOpenGraph } from '@/lib/og';
 import Link from 'next/link';
 import { Shield, Award, Users, CheckCircle, MapPin, Clock, Leaf } from 'lucide-react';
 import { PHONE, PHONE_RAW, SITE_NAME, DOMAIN, TAGLINE } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: `About Middlesex County Pest Control | NJ Exterminators`,
-  description: `Middlesex County Pest Control — licensed NJ DEP pest management professionals serving all 25 municipalities since 2018. Local experts, not a national chain.`,
+  description: `Middlesex County Pest Control — licensed NJ DEP pest management professionals serving all 25 municipalities since 2018. Local experts, not a chain`,
   alternates: { canonical: `${DOMAIN}/about` },
-  openGraph: { url: '/about' },
+  openGraph: getOpenGraph('/about'),
 };
 
 const faqSchema = {

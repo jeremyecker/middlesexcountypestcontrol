@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getOpenGraph } from '@/lib/og';
 import Link from 'next/link';
 import { MapPin } from 'lucide-react';
 import { towns, PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
   title: `Pest Control Locations in Middlesex County, NJ`,
   description: `Middlesex County Pest Control serves all 25 municipalities in Middlesex County, NJ. Find your town and book same-day pest control service.`,
   alternates: { canonical: `${DOMAIN}/locations` },
+  openGraph: getOpenGraph('/locations'),
 };
 
 export default function LocationsPage() {

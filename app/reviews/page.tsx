@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getOpenGraph } from '@/lib/og';
 import Link from 'next/link';
 import { Star } from 'lucide-react';
 import { PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   title: `Customer Reviews | Middlesex County Pest Control`,
   description: `Reviews from Middlesex County homeowners and businesses. Trusted pest control serving Edison, Woodbridge, New Brunswick, Piscataway, and more since 2018.`,
   alternates: { canonical: `${DOMAIN}/reviews` },
-  openGraph: { url: '/reviews' },
+  openGraph: getOpenGraph('/reviews'),
 };
 
 const reviews = [
@@ -26,14 +27,17 @@ export default function ReviewsPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: SITE_NAME,
+    url: `${DOMAIN}/reviews`,
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5',
+      bestRating: '5',
+      worstRating: '1',
       reviewCount: String(reviews.length),
     },
     review: reviews.map(r => ({
       '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: String(r.rating) },
+      reviewRating: { '@type': 'Rating', ratingValue: String(r.rating), bestRating: '5', worstRating: '1' },
       author: { '@type': 'Person', name: r.name },
       reviewBody: r.text,
     })),
@@ -65,7 +69,7 @@ export default function ReviewsPage() {
                     <Star key={j} size={16} className="text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-700 leading-relaxed mb-4 italic">"{review.text}"</p>
+                <p className="text-gray-700 leading-relaxed mb-4 italic">&quot;{review.text}&quot;</p>
                 <p className="text-dark font-semibold text-sm">— {review.name}, {review.location}</p>
               </div>
             ))}

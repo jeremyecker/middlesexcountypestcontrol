@@ -88,7 +88,7 @@ export default function ContactPageClient() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
             <div>
-              <h2 className="text-2xl font-bold text-dark mb-6">Book a Service or Free Inspection</h2>
+              <h2 className="text-2xl font-bold text-dark mb-6">Book a Service or Get a Free Quote</h2>
 
               {submitted ? (
                 <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
@@ -195,7 +195,7 @@ export default function ContactPageClient() {
                     <div className="bg-primary rounded-full p-3"><Clock size={20} /></div>
                     <div>
                       <p className="text-sm text-blue-200">Hours</p>
-                      <p className="font-bold">Same-Day Emergency Service</p>
+                      <p className="font-bold">Same-Day Service Available</p>
                       <p className="text-blue-100 text-sm">Monday–Saturday</p>
                     </div>
                   </div>

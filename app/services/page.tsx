@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
+import { getOpenGraph } from '@/lib/og';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { services, wildlifeServices, PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'Pest Control Services | Middlesex County, NJ',
-  description: `Pest control in Middlesex County NJ: bed bugs, rodents, cockroaches, ants, termites, mosquitoes, wasps, ticks, fleas. Licensed & insured. Call ${PHONE}.`,
+  description: `Middlesex County, NJ pest control: bed bugs, rodents, cockroaches, termites, mosquitoes, wasps, ticks, fleas. Licensed & insured. Call ${PHONE}`,
   alternates: { canonical: `${DOMAIN}/services` },
-  openGraph: { url: '/services' },
+  openGraph: getOpenGraph('/services'),
 };
 
 const serviceEmojiMap: Record<string, string> = {

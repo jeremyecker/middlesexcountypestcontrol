@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getOpenGraph } from '@/lib/og';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { CheckCircle, ArrowRight } from 'lucide-react';
@@ -126,7 +127,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title: `${service.title} | Middlesex County, NJ`,
     description: `Professional ${service.title.toLowerCase()} in Middlesex County, NJ. Licensed & insured. Call ${PHONE} for same-day service.`,
     alternates: { canonical: `${DOMAIN}/services/${service.slug}` },
-    openGraph: { url: `/services/${service.slug}` },
+    openGraph: getOpenGraph(`/services/${service.slug}`),
   };
 }
 
@@ -156,18 +157,20 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: service.title,
+    url: `${DOMAIN}/services/${service.slug}`,
     description: details.heroDesc,
     provider: {
       '@type': 'LocalBusiness',
       name: SITE_NAME,
       telephone: PHONE,
       url: DOMAIN,
+      image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&h=630&fit=crop&q=80',
+      address: { '@type': 'PostalAddress', addressLocality: 'New Brunswick', addressRegion: 'NJ', addressCountry: 'US' },
     },
     areaServed: {
       '@type': 'AdministrativeArea',
       name: 'Middlesex County, NJ',
     },
-    serviceType: service.title,
   };
 
   const breadcrumbSchema = {

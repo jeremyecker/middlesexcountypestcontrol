@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getOpenGraph } from '@/lib/og';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { blogPosts, PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
@@ -702,6 +703,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title: `${post.title}`,
     description: post.excerpt,
     alternates: { canonical: `${DOMAIN}/blog/${post.slug}` },
+    openGraph: getOpenGraph(`/blog/${post.slug}`),
   };
 }
 

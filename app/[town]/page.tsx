@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getOpenGraph } from '@/lib/og';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { MapPin, Phone, CheckCircle, ArrowRight } from 'lucide-react';
@@ -54,9 +55,9 @@ export async function generateMetadata({ params }: { params: { town: string } })
 
   return {
     title: `Pest Control in ${town.name}, NJ | Middlesex County`,
-    description: `Expert pest control in ${town.name}, NJ. Bed bugs, rodents, termites, mosquitoes & more. Licensed and insured. Call ${PHONE} for same-day service.`,
+    description: `Expert pest control in ${town.name}, NJ. Bed bugs, rodents, termites, mosquitoes & more. Licensed & insured. Call ${PHONE} for same-day service`,
     alternates: { canonical: `${DOMAIN}/${town.slug}` },
-    openGraph: { url: `/${town.slug}` },
+    openGraph: getOpenGraph(`/${town.slug}`),
   };
 }
 
@@ -73,7 +74,7 @@ export default function TownPage({ params }: { params: { town: string } }) {
     },
     {
       q: `How much does pest control cost in ${town.name}?`,
-      a: `Pest control costs in ${town.name} vary by pest type and infestation size. Most residential treatments range from $150–$400. We offer free inspections — call ${PHONE} or book online for an upfront quote.`,
+      a: `Pest control costs in ${town.name} vary by pest type and infestation size. Most residential treatments range from $150–$400. We offer free estimates — call ${PHONE} or book online for an upfront quote.`,
     },
     {
       q: `How quickly can you reach ${town.name} for pest control?`,
@@ -107,7 +108,9 @@ export default function TownPage({ params }: { params: { town: string } }) {
     name: SITE_NAME,
     telephone: PHONE,
     url: `${DOMAIN}/${town.slug}`,
+    image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&h=630&fit=crop&q=80',
     description: `Pest control services in ${town.name}, NJ`,
+    address: { '@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US' },
     areaServed: {
       '@type': 'City',
       name: `${town.name}, NJ`,
@@ -178,7 +181,7 @@ export default function TownPage({ params }: { params: { town: string } }) {
                     <h3 className="text-lg font-bold text-dark mb-2">{service.title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed mb-3">{service.shortDesc}</p>
                     <Link
-                      href={`/services/${service.slug}`}
+                      href={`/services/${service.slug}/${town.slug}`}
                       className="text-primary font-semibold text-sm flex items-center gap-1"
                     >
                       Learn More <ArrowRight size={12} />
@@ -255,7 +258,7 @@ export default function TownPage({ params }: { params: { town: string } }) {
       {/* CTA */}
       <section className="bg-primary py-14">
         <div className="container-main text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Get a Free Inspection in {town.name}</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">Get a Free Quote in {town.name}</h2>
           <p className="text-red-100 text-lg mb-8">Same-day service available. Call now or book online.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="bg-white text-primary px-8 py-4 rounded font-bold hover:bg-gray-100 transition-colors">

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getOpenGraph } from '@/lib/og';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { CheckCircle } from 'lucide-react';
@@ -119,6 +120,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title: `${service.title} in Middlesex County, NJ`,
     description: `Professional ${service.title.toLowerCase()} in Middlesex County, NJ. Licensed and insured. Call ${PHONE} for same-day service.`,
     alternates: { canonical: `${DOMAIN}/wildlife/${service.slug}` },
+    openGraph: getOpenGraph(`/wildlife/${service.slug}`),
   };
 }
 

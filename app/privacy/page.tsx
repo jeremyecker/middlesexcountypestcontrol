@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getOpenGraph } from '@/lib/og';
 import Link from 'next/link';
 import { PHONE, SITE_NAME, DOMAIN } from '@/lib/data';
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: `Privacy Policy | Middlesex County Pest Control`,
   description: `Privacy Policy for ${SITE_NAME}. Learn how we collect, use, and protect your information.`,
   alternates: { canonical: `${DOMAIN}/privacy` },
-  openGraph: { url: '/privacy' },
+  openGraph: getOpenGraph('/privacy'),
 };
 
 export default function PrivacyPage() {
@@ -30,7 +31,7 @@ export default function PrivacyPage() {
 
             <h2 className="text-2xl font-bold text-dark mb-4">Introduction</h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Middlesex County Pest Control ("we," "our," or "us") operates the website located at {DOMAIN} (the "Site"). This Privacy Policy describes how we collect, use, and share information about you when you use our Site, contact us, or use our services.
+              Middlesex County Pest Control (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the website located at {DOMAIN} (the &quot;Site&quot;). This Privacy Policy describes how we collect, use, and share information about you when you use our Site, contact us, or use our services.
             </p>
 
             <h2 className="text-2xl font-bold text-dark mb-4">Information We Collect</h2>
@@ -87,7 +88,7 @@ export default function PrivacyPage() {
 
             <h2 className="text-2xl font-bold text-dark mb-4">Changes to This Policy</h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              We may update this Privacy Policy from time to time. When we do, we will update the "Last Updated" date at the top of this page. Your continued use of the Site after any changes constitutes your acceptance of the updated policy.
+              We may update this Privacy Policy from time to time. When we do, we will update the &quot;Last Updated&quot; date at the top of this page. Your continued use of the Site after any changes constitutes your acceptance of the updated policy.
             </p>
 
             <h2 className="text-2xl font-bold text-dark mb-4">Contact Us</h2>

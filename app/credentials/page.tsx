@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
+import { getOpenGraph } from '@/lib/og';
 import Link from 'next/link';
 import { Shield, CheckCircle, Award, Phone } from 'lucide-react';
 import { PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'Licensed & Insured Pest Control | Middlesex County',
-  description: `${SITE_NAME} is fully licensed by the NJ DEP and carries full liability insurance. Learn about our credentials, certifications, and commitment to professional pest management.`,
+  description: `${SITE_NAME} — NJ DEP licensed and fully insured. Our credentials, certifications, and commitment to professional pest management`,
   alternates: { canonical: `${DOMAIN}/credentials` },
+  openGraph: getOpenGraph('/credentials'),
 };
 
 const credentialsSchema = {
