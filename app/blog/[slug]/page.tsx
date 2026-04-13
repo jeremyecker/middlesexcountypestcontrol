@@ -735,7 +735,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   };
 
   // Convert basic markdown to paragraphs
-  const paragraphs = content.body.split('\n\n').map((para, i) => {
+  const paragraphs = content.body.split('
+
+').map((para, i) => {
     if (para.startsWith('## ')) {
       return <h2 key={i} className="text-2xl font-bold text-dark mt-8 mb-4">{para.replace('## ', '')}</h2>;
     }
