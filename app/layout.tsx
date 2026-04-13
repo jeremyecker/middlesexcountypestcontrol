@@ -1,65 +1,10 @@
-import type { Metadata } from 'next';
-import Script from 'next/script';
-import './globals.css';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { SITE_NAME, DOMAIN, PHONE, GA4_ID } from '@/lib/data';
-
-const OG_IMAGE = 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&h=630&fit=crop&q=80';
-
-export const metadata: Metadata = {
-  metadataBase: new URL(DOMAIN),
-  title: {
-    default: 'Middlesex County Pest Control | Licensed Exterminators NJ',
-    template: '%s',
-  },
-  description: `Expert pest control services in Middlesex County, NJ. Bed bugs, rodents, termites, mosquitoes and more. Call ${PHONE} for same-day service.`,
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: '/',
-    siteName: SITE_NAME,
-    images: [
-      {
-        url: OG_IMAGE,
-        width: 1200,
-        height: 630,
-        alt: 'Middlesex County NJ residential neighborhood',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    images: [OG_IMAGE],
-  },
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <body>
-        {/* GA4 */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="ga4-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA4_ID}');
-          `}
-        </Script>
-
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
-  );
+{
+  "type": "file",
+  "name": "layout.tsx",
+  "path": "app/layout.tsx",
+  "size": 1804,
+  "sha": "f26537a30d67b5ba4e3f281f52107abb9c44e0ba",
+  "content": "import type { Metadata } from 'next';\nimport Script from 'next/script';\nimport './globals.css';\nimport Header from '@/components/Header';\nimport Footer from '@/components/Footer';\nimport { SITE_NAME, DOMAIN, PHONE, GA4_ID } from '@/lib/data';\nimport { OG_IMAGE } from '@/lib/og';\n\nexport const metadata: Metadata = {\n  metadataBase: new URL(DOMAIN),\n  title: {\n    default: 'Middlesex County Pest Control | Licensed Exterminators NJ',\n    template: '%s',\n  },\n  description: `Expert pest control services in Middlesex County, NJ. Bed bugs, rodents, termites, mosquitoes and more. Call ${PHONE} for same-day service.`,\n  openGraph: {\n    type: 'website',\n    locale: 'en_US',\n    siteName: SITE_NAME,\n    images: [\n      {\n        url: OG_IMAGE,\n        width: 1200,\n        height: 630,\n        alt: 'Middlesex County NJ residential neighborhood',\n      },\n    ],\n  },\n  twitter: {\n    card: 'summary_large_image',\n    images: [OG_IMAGE],\n  },\n};\n\nexport default function RootLayout({\n  children,\n}: {\n  children: React.ReactNode;\n}) {\n  return (\n    <html lang=\"en\">\n      <head>\n        {/* Ahrefs Web Analytics */}\n        <script src=\"https://analytics.ahrefs.com/analytics.js\" data-key=\"FvYZ6FQ4LxaynlOqRZyiJw\" async />\n      </head>\n      <body>\n        {/* GA4 */}\n        <Script\n          src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}\n          strategy=\"afterInteractive\"\n        />\n        <Script id=\"ga4-init\" strategy=\"afterInteractive\">\n          {`\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', '${GA4_ID}');\n          `}\n        </Script>\n\n        <Header />\n        <main>{children}</main>\n        <Footer />\n      </body>\n    </html>\n  );\n}\n",
+  "encoding": "base64",
+  "downloadUrl": "https://raw.githubusercontent.com/jeremyecker/middlesexcountypestcontrol/main/app/layout.tsx"
 }
