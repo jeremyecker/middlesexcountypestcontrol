@@ -2,6 +2,13 @@
 const nextConfig = {
   async redirects() {
     return [
+      // www → non-www canonical redirect
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.middlesexcountypestcontrol.com' }],
+        destination: 'https://middlesexcountypestcontrol.com/:path*',
+        permanent: true,
+      },
       // Old WordPress blog posts
       { source: '/how-to-get-rid-of-mice-in-your-house/', destination: '/blog/signs-you-have-rats-middlesex-county', permanent: true },
       { source: '/signs-of-bed-bugs/', destination: '/blog/how-to-get-rid-of-bed-bugs-new-brunswick-nj', permanent: true },

@@ -119,13 +119,40 @@ export async function generateStaticParams() {
   return services.map(service => ({ slug: service.slug }));
 }
 
+const seoTitles: Record<string, string> = {
+  'bed-bugs': 'Bed Bug Exterminator Middlesex County NJ | Same-Day Treatment',
+  'ants': 'Ant Exterminator Middlesex County NJ | Free Estimate',
+  'rodents': 'Rodent Control Middlesex County NJ | Mice & Rat Removal',
+  'termites': 'Termite Treatment Middlesex County NJ | Licensed Inspectors',
+  'ticks': 'Tick Control Middlesex County NJ | Yard Spray Programs',
+  'mosquitoes': 'Mosquito Control Middlesex County NJ | Seasonal Programs',
+  'cockroaches': 'Cockroach Exterminator Middlesex County NJ | Same-Day Service',
+  'wasps': 'Wasp & Hornet Removal Middlesex County NJ | Same-Day',
+  'fleas': 'Flea Exterminator Middlesex County NJ | Home & Yard Treatment',
+};
+
+const seoDescriptions: Record<string, string> = {
+  'bed-bugs': `Bed bug problem in Middlesex County? Our licensed exterminators use heat and chemical treatments to eliminate infestations completely. Same-day service. Call ${PHONE}.`,
+  'ants': `Carpenter ants, pavement ants, or odorous house ants in Middlesex County? We target the colony, not just the workers. Free estimate. Call ${PHONE}.`,
+  'rodents': `Mice or rats in your Middlesex County home? We inspect, trap, and seal all entry points to eliminate rodents for good. Same-day service. Call ${PHONE}.`,
+  'termites': `Protect your Middlesex County home from termite damage. Licensed inspections, liquid and bait system treatments, WDI reports for real estate. Call ${PHONE}.`,
+  'ticks': `Reduce tick populations in your Middlesex County yard by 80-90%. Seasonal programs protect your family from Lyme disease. Call ${PHONE}.`,
+  'mosquitoes': `Take back your Middlesex County backyard. Monthly mosquito barrier spray programs May-October. 80-90% reduction. Call ${PHONE}.`,
+  'cockroaches': `German or American cockroaches in your Middlesex County home? Professional gel bait and IGR eliminate the whole colony. Call ${PHONE}.`,
+  'wasps': `Wasp or hornet nest on your Middlesex County property? We remove yellow jackets and hornets safely. Same-day service available. Call ${PHONE}.`,
+  'fleas': `Flea infestation in your Middlesex County home? Professional treatment plus IGR breaks the flea life cycle completely. Call ${PHONE}.`,
+};
+
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const service = services.find(s => s.slug === params.slug);
   if (!service) return {};
 
+  const title = seoTitles[params.slug] ?? `${service.title} | Middlesex County, NJ`;
+  const description = seoDescriptions[params.slug] ?? `Professional ${service.title.toLowerCase()} in Middlesex County, NJ. Licensed & insured. Call ${PHONE} for same-day service.`;
+
   return {
-    title: `${service.title} | Middlesex County, NJ`,
-    description: `Professional ${service.title.toLowerCase()} in Middlesex County, NJ. Licensed & insured. Call ${PHONE} for same-day service.`,
+    title,
+    description,
     alternates: { canonical: `${DOMAIN}/services/${service.slug}` },
     openGraph: getOpenGraph(`/services/${service.slug}`),
   };

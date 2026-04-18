@@ -25,8 +25,8 @@ export async function generateMetadata({
   const town = towns.find(t => t.slug === params.town);
   if (!service || !town) return {};
   return {
-    title: `${service.title} in ${town.name}, NJ`,
-    description: `Professional ${service.title.toLowerCase()} in ${town.name}, NJ. Licensed & insured. Serving Middlesex County since 2018. Call ${PHONE}.`,
+    title: `${service.title} in ${town.name} NJ | Middlesex County Pest Control`,
+    description: `Professional ${service.title.toLowerCase()} in ${town.name}, NJ. Licensed & insured. Same-day service available throughout Middlesex County since 2018. Call ${PHONE}.`,
     alternates: { canonical: `${DOMAIN}/services/${params.slug}/${params.town}` },
     openGraph: getOpenGraph(`/services/${params.slug}/${params.town}`),
   };
@@ -116,6 +116,19 @@ const serviceDetails: Record<string, { bullets: string[]; bodyPara: string }> = 
   },
 };
 
+const townServiceSupplement: Record<string, Record<string, string>> = {
+  'metuchen': {
+    'termites': `Metuchen's historic Victorian-era homes — many built between the 1880s and 1920s — represent some of the highest-risk structures for eastern subterranean termite damage in Middlesex County. These century-old wood-frame buildings frequently have original untreated lumber, direct wood-to-soil contact at aging foundations, and moisture conditions from older plumbing that termites exploit. The National Association of Realtors consistently flags pre-war Metuchen housing as requiring termite inspection before any real estate transaction. Most NJ mortgage lenders require a WDI (Wood-Destroying Insect) report as a condition of sale — our NJ-licensed inspectors provide same-day reports for Metuchen buyers, sellers, and real estate professionals.`,
+  },
+  'helmetta': {
+    'bed-bugs': `Helmetta's residential housing stock, combined with proximity to Jamesburg and Monroe, creates bed bug transmission risk through neighbor-to-neighbor and shared-laundry-facility spread common in smaller boroughs. Professional treatment is the only effective solution — over-the-counter sprays push infestations deeper into walls and furniture without eliminating eggs.`,
+  },
+  'carteret': {
+    'rodents': `Carteret's industrial waterfront along the Raritan Bay and Arthur Kill creates significant Norway rat pressure. Proximity to port operations, warehousing, and the former industrial corridor means rat populations are both large and established. Professional exclusion work — sealing entry points in addition to trapping — is essential for lasting control in this environment.`,
+  },
+};
+
+
 export default function ServiceTownPage({
   params,
 }: {
@@ -186,6 +199,11 @@ export default function ServiceTownPage({
               <p className="text-gray-700 leading-relaxed mb-8">
                 {town.description} Our {service.title.toLowerCase()} programs are customized for the specific pest pressures and property types in {town.name} — from single-family homes and condominiums to commercial properties and multi-family buildings.
               </p>
+              {townServiceSupplement[params.town]?.[params.slug] && (
+                <p className="text-gray-700 leading-relaxed mb-8">
+                  {townServiceSupplement[params.town][params.slug]}
+                </p>
+              )}
 
               <h3 className="text-xl font-bold text-dark mb-4">What Our Service Includes</h3>
               <ul className="flex flex-col gap-3 mb-10">
