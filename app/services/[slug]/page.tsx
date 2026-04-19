@@ -132,8 +132,8 @@ const seoTitles: Record<string, string> = {
 };
 
 const seoDescriptions: Record<string, string> = {
-  'bed-bugs': `Bed bug problem in Middlesex County? Our licensed exterminators use heat and chemical treatments to eliminate infestations completely. Same-day service. Call ${PHONE}.`,
-  'ants': `Carpenter ants, pavement ants, or odorous house ants in Middlesex County? We target the colony, not just the workers. Free estimate. Call ${PHONE}.`,
+  'bed-bugs': `Bed bugs in Middlesex County? Heat & chemical treatments eliminate infestations completely. Licensed & insured. Same-day service. Call ${PHONE}.`,
+  'ants': `Carpenter ants, pavement ants & odorous house ants in Middlesex County? We eliminate the colony — not just workers. Free estimate. Call ${PHONE}.`,
   'rodents': `Mice or rats in your Middlesex County home? We inspect, trap, and seal all entry points to eliminate rodents for good. Same-day service. Call ${PHONE}.`,
   'termites': `Protect your Middlesex County home from termite damage. Licensed inspections, liquid and bait system treatments, WDI reports for real estate. Call ${PHONE}.`,
   'ticks': `Reduce tick populations in your Middlesex County yard by 80-90%. Seasonal programs protect your family from Lyme disease. Call ${PHONE}.`,
