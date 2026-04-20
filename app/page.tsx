@@ -152,8 +152,8 @@ export default function HomePage() {
           <div className="max-w-2xl">
             <p className="text-white font-semibold uppercase tracking-wider text-sm mb-3 drop-shadow">{TAGLINE}</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 drop-shadow-lg">
-              Middlesex County&apos;s Trusted<br />
-              <span className="text-red-400">Pest Control Experts</span>
+              Middlesex County Exterminator<br />
+              <span className="text-red-400">Pest Control Experts in NJ</span>
             </h1>
             <p className="text-gray-100 text-lg mb-8 leading-relaxed drop-shadow">
               Serving all 25 municipalities in Middlesex County, NJ since 2018. Licensed, insured, and ready today.
