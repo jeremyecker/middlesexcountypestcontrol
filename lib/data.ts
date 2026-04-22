@@ -179,6 +179,7 @@ export const blogPosts = [
   {
     slug: 'tick-season-middlesex-county-nj',
     title: 'Tick Season in Middlesex County: What Homeowners Need to Know',
+    metaTitle: 'Tick Season Middlesex County NJ | Homeowner Guide',
     excerpt: "Middlesex County's parks, wooded areas, and suburban green spaces harbor significant tick populations. Protecting your family starts with awareness.",
     date: '2025-12-22',
     category: 'Ticks',
@@ -219,6 +220,7 @@ export const blogPosts = [
   {
     slug: 'wildlife-removal-middlesex-county',
     title: 'Wildlife Removal in Middlesex County: Squirrels, Raccoons, and More',
+    metaTitle: 'Wildlife Removal Middlesex County NJ | Squirrels & Raccoons',
     excerpt: "Middlesex County's suburban-natural mix creates regular wildlife intrusion problems. Licensed removal is the only reliable solution.",
     date: '2026-03-05',
     category: 'Wildlife',
@@ -235,6 +237,7 @@ export const blogPosts = [
   {
     slug: 'bed-bug-prevention-guide-middlesex-county',
     title: 'Bed Bug Prevention Guide for Middlesex County Renters and Landlords',
+    metaTitle: 'Bed Bug Prevention Middlesex County NJ | Renter Guide',
     excerpt: 'Whether you rent in New Brunswick or own a multi-family property in Perth Amboy, bed bug prevention starts with understanding how they spread.',
     date: '2026-03-18',
     category: 'Bed Bugs',
@@ -251,6 +254,7 @@ export const blogPosts = [
   {
     slug: 'spring-pest-control-checklist-middlesex-county',
     title: 'Spring Pest Control Checklist for Middlesex County Homeowners',
+    metaTitle: 'Spring Pest Control Checklist | Middlesex County NJ',
     excerpt: 'As temperatures warm in Middlesex County, pest activity ramps up fast. Get ahead of ants, termites, mosquitoes and more with this checklist.',
     date: '2026-03-25',
     category: 'Prevention',
@@ -267,6 +271,7 @@ export const blogPosts = [
   {
     slug: 'spider-control-middlesex-county-nj',
     title: 'Spider Control in Middlesex County: Which Species to Watch For',
+    metaTitle: 'Spider Control Middlesex County NJ | Species to Watch',
     excerpt: "Most NJ spiders are harmless — but a few aren't, and large indoor populations signal a broader pest problem. Here's what homeowners should know.",
     date: '2026-03-27',
     category: 'General',
@@ -315,6 +320,7 @@ export const blogPosts = [
   {
     slug: 'integrated-pest-management-middlesex-county',
     title: 'What Is Integrated Pest Management (IPM)? A Guide for NJ Homeowners',
+    metaTitle: 'What Is Integrated Pest Management (IPM)? | NJ Guide',
     excerpt: "IPM is the professional standard for pest control in New Jersey — but most homeowners haven't heard of it. Here's what it means.",
     date: '2026-04-02',
     category: 'General',

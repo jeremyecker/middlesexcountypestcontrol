@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: { absolute: "Free Wasp & Hornet Removal Quote | Middlesex County, NJ" },
   description:
     "Licensed wasp & hornet exterminators in Middlesex County, NJ. Safe nest removal — same-day service available. Free quote.",
-  alternates: { canonical: `${DOMAIN}/get-a-quote/wasp-removal/` },
+  alternates: { canonical: `${DOMAIN}/get-a-quote/wasp-removal` },
   openGraph: {
     title: "Free Wasp & Hornet Removal Quote | Middlesex County, NJ",
     description: "Licensed wasp & hornet exterminators in Middlesex County, NJ. Safe nest removal — same-day service available. Free quote.",
-    url: `${DOMAIN}/get-a-quote/wasp-removal/`,
+    url: `${DOMAIN}/get-a-quote/wasp-removal`,
   },
 };
 
@@ -87,7 +87,7 @@ export default function WaspRemovalQuotePage() {
       {/* Back to hub */}
       <section className="section-gray">
         <div className="container-main text-center py-8">
-          <Link href="/get-a-quote/" className="text-primary font-semibold hover:underline text-sm">
+          <Link href="/get-a-quote" className="text-primary font-semibold hover:underline text-sm">
             &larr; Back to all pest control services
           </Link>
         </div>

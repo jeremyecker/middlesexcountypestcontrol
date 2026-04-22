@@ -45,13 +45,18 @@ const townIntros: Record<string, string> = {
   'woodbridge': 'Woodbridge Township is the second largest community in Middlesex County — a major suburban hub near Staten Island and the Arthur Kill waterway with massive residential diversity, major retail corridors including the Woodbridge Center mall, and significant industrial operations near the waterfront. The sheer scale and diversity of Woodbridge creates pest challenges at every level, and Middlesex County Pest Control is equipped to handle all of them.',
 };
 
+// Towns with dedicated static routes are excluded to avoid route-collision duplication.
+const STATIC_TOWN_SLUGS = new Set(['edison', 'woodbridge', 'new-brunswick']);
+
 export async function generateStaticParams() {
-  return towns.map(town => ({ town: town.slug }));
+  return towns
+    .filter(town => !STATIC_TOWN_SLUGS.has(town.slug))
+    .map(town => ({ town: town.slug }));
 }
 
 export async function generateMetadata({ params }: { params: { town: string } }): Promise<Metadata> {
   const town = towns.find(t => t.slug === params.town);
-  if (!town) return {};
+  if (!town || STATIC_TOWN_SLUGS.has(params.town)) return {};
 
   return {
     title: `Pest Control in ${town.name}, NJ | Middlesex County`,
@@ -62,6 +67,7 @@ export async function generateMetadata({ params }: { params: { town: string } })
 }
 
 export default function TownPage({ params }: { params: { town: string } }) {
+  if (STATIC_TOWN_SLUGS.has(params.town)) notFound();
   const town = towns.find(t => t.slug === params.town);
   if (!town) notFound();
 

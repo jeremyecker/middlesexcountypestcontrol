@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: { absolute: "Free Termite Treatment Quote | Middlesex County, NJ" },
   description:
     "Licensed termite exterminators in Middlesex County, NJ. Liquid barrier & bait station options. Free inspection — same-day service available.",
-  alternates: { canonical: `${DOMAIN}/get-a-quote/termite-treatment/` },
+  alternates: { canonical: `${DOMAIN}/get-a-quote/termite-treatment` },
   openGraph: {
     title: "Free Termite Treatment Quote | Middlesex County, NJ",
     description: "Licensed termite exterminators in Middlesex County, NJ. Liquid barrier & bait station options. Free inspection — same-day service available.",
-    url: `${DOMAIN}/get-a-quote/termite-treatment/`,
+    url: `${DOMAIN}/get-a-quote/termite-treatment`,
   },
 };
 
@@ -87,7 +87,7 @@ export default function TermiteTreatmentQuotePage() {
       {/* Back to hub */}
       <section className="section-gray">
         <div className="container-main text-center py-8">
-          <Link href="/get-a-quote/" className="text-primary font-semibold hover:underline text-sm">
+          <Link href="/get-a-quote" className="text-primary font-semibold hover:underline text-sm">
             &larr; Back to all pest control services
           </Link>
         </div>

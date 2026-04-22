@@ -323,8 +323,8 @@ export async function generateMetadata(
   return {
     title: { absolute: title },
     description,
-    alternates: { canonical: `${DOMAIN}/get-a-quote/${params.service}/${params.town}/` },
-    openGraph: { title, description, url: `${DOMAIN}/get-a-quote/${params.service}/${params.town}/` },
+    alternates: { canonical: `${DOMAIN}/get-a-quote/${params.service}/${params.town}` },
+    openGraph: { title, description, url: `${DOMAIN}/get-a-quote/${params.service}/${params.town}` },
   };
 }
 
@@ -380,11 +380,11 @@ export default function ServiceTownQuotePage(
 
       <section className="section-gray">
         <div className="container-main text-center py-8 space-x-4">
-          <Link href={`/get-a-quote/${params.service}/`} className="text-primary font-semibold hover:underline text-sm">
+          <Link href={`/get-a-quote/${params.service}`} className="text-primary font-semibold hover:underline text-sm">
             &larr; Back to {svc.label} Quotes
           </Link>
           <span className="text-gray-300">|</span>
-          <Link href="/get-a-quote/" className="text-primary font-semibold hover:underline text-sm">All Services</Link>
+          <Link href="/get-a-quote" className="text-primary font-semibold hover:underline text-sm">All Services</Link>
         </div>
       </section>
 

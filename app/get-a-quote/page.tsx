@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title: { absolute: 'Get a Free Pest Control Quote | Middlesex County, NJ' },
   description:
     'Request a free pest control estimate for your Middlesex County home or business. Licensed exterminator \u2014 same-day service available in Edison, Woodbridge, New Brunswick & more.',
-  alternates: { canonical: `${DOMAIN}/get-a-quote/` },
+  alternates: { canonical: `${DOMAIN}/get-a-quote` },
   openGraph: {
     title: 'Get a Free Pest Control Quote | Middlesex County, NJ',
     description:
       'Request a free pest control estimate for your Middlesex County home or business. Same-day service available.',
-    url: `${DOMAIN}/get-a-quote/`,
+    url: `${DOMAIN}/get-a-quote`,
   },
 };
 
@@ -88,9 +88,9 @@ export default function GetAQuotePage() {
                 or fill out the form and we&apos;ll call you.
               </p>
               <ul className="space-y-2 text-gray-200">
-                <li>\u2705 Free estimate, no obligation</li>
-                <li>\u2705 Response within minutes during business hours</li>
-                <li>\u2705 Serving Edison, Woodbridge, New Brunswick &amp; all of Middlesex County</li>
+                <li>&#10004; Free estimate, no obligation</li>
+                <li>&#10004; Response within minutes during business hours</li>
+                <li>&#10004; Serving Edison, Woodbridge, New Brunswick &amp; all of Middlesex County</li>
               </ul>
             </div>
             <div className="bg-white rounded-xl shadow-xl p-8">
@@ -183,7 +183,7 @@ export default function GetAQuotePage() {
             href={`tel:${PHONE_RAW}`}
             className="inline-flex items-center gap-3 bg-white text-primary px-10 py-4 rounded-full font-bold text-xl hover:bg-gray-100 transition-colors"
           >
-            \uD83D\uDCDE {PHONE}
+            &#128222; {PHONE}
           </a>
         </div>
       </section>

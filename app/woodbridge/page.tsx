@@ -147,7 +147,7 @@ export default function WoodbridgePage() {
               {PHONE}
             </a>
             <Link
-              href="/get-a-quote/"
+              href="/get-a-quote"
               className="flex items-center justify-center gap-2 border-2 border-white text-white font-bold px-6 py-3 rounded-lg text-lg hover:bg-white/10 transition"
             >
               Get a Free Quote
@@ -184,7 +184,7 @@ export default function WoodbridgePage() {
             {WOODBRIDGE_SERVICES.map((s) => (
               <Link
                 key={s.slug}
-                href={`/get-a-quote/${s.slug}/woodbridge/`}
+                href={`/services/${s.slug}/woodbridge`}
                 className="group bg-white border border-gray-200 rounded-xl p-6 hover:border-green-500 hover:shadow-md transition"
               >
                 <div className="text-3xl mb-3">{s.emoji}</div>
@@ -294,7 +294,7 @@ export default function WoodbridgePage() {
               {PHONE}
             </a>
             <Link
-              href="/get-a-quote/"
+              href="/get-a-quote"
               className="flex items-center justify-center gap-2 border-2 border-white text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-white/10 transition"
             >
               Get a Free Quote
