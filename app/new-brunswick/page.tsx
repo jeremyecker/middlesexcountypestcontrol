@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { MapPin, Phone, CheckCircle, ArrowRight, Shield, Clock, Star } from 'lucide-react';
+import { getOpenGraph } from '@/lib/og';
 import { PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'Pest Control New Brunswick NJ | Same-Day Service',
   description: 'Expert pest control in New Brunswick, NJ — Rutgers area, downtown & Highland Park. Bed bugs, cockroaches & rodents. Licensed & insured. Call for same-day service.',
   alternates: { canonical: `${DOMAIN}/new-brunswick` },
+  openGraph: getOpenGraph('/new-brunswick'),
 };
 
 const services = [

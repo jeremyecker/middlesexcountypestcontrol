@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: { absolute: "Free Cockroach Treatment Quote | Middlesex County, NJ" },
   description:
     "Licensed cockroach exterminators in Middlesex County, NJ. Same-day service for German roaches, American cockroaches & more. Free quote.",
-  alternates: { canonical: `${DOMAIN}/get-a-quote/cockroach-treatment/` },
+  alternates: { canonical: `${DOMAIN}/get-a-quote/cockroach-treatment` },
   openGraph: {
     title: "Free Cockroach Treatment Quote | Middlesex County, NJ",
     description: "Licensed cockroach exterminators in Middlesex County, NJ. Same-day service for German roaches, American cockroaches & more. Free quote.",
-    url: `${DOMAIN}/get-a-quote/cockroach-treatment/`,
+    url: `${DOMAIN}/get-a-quote/cockroach-treatment`,
   },
 };
 
@@ -87,7 +87,7 @@ export default function CockroachTreatmentQuotePage() {
       {/* Back to hub */}
       <section className="section-gray">
         <div className="container-main text-center py-8">
-          <Link href="/get-a-quote/" className="text-primary font-semibold hover:underline text-sm">
+          <Link href="/get-a-quote" className="text-primary font-semibold hover:underline text-sm">
             &larr; Back to all pest control services
           </Link>
         </div>

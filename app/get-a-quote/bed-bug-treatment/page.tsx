@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: { absolute: "Free Bed Bug Treatment Quote | Middlesex County, NJ" },
   description:
     "Licensed bed bug exterminators in Middlesex County. Heat treatment & chemical options. Free inspection quote — same-day service available.",
-  alternates: { canonical: `${DOMAIN}/get-a-quote/bed-bug-treatment/` },
+  alternates: { canonical: `${DOMAIN}/get-a-quote/bed-bug-treatment` },
   openGraph: {
     title: "Free Bed Bug Treatment Quote | Middlesex County, NJ",
     description: "Licensed bed bug exterminators in Middlesex County. Heat treatment & chemical options. Free inspection quote — same-day service available.",
-    url: `${DOMAIN}/get-a-quote/bed-bug-treatment/`,
+    url: `${DOMAIN}/get-a-quote/bed-bug-treatment`,
   },
 };
 
@@ -87,7 +87,7 @@ export default function BedBugTreatmentQuotePage() {
       {/* Back to hub */}
       <section className="section-gray">
         <div className="container-main text-center py-8">
-          <Link href="/get-a-quote/" className="text-primary font-semibold hover:underline text-sm">
+          <Link href="/get-a-quote" className="text-primary font-semibold hover:underline text-sm">
             &larr; Back to all pest control services
           </Link>
         </div>

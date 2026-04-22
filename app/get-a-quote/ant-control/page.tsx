@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: { absolute: "Free Ant Control Quote | Middlesex County, NJ" },
   description:
     "Licensed ant exterminators serving Middlesex County. Free same-day quote for carpenter ants, pavement ants, odorous house ants & more.",
-  alternates: { canonical: `${DOMAIN}/get-a-quote/ant-control/` },
+  alternates: { canonical: `${DOMAIN}/get-a-quote/ant-control` },
   openGraph: {
     title: "Free Ant Control Quote | Middlesex County, NJ",
     description: "Licensed ant exterminators serving Middlesex County. Free same-day quote for carpenter ants, pavement ants, odorous house ants & more.",
-    url: `${DOMAIN}/get-a-quote/ant-control/`,
+    url: `${DOMAIN}/get-a-quote/ant-control`,
   },
 };
 
@@ -87,7 +87,7 @@ export default function AntControlQuotePage() {
       {/* Back to hub */}
       <section className="section-gray">
         <div className="container-main text-center py-8">
-          <Link href="/get-a-quote/" className="text-primary font-semibold hover:underline text-sm">
+          <Link href="/get-a-quote" className="text-primary font-semibold hover:underline text-sm">
             &larr; Back to all pest control services
           </Link>
         </div>

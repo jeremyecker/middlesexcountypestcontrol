@@ -14,10 +14,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${DOMAIN}/blog`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 },
     { url: `${DOMAIN}/about`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 },
     { url: `${DOMAIN}/contact`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${DOMAIN}/get-a-quote`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${DOMAIN}/reviews`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.6 },
     { url: `${DOMAIN}/credentials`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.6 },
     { url: `${DOMAIN}/privacy`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.3 },
   ];
+
+  const quoteStaticServices = [
+    'ant-control', 'bed-bug-treatment', 'cockroach-treatment',
+    'mosquito-treatment', 'rodent-control', 'termite-treatment', 'wasp-removal',
+  ];
+  const quoteStaticPages = quoteStaticServices.map(slug => ({
+    url: `${DOMAIN}/get-a-quote/${slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  const quoteServiceSlugs = [
+    'bed-bug-treatment', 'ant-exterminator', 'rodent-control',
+    'cockroach-exterminator', 'mosquito-treatment',
+    'wasp-hornet-removal', 'termite-treatment',
+  ];
+  const quoteTownPages = quoteServiceSlugs.flatMap(svc =>
+    towns.map(town => ({
+      url: `${DOMAIN}/get-a-quote/${svc}/${town.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    }))
+  );
 
   const townPages = towns.map(town => ({
     url: `${DOMAIN}/${town.slug}`,
@@ -56,5 +82,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...townPages, ...servicePages, ...serviceTownPages, ...wildlifePages, ...blogPages];
+  return [
+    ...staticPages,
+    ...quoteStaticPages,
+    ...townPages,
+    ...servicePages,
+    ...serviceTownPages,
+    ...wildlifePages,
+    ...blogPages,
+    ...quoteTownPages,
+  ];
 }
