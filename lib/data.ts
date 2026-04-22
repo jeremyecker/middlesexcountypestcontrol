@@ -36,6 +36,14 @@ export const towns = [
   { name: 'South River', slug: 'south-river', county: 'Middlesex County', state: 'NJ', population: 16000, description: 'Borough with a waterfront character situated along the South River.' },
   { name: 'Spotswood', slug: 'spotswood', county: 'Middlesex County', state: 'NJ', population: 8500, description: 'Small suburban borough near Old Bridge in central Middlesex County.' },
   { name: 'Woodbridge', slug: 'woodbridge', county: 'Middlesex County', state: 'NJ', population: 100000, description: 'Second largest township in Middlesex County, near Staten Island and the Arthur Kill.' },
+  { name: 'Iselin', slug: 'iselin', county: 'Middlesex County', state: 'NJ', population: 20000, description: 'Thriving community within Woodbridge Township with dense residential neighborhoods and commercial corridors along Route 1.' },
+  { name: 'Colonia', slug: 'colonia', county: 'Middlesex County', state: 'NJ', population: 18000, description: 'Established residential community within Woodbridge Township known for its family-friendly neighborhoods and suburban character.' },
+  { name: 'Avenel', slug: 'avenel', county: 'Middlesex County', state: 'NJ', population: 17000, description: 'Vibrant community within Woodbridge Township with a mix of residential and commercial properties near the Garden State Parkway.' },
+  { name: 'Fords', slug: 'fords', county: 'Middlesex County', state: 'NJ', population: 15000, description: 'Residential community within Woodbridge Township along major transit and highway corridors in Middlesex County.' },
+  { name: 'Port Reading', slug: 'port-reading', county: 'Middlesex County', state: 'NJ', population: 4000, description: 'Waterfront community within Woodbridge Township situated along the Arthur Kill with industrial and residential character.' },
+  { name: 'Sewaren', slug: 'sewaren', county: 'Middlesex County', state: 'NJ', population: 2500, description: 'Small waterfront community within Woodbridge Township on Raritan Bay with unique coastal pest pressures.' },
+  { name: 'Dayton', slug: 'dayton', county: 'Middlesex County', state: 'NJ', population: 7000, description: 'Growing CDP within South Brunswick Township in central Middlesex County with newer residential developments.' },
+  { name: 'Kendall Park', slug: 'kendall-park', county: 'Middlesex County', state: 'NJ', population: 8000, description: 'Major residential CDP within South Brunswick Township along the Route 27 corridor between New Brunswick and Princeton.' },
 ];
 
 export const services = [
