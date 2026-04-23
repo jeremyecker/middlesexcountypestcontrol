@@ -69,9 +69,9 @@ export default function QuoteForm() {
             page_url: typeof window !== 'undefined' ? window.location.href : '',
             site_domain: 'middlesexcountypestcontrol.com',
           },
-        ,
           honeypot: (document.querySelector('input[name="honeypot"]') as HTMLInputElement)?.value || '',
-          form_started_at: formStartedAt}),
+          form_started_at: formStartedAt,
+        }),
       });
     } catch (err) {
       console.error('Webhook error:', err);
