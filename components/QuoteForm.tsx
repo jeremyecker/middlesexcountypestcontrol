@@ -29,6 +29,7 @@ export default function QuoteForm() {
     service: '',
     smsConsent: false,
   });
+  const [formStartedAt] = useState(Date.now());
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -68,7 +69,9 @@ export default function QuoteForm() {
             page_url: typeof window !== 'undefined' ? window.location.href : '',
             site_domain: 'middlesexcountypestcontrol.com',
           },
-        }),
+        ,
+          honeypot: (document.querySelector('input[name="honeypot"]') as HTMLInputElement)?.value || '',
+          form_started_at: formStartedAt}),
       });
     } catch (err) {
       console.error('Webhook error:', err);
@@ -147,6 +150,15 @@ export default function QuoteForm() {
         </label>
       </div>
 
+      {/* Honeypot - hidden from real users */}
+      <input
+        type="text"
+        name="honeypot"
+        style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, width: 0, zIndex: -1 }}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+      />
       <button type="submit" className="bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-ctahover transition-colors">
         Get My Free Quote
       </button>
