@@ -20,6 +20,9 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  '@id': `${DOMAIN}/#localbusiness`,
+  logo: { '@type': 'ImageObject', url: `${DOMAIN}/logo.png` },
+  priceRange: '$$',
   name: SITE_NAME,
   telephone: '(732) 856-5142',
   url: DOMAIN,
