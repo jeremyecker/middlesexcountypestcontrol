@@ -13,7 +13,7 @@ import QuoteForm from '@/components/QuoteForm';
 export const metadata: Metadata = {
   title: 'Middlesex County Pest Control | Exterminators in NJ',
   description: `Middlesex County's trusted pest control since 2018. Same-day service for bed bugs, rodents, termites, mosquitoes & more. Call ${PHONE}.`,
-  alternates: { canonical: DOMAIN },
+  alternates: { canonical: `${DOMAIN}/` },
   openGraph: getOpenGraph('/'),
 };
 
