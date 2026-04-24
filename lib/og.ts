@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { SITE_NAME } from './data';
 
-export const OG_IMAGE = 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&h=630&fit=crop&q=80';
+export const OG_IMAGE = '/og-default.jpg';
 
 export function getOpenGraph(url: string): Metadata['openGraph'] {
   return {

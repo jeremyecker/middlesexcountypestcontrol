@@ -25,8 +25,8 @@ export async function generateMetadata({
   const town = towns.find(t => t.slug === params.town);
   if (!service || !town) return {};
   return {
-    title: `${service.title} in ${town.name} NJ | Middlesex County Pest Control`,
-    description: `Professional ${service.title.toLowerCase()} in ${town.name}, NJ. Licensed & insured. Same-day service available throughout Middlesex County since 2018. Call ${PHONE}.`,
+    title: `${service.title} in ${town.name}, NJ`,
+    description: `Professional ${service.title.toLowerCase()} in ${town.name}, NJ. Licensed & insured, same-day service. Call ${PHONE}.`,
     alternates: { canonical: `${DOMAIN}/services/${params.slug}/${params.town}` },
     openGraph: getOpenGraph(`/services/${params.slug}/${params.town}`),
   };

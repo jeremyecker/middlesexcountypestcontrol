@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import QuoteForm from '@/components/QuoteForm';
 import Link from 'next/link';
 import { PHONE, PHONE_RAW, DOMAIN } from '@/lib/data';
+import { OG_IMAGE } from '@/lib/og';
 
 interface FAQ { q: string; a: string; }
 interface ServiceConfig {
@@ -318,13 +319,13 @@ export async function generateMetadata(
   const svc = SERVICES_MAP[params.service];
   if (!svc) return {};
   const townName = getTownName(params.town);
-  const title = svc.h1(townName);
+  const title = `Free ${svc.label} Quote in ${townName}, NJ`;
   const description = `Licensed ${svc.label.toLowerCase()} serving ${townName}, Middlesex County. ${svc.pricing} \u2014 free estimate, same-day service available.`;
   return {
     title: { absolute: title },
     description,
     alternates: { canonical: `${DOMAIN}/get-a-quote/${params.service}/${params.town}` },
-    openGraph: { title, description, url: `${DOMAIN}/get-a-quote/${params.service}/${params.town}` },
+    openGraph: { title, description, url: `${DOMAIN}/get-a-quote/${params.service}/${params.town}`, images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Middlesex County pest control' }] },
   };
 }
 
