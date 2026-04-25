@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import QuoteForm from '@/components/QuoteForm';
 import Link from 'next/link';
-import { PHONE, DOMAIN } from '@/lib/data';
+import { PHONE, DOMAIN, towns } from '@/lib/data';
 import { OG_IMAGE } from '@/lib/og';
 
 const SERVICES_INFO: Record<string, { label: string; description: string }> = {
@@ -79,7 +79,31 @@ export default function ServiceQuotePage({ params }: { params: { service: string
           <QuoteForm />
         </div>
       </section>
-      <section className="py-10 bg-white">
+
+      {/* Town links — fixes orphan pages by providing internal links to all service×town quote pages */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-dark text-center mb-3">
+            {svc.label} Available Throughout Middlesex County
+          </h2>
+          <p className="text-gray-600 text-center mb-8">
+            Select your town for a free, same-day {svc.label.toLowerCase()} quote.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            {towns.map(town => (
+              <Link
+                key={town.slug}
+                href={`/get-a-quote/${params.service}/${town.slug}`}
+                className="bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm font-medium text-dark hover:bg-primary hover:text-white hover:border-primary transition-colors text-center"
+              >
+                {town.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-10 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
           <p className="text-gray-600">
             <Link href="/get-a-quote" className="text-blue-600 hover:underline">← Back to Get a Quote</Link>
