@@ -3,12 +3,18 @@ import { SITE_NAME } from './data';
 
 export const OG_IMAGE = '/og-default.jpg';
 
-export function getOpenGraph(url: string): Metadata['openGraph'] {
+export function getOpenGraph(
+  url: string,
+  title?: string,
+  description?: string
+): Metadata['openGraph'] {
   return {
     type: 'website',
     locale: 'en_US',
     url,
     siteName: SITE_NAME,
+    ...(title && { title }),
+    ...(description && { description }),
     images: [
       {
         url: OG_IMAGE,

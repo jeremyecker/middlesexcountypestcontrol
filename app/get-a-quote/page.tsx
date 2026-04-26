@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getOpenGraph } from '@/lib/og';
 import QuoteForm from '@/components/QuoteForm';
 import Link from 'next/link';
 import { PHONE, PHONE_RAW, DOMAIN } from '@/lib/data';
@@ -6,14 +7,13 @@ import { PHONE, PHONE_RAW, DOMAIN } from '@/lib/data';
 export const metadata: Metadata = {
   title: { absolute: 'Get a Free Pest Control Quote | Middlesex County, NJ' },
   description:
-    'Request a free pest control estimate for your Middlesex County home or business. Licensed exterminator \u2014 same-day service available in Edison, Woodbridge, New Brunswick & more.',
+    'Free pest control estimate for Middlesex County homes & businesses. Licensed exterminator \u2014 same-day service in Edison, Woodbridge, New Brunswick & more.',
   alternates: { canonical: `${DOMAIN}/get-a-quote` },
-  openGraph: {
-    title: 'Get a Free Pest Control Quote | Middlesex County, NJ',
-    description:
-      'Request a free pest control estimate for your Middlesex County home or business. Same-day service available.',
-    url: `${DOMAIN}/get-a-quote`,
-  },
+  openGraph: getOpenGraph(
+    '/get-a-quote',
+    'Get a Free Pest Control Quote | Middlesex County, NJ',
+    'Free pest control estimate for Middlesex County homes & businesses. Licensed exterminator \u2014 same-day service in Edison, Woodbridge, New Brunswick & more.',
+  ),
 };
 
 const WHY_US = [

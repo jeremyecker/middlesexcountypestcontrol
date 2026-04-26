@@ -62,7 +62,11 @@ export async function generateMetadata({ params }: { params: { town: string } })
     title: `Pest Control in ${town.name}, NJ | Middlesex County`,
     description: `Expert pest control in ${town.name}, NJ. Bed bugs, rodents, termites, mosquitoes & more. Licensed & insured. Call ${PHONE} for same-day service`,
     alternates: { canonical: `${DOMAIN}/${town.slug}` },
-    openGraph: getOpenGraph(`/${town.slug}`),
+    openGraph: getOpenGraph(
+      `/${town.slug}`,
+      `Pest Control in ${town.name}, NJ | Middlesex County`,
+      `Expert pest control in ${town.name}, NJ. Bed bugs, rodents, termites, mosquitoes & more. Licensed & insured. Call ${PHONE} for same-day service`,
+    ),
   };
 }
 

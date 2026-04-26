@@ -24,11 +24,15 @@ export async function generateMetadata({
   const service = services.find(s => s.slug === params.slug);
   const town = towns.find(t => t.slug === params.town);
   if (!service || !town) return {};
+  const title = `${service.title} in ${town.name}, NJ`;
+  const description = params.slug === 'ticks'
+    ? `Professional tick control in ${town.name}, NJ. Yard spray programs reduce tick populations 80–90%. Protect your family from Lyme disease. Call ${PHONE}.`
+    : `Professional ${service.title.toLowerCase()} in ${town.name}, NJ. Licensed & insured, same-day service. Call ${PHONE}.`;
   return {
-    title: `${service.title} in ${town.name}, NJ`,
-    description: `Professional ${service.title.toLowerCase()} in ${town.name}, NJ. Licensed & insured, same-day service. Call ${PHONE}.`,
+    title,
+    description,
     alternates: { canonical: `${DOMAIN}/services/${params.slug}/${params.town}` },
-    openGraph: getOpenGraph(`/services/${params.slug}/${params.town}`),
+    openGraph: getOpenGraph(`/services/${params.slug}/${params.town}`, title, description),
   };
 }
 
