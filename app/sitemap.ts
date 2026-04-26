@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const quoteStaticServices = [
     'ant-control', 'bed-bug-treatment', 'cockroach-treatment',
     'mosquito-treatment', 'rodent-control', 'termite-treatment', 'wasp-removal',
+    'ant-exterminator', 'cockroach-exterminator', 'wasp-hornet-removal',
   ];
   const quoteStaticPages = quoteStaticServices.map(slug => ({
     url: `${DOMAIN}/get-a-quote/${slug}`,

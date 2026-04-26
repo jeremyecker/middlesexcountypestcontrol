@@ -6,9 +6,13 @@ import { PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'Pest Control New Brunswick NJ | Same-Day Service',
-  description: 'Expert pest control in New Brunswick, NJ — Rutgers area, downtown & Highland Park. Bed bugs, cockroaches & rodents. Licensed & insured. Call for same-day service.',
+  description: 'Expert pest control in New Brunswick, NJ. Bed bugs, cockroaches & rodents near Rutgers and downtown. Licensed & insured. Same-day service available.',
   alternates: { canonical: `${DOMAIN}/new-brunswick` },
-  openGraph: getOpenGraph('/new-brunswick'),
+  openGraph: getOpenGraph(
+    '/new-brunswick',
+    'Pest Control New Brunswick NJ | Same-Day Service',
+    'Expert pest control in New Brunswick, NJ. Bed bugs, cockroaches & rodents near Rutgers and downtown. Licensed & insured. Same-day service available.',
+  ),
 };
 
 const services = [

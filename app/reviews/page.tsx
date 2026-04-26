@@ -8,7 +8,11 @@ export const metadata: Metadata = {
   title: `Customer Reviews | Middlesex County Pest Control`,
   description: `Reviews from Middlesex County homeowners and businesses. Trusted pest control serving Edison, Woodbridge, New Brunswick, Piscataway, and more since 2018.`,
   alternates: { canonical: `${DOMAIN}/reviews` },
-  openGraph: getOpenGraph('/reviews'),
+  openGraph: getOpenGraph(
+    '/reviews',
+    `Customer Reviews | Middlesex County Pest Control`,
+    `Reviews from Middlesex County homeowners and businesses. Trusted pest control serving Edison, Woodbridge, New Brunswick, Piscataway, and more since 2018.`,
+  ),
 };
 
 const reviews = [
@@ -28,6 +32,8 @@ export default function ReviewsPage() {
     '@type': 'LocalBusiness',
     name: SITE_NAME,
     url: `${DOMAIN}/reviews`,
+    telephone: PHONE,
+    address: { '@type': 'PostalAddress', addressLocality: 'New Brunswick', addressRegion: 'NJ', addressCountry: 'US' },
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5',

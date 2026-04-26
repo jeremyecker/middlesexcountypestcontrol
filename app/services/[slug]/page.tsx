@@ -135,7 +135,7 @@ const seoDescriptions: Record<string, string> = {
   'bed-bugs': `Bed bugs in Middlesex County? Heat & chemical treatments eliminate infestations completely. Licensed & insured. Same-day service. Call ${PHONE}.`,
   'ants': `Carpenter ants, pavement ants & odorous house ants in Middlesex County? We eliminate the colony — not just workers. Free estimate. Call ${PHONE}.`,
   'rodents': `Mice or rats in your Middlesex County home? We inspect, trap, and seal all entry points to eliminate rodents for good. Same-day service. Call ${PHONE}.`,
-  'termites': `Protect your Middlesex County home from termite damage. Licensed inspections, liquid and bait system treatments, WDI reports for real estate. Call ${PHONE}.`,
+  'termites': `Protect your Middlesex County home from termites. Licensed inspections, liquid & bait treatments, and WDI reports for real estate. Call ${PHONE}.`,
   'ticks': `Reduce tick populations in your Middlesex County yard by 80-90%. Seasonal programs protect your family from Lyme disease. Call ${PHONE}.`,
   'mosquitoes': `Take back your Middlesex County backyard. Monthly mosquito barrier spray programs May-October. 80-90% reduction. Call ${PHONE}.`,
   'cockroaches': `German or American cockroaches in your Middlesex County home? Professional gel bait and IGR eliminate the whole colony. Call ${PHONE}.`,
@@ -154,7 +154,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title,
     description,
     alternates: { canonical: `${DOMAIN}/services/${service.slug}` },
-    openGraph: getOpenGraph(`/services/${service.slug}`),
+    openGraph: getOpenGraph(`/services/${service.slug}`, title, description),
   };
 }
 

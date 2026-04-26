@@ -8,7 +8,11 @@ export const metadata: Metadata = {
   title: 'Licensed & Insured Pest Control | Middlesex County',
   description: `${SITE_NAME} — NJ DEP licensed and fully insured. Our credentials, certifications, and commitment to professional pest management`,
   alternates: { canonical: `${DOMAIN}/credentials` },
-  openGraph: getOpenGraph('/credentials'),
+  openGraph: getOpenGraph(
+    '/credentials',
+    'Licensed & Insured Pest Control | Middlesex County',
+    `${SITE_NAME} — NJ DEP licensed and fully insured. Our credentials, certifications, and commitment to professional pest management`,
+  ),
 };
 
 const credentialsSchema = {
@@ -16,6 +20,8 @@ const credentialsSchema = {
   '@type': 'LocalBusiness',
   name: SITE_NAME,
   url: DOMAIN,
+  telephone: PHONE,
+  address: { '@type': 'PostalAddress', addressLocality: 'New Brunswick', addressRegion: 'NJ', addressCountry: 'US' },
   hasCredential: [
     {
       '@type': 'EducationalOccupationalCredential',
