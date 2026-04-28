@@ -42,7 +42,8 @@ export default function RootLayout({
       <head>
         {/* Ahrefs Web Analytics */}
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="FvYZ6FQ4LxaynlOqRZyiJw" async />
-      </head>
+          <meta property="og:image" content="/images/og-default.jpg" />
+  </head>
       <body>
         {/* GA4 */}
         <Script
