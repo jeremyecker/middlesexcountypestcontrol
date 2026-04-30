@@ -186,6 +186,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
     name: service.title,
     url: `${DOMAIN}/services/${service.slug}`,
     description: details.heroDesc,
+    serviceType: service.title,
     provider: {
       '@type': 'LocalBusiness',
       name: SITE_NAME,
