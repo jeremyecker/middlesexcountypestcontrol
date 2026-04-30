@@ -8,6 +8,9 @@ import { OG_IMAGE } from '@/lib/og';
 
 export const metadata: Metadata = {
   metadataBase: new URL(DOMAIN),
+  alternates: {
+    canonical: 'https://middlesexcountypestcontrol.com/',
+  },
   title: {
     default: 'Middlesex County Pest Control | Licensed Exterminators NJ',
     template: '%s',
