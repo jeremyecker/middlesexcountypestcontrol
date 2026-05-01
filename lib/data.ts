@@ -334,6 +334,14 @@ export const blogPosts = [
     category: 'General',
     readTime: '7 min',
   },
+  {
+    slug: 'complete-pest-control-guide-middlesex-county',
+    title: 'The Complete Pest Control Guide for Middlesex County Homeowners',
+    excerpt: 'Protect your Middlesex County home from pests year-round with our comprehensive seasonal guide. Learn which pests threaten your property in every season and how to prevent infestations before they start.',
+    date: '2026-05-05',
+    category: 'Prevention',
+    readTime: '7 min',
+  },
 ];
 
 export const testimonials = [
