@@ -24,6 +24,16 @@ const WHY_US = [
   { icon: '\uD83D\uDCDE', title: 'Real People Answer', body: 'Call or submit this form and a real person follows up \u2014 usually within minutes during business hours.' },
 ];
 
+const QUOTE_SERVICES = [
+  { name: 'Bed Bug Treatment', slug: 'bed-bug-treatment', icon: '🛏️', price: '$1,200–$4,500' },
+  { name: 'Ant Control', slug: 'ant-exterminator', icon: '🐜', price: '$300–$450' },
+  { name: 'Rodent Control', slug: 'rodent-control', icon: '🐀', price: '$300–$450' },
+  { name: 'Cockroach Exterminator', slug: 'cockroach-exterminator', icon: '🪳', price: '$300–$450' },
+  { name: 'Mosquito Treatment', slug: 'mosquito-treatment', icon: '🦟', price: '$125–$150/visit' },
+  { name: 'Termite Treatment', slug: 'termite-treatment', icon: '🪵', price: '$800–$2,500' },
+  { name: 'Wasp & Hornet Removal', slug: 'wasp-hornet-removal', icon: '🐝', price: '$300–$450' },
+];
+
 const COMMON_PESTS = [
   { name: 'Ants', link: '/services/ants', icon: '\uD83D\uDC1C' },
   { name: 'Bed Bugs', link: '/services/bed-bugs', icon: '\uD83D\uDECF\uFE0F' },
@@ -117,8 +127,32 @@ export default function GetAQuotePage() {
         </div>
       </section>
 
-      {/* Pest Types */}
+      {/* Service Quote Cards */}
       <section className="section-light">
+        <div className="container-main">
+          <h2 className="text-3xl font-bold text-dark text-center mb-4">Get a Quote by Service</h2>
+          <p className="text-center text-gray-600 mb-10">
+            Select your pest problem for pricing, FAQs, and a free same-day estimate.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {QUOTE_SERVICES.map((svc) => (
+              <Link
+                key={svc.slug}
+                href={`/get-a-quote/${svc.slug}`}
+                className="flex flex-col items-center gap-2 bg-white border border-gray-200 rounded-xl p-5 text-center hover:border-primary hover:shadow-md transition-all"
+              >
+                <span className="text-4xl">{svc.icon}</span>
+                <span className="font-bold text-dark text-sm">{svc.name}</span>
+                <span className="text-primary text-xs font-semibold">{svc.price}</span>
+                <span className="text-xs text-gray-500">Free Estimate →</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pest Types */}
+      <section className="section-gray">
         <div className="container-main">
           <h2 className="text-3xl font-bold text-dark text-center mb-4">Pests We Treat in Middlesex County</h2>
           <p className="text-center text-gray-600 mb-10">
@@ -140,7 +174,7 @@ export default function GetAQuotePage() {
       </section>
 
       {/* Service Areas */}
-      <section className="section-gray">
+      <section className="section-light">
         <div className="container-main">
           <h2 className="text-3xl font-bold text-dark text-center mb-4">Service Areas</h2>
           <p className="text-center text-gray-600 mb-8">
@@ -158,7 +192,7 @@ export default function GetAQuotePage() {
       </section>
 
       {/* FAQ */}
-      <section className="section-light">
+      <section className="section-gray">
         <div className="container-main max-w-3xl">
           <h2 className="text-3xl font-bold text-dark text-center mb-10">Frequently Asked Questions</h2>
           <div className="space-y-6">

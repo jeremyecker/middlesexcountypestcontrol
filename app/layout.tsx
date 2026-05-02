@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
+    url: DOMAIN,
     siteName: SITE_NAME,
     images: [
       {
@@ -45,8 +46,7 @@ export default function RootLayout({
       <head>
         {/* Ahrefs Web Analytics */}
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="FvYZ6FQ4LxaynlOqRZyiJw" async />
-          <meta property="og:image" content="/images/og-default.jpg" />
-  </head>
+      </head>
       <body>
         {/* GA4 */}
         <Script

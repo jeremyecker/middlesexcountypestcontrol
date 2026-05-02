@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { OG_IMAGE } from '@/lib/og';
 import QuoteForm from '@/components/QuoteForm';
 import Link from 'next/link';
 import { PHONE, PHONE_RAW, DOMAIN } from '@/lib/data';
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     title: "Free Cockroach Treatment Quote | Middlesex County, NJ",
     description: "Licensed cockroach exterminators in Middlesex County, NJ. Same-day service for German roaches, American cockroaches & more. Free quote.",
     url: `${DOMAIN}/get-a-quote/cockroach-treatment`,
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Middlesex County pest control' }],
   },
 };
 
