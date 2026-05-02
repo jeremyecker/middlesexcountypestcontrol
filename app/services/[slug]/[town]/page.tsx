@@ -6,6 +6,17 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
 import { PHONE, PHONE_RAW, SITE_NAME, DOMAIN, services, towns } from '@/lib/data';
 import PhoneLink from '@/components/PhoneLink';
 
+// Maps service slug → get-a-quote slug for internal linking
+const SERVICE_TO_QUOTE_SLUG: Record<string, string> = {
+  'bed-bugs': 'bed-bug-treatment',
+  'rodents': 'rodent-control',
+  'cockroaches': 'cockroach-exterminator',
+  'ants': 'ant-exterminator',
+  'termites': 'termite-treatment',
+  'mosquitoes': 'mosquito-treatment',
+  'wasps': 'wasp-hornet-removal',
+};
+
 export async function generateStaticParams() {
   const params: { slug: string; town: string }[] = [];
   for (const service of services) {
@@ -26,8 +37,8 @@ export async function generateMetadata({
   if (!service || !town) return {};
   const title = `${service.title} in ${town.name}, NJ`;
   const description = params.slug === 'ticks'
-    ? `Professional tick control in ${town.name}, NJ. Yard spray programs reduce tick populations 80–90%. Protect your family from Lyme disease. Call ${PHONE}.`
-    : `Professional ${service.title.toLowerCase()} in ${town.name}, NJ. Licensed & insured, same-day service. Call ${PHONE}.`;
+    ? `Professional tick control in ${town.name}, NJ. Yard programs reduce tick populations 80–90%. Protect your family from Lyme disease. Call ${PHONE}.`
+    : `Professional ${service.title.toLowerCase()} in ${town.name}, Middlesex County NJ. Licensed & insured — same-day service available. Call ${PHONE}.`;
   return {
     title,
     description,
@@ -233,10 +244,10 @@ export default function ServiceTownPage({
                 <p className="text-blue-200 text-sm mb-1">{town.name}, NJ</p>
                 <p className="text-gray-300 text-sm mb-5">Same-day service available throughout Middlesex County.</p>
                 <Link
-                  href="/contact"
+                  href={SERVICE_TO_QUOTE_SLUG[params.slug] ? `/get-a-quote/${SERVICE_TO_QUOTE_SLUG[params.slug]}/${params.town}` : '/contact'}
                   className="block bg-primary text-white text-center px-6 py-3 rounded font-bold hover:bg-ctahover transition-colors mb-3"
                 >
-                  Book Now
+                  Get a Free Quote
                 </Link>
                 <a
                   href={`tel:${PHONE_RAW}`}
@@ -273,8 +284,11 @@ export default function ServiceTownPage({
             Contact Middlesex County Pest Control for fast, professional service throughout {town.name} and all of Middlesex County.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-primary text-white px-8 py-4 rounded font-bold hover:bg-ctahover transition-colors">
-              Book Now
+            <Link
+              href={SERVICE_TO_QUOTE_SLUG[params.slug] ? `/get-a-quote/${SERVICE_TO_QUOTE_SLUG[params.slug]}/${params.town}` : '/contact'}
+              className="bg-primary text-white px-8 py-4 rounded font-bold hover:bg-ctahover transition-colors"
+            >
+              Get a Free Quote
             </Link>
             <a href={`tel:${PHONE_RAW}`} className="border-2 border-white text-white px-8 py-4 rounded font-bold hover:bg-navyhover transition-colors">
               {PHONE}

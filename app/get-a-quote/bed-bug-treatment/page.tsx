@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { OG_IMAGE } from '@/lib/og';
 import QuoteForm from '@/components/QuoteForm';
 import Link from 'next/link';
 import { PHONE, PHONE_RAW, DOMAIN } from '@/lib/data';
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     title: "Free Bed Bug Treatment Quote | Middlesex County, NJ",
     description: "Licensed bed bug exterminators in Middlesex County. Heat treatment & chemical options. Free inspection quote — same-day service available.",
     url: `${DOMAIN}/get-a-quote/bed-bug-treatment`,
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Middlesex County pest control' }],
   },
 };
 

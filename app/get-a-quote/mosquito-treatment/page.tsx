@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { OG_IMAGE } from '@/lib/og';
 import QuoteForm from '@/components/QuoteForm';
 import Link from 'next/link';
 import { PHONE, PHONE_RAW, DOMAIN } from '@/lib/data';
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     title: "Free Mosquito Treatment Quote | Middlesex County, NJ",
     description: "Licensed mosquito control in Middlesex County, NJ. Seasonal yard treatments from $125–$150/visit. Free quote — same-day service available.",
     url: `${DOMAIN}/get-a-quote/mosquito-treatment`,
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Middlesex County pest control' }],
   },
 };
 

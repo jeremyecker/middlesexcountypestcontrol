@@ -5,6 +5,17 @@ import Link from 'next/link';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { services, towns, PHONE, PHONE_RAW, SITE_NAME, DOMAIN } from '@/lib/data';
 
+// Maps service slug → get-a-quote slug for internal linking
+const SERVICE_TO_QUOTE_SLUG: Record<string, string> = {
+  'bed-bugs': 'bed-bug-treatment',
+  'rodents': 'rodent-control',
+  'cockroaches': 'cockroach-exterminator',
+  'ants': 'ant-exterminator',
+  'termites': 'termite-treatment',
+  'mosquitoes': 'mosquito-treatment',
+  'wasps': 'wasp-hornet-removal',
+};
+
 const serviceDetails: Record<string, {
   heroDesc: string;
   intro: string;
@@ -43,7 +54,7 @@ const serviceDetails: Record<string, {
     process: ['Full inspection including appliance undersides, cabinet interiors, and plumbing areas', 'Species identification (German, American, or Oriental)', 'Professional gel bait application and insect growth regulator (IGR)', 'Crack and crevice treatment', 'Follow-up service to confirm elimination'],
     faqs: [
       { q: 'Why do I keep getting cockroaches even after treating?', a: 'Re-infestation is common in multi-family buildings without treating the source. Professional programs address harborage points and include IGR to break the breeding cycle.' },
-      { q: 'Are German cockroaches different from American cockroaches?', a: 'Yes. German cockroaches are small (about 1/2") and primarily infest kitchens. American cockroaches are larger (up to 2") and prefer basements and sewers.' },
+      { q: 'Are German cockroaches different from American cockroaches?', a: 'Yes. German cockroaches are small (about 1/2\") and primarily infest kitchens. American cockroaches are larger (up to 2\") and prefer basements and sewers.' },
       { q: 'How quickly does cockroach treatment work?', a: 'Gel bait typically shows results within 1–2 weeks. A follow-up service is usually recommended 2–4 weeks later.' },
     ],
   },
@@ -268,8 +279,11 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               <div className="bg-navy rounded-xl p-6 text-white sticky top-24">
                 <h3 className="text-xl font-bold mb-4">Get a Free Estimate</h3>
                 <p className="text-blue-100 text-sm mb-6">Same-day service available throughout Middlesex County, NJ.</p>
-                <Link href="/contact" className="block bg-primary text-white text-center px-6 py-3 rounded font-bold hover:bg-ctahover transition-colors mb-3">
-                  Book Now
+                <Link
+                  href={SERVICE_TO_QUOTE_SLUG[service.slug] ? `/get-a-quote/${SERVICE_TO_QUOTE_SLUG[service.slug]}` : '/contact'}
+                  className="block bg-primary text-white text-center px-6 py-3 rounded font-bold hover:bg-ctahover transition-colors mb-3"
+                >
+                  Get a Free Quote
                 </Link>
                 <a href={`tel:${PHONE_RAW}`} className="block border-2 border-white text-white text-center px-6 py-3 rounded font-bold hover:bg-navyhover transition-colors">
                   {PHONE}
