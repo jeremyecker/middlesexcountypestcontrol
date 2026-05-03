@@ -393,4 +393,12 @@ export const testimonials = [
     rating: 5,
     text: 'Squirrels had gotten into our attic and were chewing wires. They came out fast, removed them humanely, and sealed all the entry points. No issues since.',
   },
+  {
+    slug: 'emergency-tick-removal-services-middlesex-county-nj',
+    title: 'Emergency Tick Removal Services in Middlesex County NJ',
+    excerpt: "Emergency tick removal services in Middlesex County, NJ provide rapid response to infestations affecting Edison, Piscataway, Old Bridge, and New Brunswick residents. Professional same-day yard treatment combined with year-round prevention programs effectively protects families from disease-carrying ticks.",
+    date: '2026-05-03',
+    category: 'Ticks',
+    readTime: '7 min',
+  },
 ];
