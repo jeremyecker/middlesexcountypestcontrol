@@ -9,11 +9,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${DOMAIN}/blog/middlesex-county-spring-pest-control-guide`,
   },
-  openGraph: getOpenGraph({
-    title: 'Middlesex County Spring Pest Control Guide | Expert Tips & Prevention',
-    description: 'Complete spring pest control guide for Middlesex County NJ homeowners. Learn how to prevent ants, termites, mosquitoes, ticks, and stinging insects this season.',
-    url: `${DOMAIN}/blog/middlesex-county-spring-pest-control-guide`,
-  }),
+  openGraph: getOpenGraph('/blog/middlesex-county-spring-pest-control-guide'),
 };
 
 const faqs = [
@@ -191,7 +187,6 @@ export default function SpringPestControlGuidePage() {
                   Watch our expert technicians demonstrate the most common areas where pests enter Middlesex County homes &mdash; and learn how to seal them effectively.
                 </p>
                 <div className="aspect-video bg-gray-300 rounded-lg flex items-center justify-center">
-                  {/* YouTube Embed Placeholder */}
                   <div className="text-center">
                     <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                       <svg className="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
@@ -319,24 +314,24 @@ export default function SpringPestControlGuidePage() {
                 <div className="bg-white rounded-xl p-6 shadow-sm border mt-8">
                   <h4 className="font-bold text-lg mb-4">Service Areas</h4>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• New Brunswick</li>
-                    <li>• Edison</li>
-                    <li>• Piscataway</li>
-                    <li>• Woodbridge</li>
-                    <li>• Old Bridge</li>
-                    <li>• Sayreville</li>
-                    <li>• East Brunswick</li>
-                    <li>• South Brunswick</li>
-                    <li>• Perth Amboy</li>
-                    <li>• South Amboy</li>
-                    <li>• Metuchen</li>
-                    <li>• Plainsboro</li>
+                    <li>&bull; New Brunswick</li>
+                    <li>&bull; Edison</li>
+                    <li>&bull; Piscataway</li>
+                    <li>&bull; Woodbridge</li>
+                    <li>&bull; Old Bridge</li>
+                    <li>&bull; Sayreville</li>
+                    <li>&bull; East Brunswick</li>
+                    <li>&bull; South Brunswick</li>
+                    <li>&bull; Perth Amboy</li>
+                    <li>&bull; South Amboy</li>
+                    <li>&bull; Metuchen</li>
+                    <li>&bull; Plainsboro</li>
                   </ul>
                   <Link
                     href="/service-areas"
                     className="block text-center mt-4 text-primary font-semibold hover:underline"
                   >
-                    View All Service Areas →
+                    View All Service Areas &rarr;
                   </Link>
                 </div>
 
