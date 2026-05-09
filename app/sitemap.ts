@@ -6,18 +6,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages = [
     { url: DOMAIN, lastModified: now, changeFrequency: 'weekly' as const, priority: 1.0 },
-    { url: `${DOMAIN}/services`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${DOMAIN}/commercial`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${DOMAIN}/residential`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${DOMAIN}/wildlife`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${DOMAIN}/locations`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${DOMAIN}/blog`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${DOMAIN}/about`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 },
-    { url: `${DOMAIN}/contact`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.9 },
-    { url: `${DOMAIN}/get-a-quote`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${DOMAIN}/reviews`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.6 },
-    { url: `${DOMAIN}/credentials`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.6 },
-    { url: `${DOMAIN}/privacy`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.3 },
+    { url: `${DOMAIN}/services/`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${DOMAIN}/commercial/`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${DOMAIN}/residential/`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${DOMAIN}/wildlife/`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${DOMAIN}/locations/`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${DOMAIN}/blog/`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${DOMAIN}/about/`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 },
+    { url: `${DOMAIN}/contact/`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${DOMAIN}/get-a-quote/`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${DOMAIN}/reviews/`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.6 },
+    { url: `${DOMAIN}/credentials/`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.6 },
+    { url: `${DOMAIN}/privacy/`, lastModified: now, changeFrequency: 'yearly' as const, priority: 0.3 },
   ];
 
   const quoteStaticServices = [
@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'ant-exterminator', 'cockroach-exterminator', 'wasp-hornet-removal',
   ];
   const quoteStaticPages = quoteStaticServices.map(slug => ({
-    url: `${DOMAIN}/get-a-quote/${slug}`,
+    url: `${DOMAIN}/get-a-quote/${slug}/`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
@@ -39,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   const quoteTownPages = quoteServiceSlugs.flatMap(svc =>
     towns.map(town => ({
-      url: `${DOMAIN}/get-a-quote/${svc}/${town.slug}`,
+      url: `${DOMAIN}/get-a-quote/${svc}/${town.slug}/`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.6,
@@ -47,14 +47,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   const townPages = towns.map(town => ({
-    url: `${DOMAIN}/${town.slug}`,
+    url: `${DOMAIN}/${town.slug}/`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }));
 
   const servicePages = services.map(service => ({
-    url: `${DOMAIN}/services/${service.slug}`,
+    url: `${DOMAIN}/services/${service.slug}/`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.8,
@@ -62,7 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const serviceTownPages = services.flatMap(service =>
     towns.map(town => ({
-      url: `${DOMAIN}/services/${service.slug}/${town.slug}`,
+      url: `${DOMAIN}/services/${service.slug}/${town.slug}/`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.6,
@@ -70,14 +70,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   const wildlifePages = wildlifeServices.map(service => ({
-    url: `${DOMAIN}/wildlife/${service.slug}`,
+    url: `${DOMAIN}/wildlife/${service.slug}/`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }));
 
   const blogPages = blogPosts.map(post => ({
-    url: `${DOMAIN}/blog/${post.slug}`,
+    url: `${DOMAIN}/blog/${post.slug}/`,
     lastModified: new Date(post.date),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
