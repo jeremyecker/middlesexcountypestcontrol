@@ -350,6 +350,15 @@ export const blogPosts = [
     category: 'Prevention',
     readTime: '7 min',
   },
+
+  {
+    slug: 'same-day-carpenter-ant-extermination-new-brunswick-nj',
+    title: "Same-Day Carpenter Ant Extermination in New Brunswick NJ",
+    excerpt: "Carpenter ants tunnel through wood to nest, making them a structural threat — not just a nuisance. In New Brunswick, older homes near the Raritan River are especially vulnerable every spring. Here's what to do when you find them.",
+    date: '2026-05-10',
+    category: 'Ants',
+    readTime: '7 min',
+  },
 ];
 
 export const testimonials = [
