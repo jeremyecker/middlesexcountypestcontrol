@@ -540,4 +540,58 @@ Don't let tick season catch you unprepared. Whether you've discovered a single t
       { q: "What trees attract spotted lanternflies on residential properties?", a: "The preferred host is Tree of Heaven (Ailanthus altissima), which grows widely in disturbed areas throughout Edison and Middlesex County. Spotted lanternflies also feed on grapevines, maples, apple trees, black walnut, and ornamental cherries and plums." }
     ],
   },
+  'same-day-carpenter-ant-extermination-new-brunswick-nj': {
+    body: `<h2>Why Carpenter Ants Appear in May</h2>
+<p>Every spring across Middlesex County, warmer temperatures trigger carpenter ant activity. Unlike many ant species, carpenter ants don't eat wood — they tunnel through it to build galleries for nesting. That makes them a structural threat, not just an annoyance you can sweep away and ignore.</p>
+<p>New Brunswick sees significant carpenter ant pressure in May for a few specific reasons. The city has a high concentration of older wood-frame homes, particularly in residential blocks near the Raritan River and in the neighborhoods surrounding the Rutgers University campus. Moisture from the river, combined with aging wooden construction, creates conditions that carpenter ants actively seek out.</p>
+<p>Typical entry points include:</p>
+<ul>
+  <li>Gaps around utility lines and plumbing penetrations</li>
+  <li>Damaged or soft wood around window and door frames</li>
+  <li>Firewood stored against the foundation</li>
+  <li>Dead stumps or tree limbs in contact with the structure</li>
+  <li>Roof overhangs where tree branches make contact</li>
+</ul>
+<p>Winged reproductive carpenter ants — called swarmers — typically emerge in May and June. Seeing swarmers indoors is a reliable indicator that a mature colony is already established inside the structure, not just foraging from outside.</p>
+
+<h2>How Same-Day Carpenter Ant Treatment Works</h2>
+<p>When carpenter ants are actively trailing and you need fast results, a licensed exterminator can perform a same-day inspection and targeted treatment. The process generally involves four steps.</p>
+<h3>Inspection</h3>
+<p>The technician traces trailing patterns, checks likely nesting zones, and confirms whether there's an interior colony. Common nesting locations include wall voids near moisture sources, attic insulation, and subfloor areas with any water damage or wood rot.</p>
+<h3>Direct Treatment</h3>
+<p>Residual insecticide is applied around the perimeter and along trailing routes. If an interior colony is confirmed, treatment of wall voids is typically necessary. This may involve drilling in targeted areas to reach the nest directly.</p>
+<h3>Baiting</h3>
+<p>In some situations, slow-acting bait stations are placed along established trails. Bait takes longer to work than sprays, but it reaches the colony and queen — which direct treatments sometimes miss if the nest is deep inside a wall or structural cavity.</p>
+<h3>Exclusion Recommendations</h3>
+<p>A thorough inspection will also identify the conditions that made the home attractive in the first place — moisture damage, rotting wood, plumbing leaks, or inadequate sealing around entry points. Fixing these reduces the chance of reinfestation.</p>
+<p>Same-day service is available for New Brunswick addresses and throughout Middlesex County. Call <strong>(732) 856-5142</strong> to check availability and schedule an inspection.</p>
+
+<h2>Carpenter Ants vs. Termites: Getting It Right</h2>
+<p>Spring is when this misidentification happens most often, and it matters because the two pests require completely different treatment approaches. Applying the wrong product wastes time and can scatter a colony, making elimination harder.</p>
+<p><strong>Carpenter ants</strong> have a clearly segmented body with a pinched waist, elbowed antennae, and larger workers that can reach ½ inch long. They are typically black or black-and-red. You may find coarse sawdust-like frass — wood shavings mixed with insect debris — near their entry points.</p>
+<p><strong>Termites</strong> are soft-bodied with no distinct waist, have straight beaded antennae, and their workers are smaller and often translucent or pale. Subterranean termites leave mud tubes along foundation walls; carpenter ants do not.</p>
+<p>If you're seeing winged insects indoors and can't confirm which pest you're dealing with, a same-day inspection will give you a definitive answer. For additional guidance on termite identification and what to do during swarm season, see our <a href="https://middlesexcountypestcontrol.com/blog/termite-prevention-middlesex-county">termite prevention guide for Middlesex County</a>.</p>
+
+<h2>Pest Conditions Specific to New Brunswick</h2>
+<p>New Brunswick's pest landscape differs from the more suburban parts of Middlesex County in several ways worth understanding before you treat.</p>
+<p>The city has a dense mix of student rentals, attached Victorian-era homes, and multi-unit apartment buildings. Carpenter ant colonies in attached or multi-unit structures can extend through shared wall voids across multiple units — a tenant treats their unit, and the colony simply contracts into an adjacent space and re-expands later.</p>
+<p>Properties near Rutgers University frequently have deferred maintenance issues that create ongoing moisture problems: leaking pipes behind walls, poor ventilation in older bathrooms, and deteriorating wood around basement windows. These conditions sustain carpenter ant colonies year over year if the root causes aren't addressed alongside treatment.</p>
+<p>New Brunswick's tree canopy is also a factor. Mature oaks and maples lining residential streets are characteristic of the city, but when branches overhang rooflines, they give carpenter ants a direct bridge from the tree to the attic or upper-floor wall voids. Trimming branches back at least six feet from the roofline is one of the more effective preventive steps a homeowner can take.</p>
+<p>May is the right time to act. Colonies treated in early May are generally smaller and easier to eliminate than those addressed in late June after a full season of expansion.</p>
+
+<h2>Why DIY Products Fall Short</h2>
+<p>Hardware store sprays kill foraging workers on contact, but they don't reach the colony. Carpenter ant queens can remain active for years, and as long as the queen and core colony are intact, the population recovers. Spraying the kitchen trail is the pest control equivalent of treating a symptom without addressing what's causing it.</p>
+<p>Professional treatment targets the nesting site directly — including interior wall voids — as well as satellite colonies that large, established infestations often develop. The goal is elimination of the reproductive core, not just the visible workers.</p>
+<p>For homeowners looking to reduce conditions that attract carpenter ants and other spring pests, our <a href="https://middlesexcountypestcontrol.com/blog/spring-pest-control-checklist-middlesex-county">spring pest control checklist for Middlesex County</a> covers practical steps you can take around the property.</p>
+
+<h2>Schedule Same-Day Service in New Brunswick</h2>
+<p>Carpenter ant colonies don't stabilize on their own. The longer a colony is established in wall voids or structural wood, the more extensive the damage — and the treatment required to reverse it.</p>
+<p>Same-day extermination appointments are available throughout New Brunswick and across Middlesex County. Call <strong>(732) 856-5142</strong> to confirm availability and get an inspection scheduled.</p>`,
+    faqs: [
+      { q: "How quickly can you respond to a carpenter ant emergency in New Brunswick?", a: "We offer same-day service for carpenter ant infestations in New Brunswick and throughout Middlesex County. Call (732) 856-5142 before noon for same-day appointments in most cases." },
+      { q: "What makes carpenter ants different from termites?", a: "Carpenter ants tunnel through wood to build nesting galleries but don't consume it as food \u2014 termites do. Both cause structural damage, but carpenter ants typically prefer wood that is already moist or slightly damaged, and their activity leaves behind piles of sawdust-like frass." },
+      { q: "Are older homes near the Raritan River at higher risk for carpenter ants?", a: "Yes. Older homes in New Brunswick and along the Raritan River corridor often have wood framing with some moisture history, which carpenter ants strongly prefer for nesting. Properties with past plumbing issues or wood-soil contact are especially vulnerable." },
+      { q: "What does professional carpenter ant treatment involve?", a: "Treatment involves locating and eliminating the parent colony \u2014 often in a nearby dead tree or stump \u2014 and any satellite colonies established inside the structure. Professionals apply targeted residual treatments to affected areas plus an exterior perimeter barrier to prevent re-entry." },
+    ],
+  },
 };
