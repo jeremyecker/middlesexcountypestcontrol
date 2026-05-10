@@ -44,14 +44,6 @@ export const towns = [
   { name: 'Sewaren', slug: 'sewaren', county: 'Middlesex County', state: 'NJ', population: 2500, description: 'Small waterfront community within Woodbridge Township on Raritan Bay with unique coastal pest pressures.' },
   { name: 'Dayton', slug: 'dayton', county: 'Middlesex County', state: 'NJ', population: 7000, description: 'Growing CDP within South Brunswick Township in central Middlesex County with newer residential developments.' },
   { name: 'Kendall Park', slug: 'kendall-park', county: 'Middlesex County', state: 'NJ', population: 8000, description: 'Major residential CDP within South Brunswick Township along the Route 27 corridor between New Brunswick and Princeton.' },
-  {
-    slug: 'spotted-lanternfly-edison-nj-treatment-guide-2026',
-    title: "Spotted Lanternfly in Edison NJ: Treatment Guide 2026",
-    excerpt: "Spotted lanternfly populations are established across Middlesex County. This guide covers 2026 activity in Edison NJ: life stages, host plants, damage signs, quarantine rules, and when professional treatment is the right move.",
-    date: '2026-05-03',
-    category: 'Ticks',
-    readTime: '6 min',
-  },
 ];
 
 export const services = [
@@ -409,13 +401,5 @@ export const testimonials = [
     location: 'Sayreville, NJ',
     rating: 5,
     text: 'Squirrels had gotten into our attic and were chewing wires. They came out fast, removed them humanely, and sealed all the entry points. No issues since.',
-  },
-  {
-    slug: 'emergency-tick-removal-services-middlesex-county-nj',
-    title: 'Emergency Tick Removal Services in Middlesex County NJ',
-    excerpt: "Emergency tick removal services in Middlesex County, NJ provide rapid response to infestations affecting Edison, Piscataway, Old Bridge, and New Brunswick residents. Professional same-day yard treatment combined with year-round prevention programs effectively protects families from disease-carrying ticks.",
-    date: '2026-05-03',
-    category: 'Ticks',
-    readTime: '7 min',
   },
 ];
