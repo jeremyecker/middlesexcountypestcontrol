@@ -4,9 +4,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import {
   Phone, Shield, Clock,
-  Star, CheckCircle, ArrowRight, MapPin
+  CheckCircle, ArrowRight, MapPin
 } from 'lucide-react';
-import { PHONE, PHONE_RAW, SITE_NAME, DOMAIN, TAGLINE, services, towns, testimonials, blogPosts } from '@/lib/data';
+import { PHONE, PHONE_RAW, SITE_NAME, DOMAIN, TAGLINE, services, towns, blogPosts } from '@/lib/data';
 import PhoneLink from '@/components/PhoneLink';
 import QuoteForm from '@/components/QuoteForm';
 
@@ -31,13 +31,6 @@ const localBusinessSchema = {
   description: 'Licensed and insured pest control services serving all of Middlesex County, NJ since 2018.',
   openingHours: 'Mo-Sa 08:00-18:00',
   address: { '@type': 'PostalAddress', addressLocality: 'New Brunswick', addressRegion: 'NJ', addressCountry: 'US' },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '8',
-    bestRating: '5',
-    worstRating: '1',
-  },
   areaServed: [
     { '@type': 'City', name: 'Carteret, NJ' },
     { '@type': 'City', name: 'Cranbury, NJ' },
@@ -319,38 +312,6 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="section-light">
-        <div className="container-main">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">What Middlesex County Residents Say</h2>
-            <div className="flex justify-center gap-1 mb-2">
-              {[1,2,3,4,5].map(i => <Star key={i} size={24} className="text-yellow-400 fill-yellow-400" />)}
-            </div>
-            <p className="text-gray-500">5.0 Rating from Middlesex County homeowners</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.slice(0, 3).map(t => (
-              <div key={t.name} className="bg-white border border-gray-200 rounded-lg p-6">
-                <div className="flex gap-1 mb-3">
-                  {[1,2,3,4,5].map(i => <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />)}
-                </div>
-                <p className="text-gray-700 leading-relaxed mb-4 text-sm">&ldquo;{t.text}&rdquo;</p>
-                <div>
-                  <p className="font-bold text-dark text-sm">{t.name}</p>
-                  <p className="text-gray-500 text-xs">{t.location}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <Link href="/reviews" className="text-primary font-semibold hover:underline">
-              Read More Reviews &rarr;
-            </Link>
           </div>
         </div>
       </section>

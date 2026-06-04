@@ -22,7 +22,6 @@ const quickLinks = [
   { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About Us' },
   { href: '/contact', label: 'Contact' },
-  { href: '/reviews', label: 'Reviews' },
   { href: '/privacy', label: 'Privacy Policy' },
   { href: '/credentials', label: 'Credentials' },
   { href: '/residential', label: 'Residential' },

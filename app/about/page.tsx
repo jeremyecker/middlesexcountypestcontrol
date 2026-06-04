@@ -121,7 +121,6 @@ export default function AboutPage() {
                   { number: '2018', label: 'Year Founded' },
                   { number: '25', label: 'Towns Served' },
                   { number: '9+', label: 'Services Offered' },
-                  { number: '5\u2605', label: 'Average Rating' },
                 ].map(stat => (
                   <div key={stat.label} className="text-center">
                     <div className="text-3xl font-bold text-red-400 mb-1">{stat.number}</div>
