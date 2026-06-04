@@ -90,6 +90,7 @@ const nextConfig = {
       { source: '/cockroach-control/', destination: '/services/cockroaches', permanent: true },
       { source: '/cockroach-control', destination: '/services/cockroaches', permanent: true },
       { source: '/page/:path*', destination: '/blog', permanent: true },
+      { source: '/reviews', destination: '/', permanent: true },
     ];
   },
 };
