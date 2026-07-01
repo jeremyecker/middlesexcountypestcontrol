@@ -54,6 +54,9 @@ export default function ContactPageClient() {
           website: 'middlesexcountypestcontrol.com',
           status: 'new',
           sms_consent: formData.smsConsent,
+          consentTimestamp: new Date().toISOString(),
+          consentPageUrl: window.location.href,
+          consentTextVersion: 'middlesexcountypestcontrol.com-contact-v1',
           lead_metadata: {
             pest_type: formData.service || 'general',
             message: formData.message,
@@ -160,7 +163,7 @@ export default function ContactPageClient() {
                       className="mt-0.5 h-4 w-4 accent-primary flex-shrink-0 cursor-pointer"
                     />
                     <label htmlFor="smsConsent" className="text-xs text-gray-600 leading-relaxed cursor-pointer">
-                      <span className="font-semibold text-dark">I agree to receive text messages.</span> By checking this box, I consent to receive recurring automated SMS/text messages from Middlesex County Pest Control at the phone number provided above. Message &amp; data rates may apply. Message frequency varies. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for assistance. View our{' '}
+                      By checking this box, I consent to receive marketing text messages and calls (including via automated technology) from Middlesex County Pest Control at the number provided. Consent is not a condition of purchase. Message frequency varies. Msg &amp; data rates may apply. Reply <strong>STOP</strong> to opt out. See our{' '}
                       <Link href="/privacy" className="text-primary underline hover:no-underline">Privacy Policy</Link>.
                     </label>
                   </div>
