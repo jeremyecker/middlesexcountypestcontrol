@@ -22,6 +22,7 @@ const services = [
 
 export default function QuoteForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -52,7 +53,7 @@ export default function QuoteForm() {
       });
     }
     try {
-      await fetch(WEBHOOK_URL, {
+      const res = await fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -76,10 +77,12 @@ export default function QuoteForm() {
           form_started_at: formStartedAt,
         }),
       });
+      if (!res.ok) throw new Error(`Webhook returned ${res.status}`);
+      setSubmitted(true);
     } catch (err) {
       console.error('Webhook error:', err);
+      setError(true);
     }
-    setSubmitted(true);
   };
 
   if (submitted) {
@@ -162,6 +165,9 @@ export default function QuoteForm() {
         autoComplete="off"
         aria-hidden="true"
       />
+      {error && (
+        <p className="text-red-600 text-sm text-center">Something went wrong. Please try again or call <a href={`tel:${PHONE_RAW}`} className="text-primary font-semibold">{PHONE}</a>.</p>
+      )}
       <button type="submit" className="bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-ctahover transition-colors">
         Get My Free Quote
       </button>
