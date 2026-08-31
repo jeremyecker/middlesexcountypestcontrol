@@ -20,7 +20,7 @@ const services = [
     slug: 'bed-bugs',
     emoji: '🛏️',
     title: 'Bed Bug Treatment',
-    desc: 'Heat treatment and IPM chemical protocols for New Brunswick apartments, student housing, and multi-family buildings. Discreet, effective, and fully documented.',
+    desc: 'Heat treatment and IPM chemical protocols for New Brunswick apartments, student housing, and multi-family buildings. Discreet, effective, and thorough.',
     link: '/services/bed-bugs/new-brunswick',
   },
   {
@@ -92,7 +92,7 @@ const faqs = [
   },
   {
     q: 'How much does pest control cost in New Brunswick?',
-    a: `Residential pest control in New Brunswick typically ranges from $150–$400 depending on the pest, property size, and infestation level. Multi-unit buildings and commercial properties are priced by scope. We provide free estimates — call ${PHONE} or submit our online contact form for an upfront quote with no obligation.`,
+    a: `Residential pest control costs in New Brunswick depend on the pest, property size, and infestation level. Multi-unit buildings and commercial properties are priced by scope. Call ${PHONE} for a free phone assessment and a clear price before any work begins.`,
   },
 ];
 
@@ -270,13 +270,13 @@ export default function NewBrunswickPage() {
             <div className="bg-navy text-white rounded-2xl p-8 md:p-10">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Property Managers &amp; Landlords in New Brunswick</h2>
               <p className="text-blue-100 leading-relaxed mb-6">
-                Multi-family buildings, rental properties, and student housing near Rutgers have specialized pest management needs. We work with property managers throughout New Brunswick to establish ongoing IPM programs, coordinate access with tenants, provide written documentation for every service, and respond quickly to tenant complaints.
+                Multi-family buildings, rental properties, and student housing near Rutgers have specialized pest management needs. We work with property managers throughout New Brunswick to establish ongoing IPM programs, coordinate access with tenants, coordinate directly with your team after every service, and respond quickly to tenant complaints.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {[
                   'Multi-unit bed bug protocols',
                   'Monthly & quarterly maintenance programs',
-                  'Written reports for every service visit',
+                  'Direct communication after every service visit',
                   'Rapid response to tenant complaints',
                   'Cockroach programs for older buildings',
                   'Discreet, professional technicians',

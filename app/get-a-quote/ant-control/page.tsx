@@ -24,11 +24,11 @@ const FAQS = [
   },
   {
     q: "How much does ant control cost in Middlesex County?",
-    a: "Most ant treatments in Middlesex County run $300–$450 depending on the species, infestation size, and number of entry points. We always give you a firm price before starting — no surprises.",
+    a: "Ant control costs depend on the species, infestation size, and number of entry points. We always give you a firm price before starting — no surprises. Call for a free phone assessment.",
   },
   {
     q: "Will one treatment get rid of ants permanently?",
-    a: "For most ant species, one treatment plus exclusion recommendations does the job. Carpenter ants may require a follow-up. We stand behind our work with a re-service guarantee.",
+    a: "For most ant species, one treatment plus exclusion recommendations does the job. Carpenter ants may require a follow-up. Every service includes a service agreement — terms are confirmed on the call.",
   },
   {
     q: "Do I need to leave my home during ant treatment?",
@@ -55,8 +55,8 @@ export default function AntControlQuotePage() {
                 Whether you&rsquo;re dealing with carpenter ants damaging wood, odorous house ants in your kitchen, or pavement ants invading outside — our licensed technicians identify the species and eliminate the colony, not just the ants you see.
               </p>
               <div className="bg-white/10 rounded-lg p-4 border border-white/20 mb-6">
-                <p className="text-yellow-300 font-semibold text-sm mb-1">Typical Cost</p>
-                <p className="text-2xl font-bold text-white">$300–$450</p>
+                <p className="text-yellow-300 font-semibold text-sm mb-1">Free Estimate</p>
+                <p className="text-2xl font-bold text-white">Call for Pricing</p>
                 <p className="text-gray-300 text-sm">per treatment &middot; free estimate before any work</p>
               </div>
               <p className="text-gray-200 text-sm">

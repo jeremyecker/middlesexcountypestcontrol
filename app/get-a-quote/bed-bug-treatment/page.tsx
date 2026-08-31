@@ -7,11 +7,11 @@ import { PHONE, PHONE_RAW, DOMAIN } from '@/lib/data';
 export const metadata: Metadata = {
   title: { absolute: "Free Bed Bug Treatment Quote | Middlesex County, NJ" },
   description:
-    "Licensed bed bug exterminators in Middlesex County. Heat treatment & chemical options. Free inspection quote — same-day service available.",
+    "Licensed bed bug exterminators in Middlesex County. Heat treatment & chemical options. Free quote — same-day service available.",
   alternates: { canonical: `${DOMAIN}/get-a-quote/bed-bug-treatment` },
   openGraph: {
     title: "Free Bed Bug Treatment Quote | Middlesex County, NJ",
-    description: "Licensed bed bug exterminators in Middlesex County. Heat treatment & chemical options. Free inspection quote — same-day service available.",
+    description: "Licensed bed bug exterminators in Middlesex County. Heat treatment & chemical options. Free quote — same-day service available.",
     url: `${DOMAIN}/get-a-quote/bed-bug-treatment`,
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Middlesex County pest control' }],
   },
@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     q: "How much does bed bug treatment cost in Middlesex County?",
-    a: "Bed bug treatment in Middlesex County ranges from $1,200–$4,500 depending on your home's size and treatment method. We provide a detailed quote after a free inspection — no surprises.",
+    a: "Bed bug treatment costs depend on your home's size and treatment method. Call for a free phone assessment and a clear price before any work begins.",
   },
   {
     q: "How long does treatment take?",
@@ -35,8 +35,8 @@ const FAQS = [
     a: "Yes — we provide a detailed prep checklist before your appointment. Proper preparation is essential for effective treatment. Our team will walk you through everything in advance.",
   },
   {
-    q: "Do you guarantee bed bugs won't come back?",
-    a: "We offer a re-service guarantee on our bed bug treatments. If bed bugs are detected within the warranty period, we return at no additional charge.",
+    q: "Is bed bug treatment covered by a service agreement?",
+    a: "Every service includes a service agreement — terms depend on the service and are confirmed on the call.",
   },
 ];
 
@@ -55,8 +55,8 @@ export default function BedBugTreatmentQuotePage() {
                 Bed bugs are one of the most stressful pest infestations — but they&rsquo;re 100% treatable. Our licensed technicians offer both heat treatment and chemical treatment for Middlesex County homes, hotels, and apartments.
               </p>
               <div className="bg-white/10 rounded-lg p-4 border border-white/20 mb-6">
-                <p className="text-yellow-300 font-semibold text-sm mb-1">Typical Cost</p>
-                <p className="text-2xl font-bold text-white">$1,200–$4,500</p>
+                <p className="text-yellow-300 font-semibold text-sm mb-1">Free Estimate</p>
+                <p className="text-2xl font-bold text-white">Call for Pricing</p>
                 <p className="text-gray-300 text-sm">heat or chemical treatment &middot; free estimate before any work</p>
               </div>
               <p className="text-gray-200 text-sm">

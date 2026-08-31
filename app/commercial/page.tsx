@@ -39,7 +39,7 @@ export default function CommercialPage() {
           <h2 className="text-3xl font-bold text-dark text-center mb-10">Industries We Serve in Middlesex County</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: 'Restaurants & Food Service', desc: 'From New Brunswick dining to the Edison food corridor, food service operations face strict NJ DOH pest control requirements. We provide scheduled programs with full health inspection documentation.' },
+              { title: 'Restaurants & Food Service', desc: 'From New Brunswick dining to the Edison food corridor, food service operations face strict NJ DOH pest control requirements. We provide scheduled programs designed to support your health inspection readiness.' },
               { title: 'Healthcare Facilities', desc: 'Robert Wood Johnson University Hospital in New Brunswick, Raritan Bay Medical Center in Perth Amboy, and facilities county-wide require our highest pest control standards.' },
               { title: 'Office Buildings & Corporate Campuses', desc: 'The Piscataway and Edison technology corridors host major corporate campuses. We design programs that work around your business hours and tenant requirements.' },
               { title: 'Multi-Family Housing', desc: 'Apartment buildings across New Brunswick, Perth Amboy, and Middlesex County require comprehensive programs coordinating across units and common areas.' },
@@ -63,12 +63,12 @@ export default function CommercialPage() {
               <ul className="flex flex-col gap-4">
                 {[
                   'Initial inspection and facility assessment',
-                  'Written Integrated Pest Management (IPM) plan',
+                  'Customized IPM service program',
                   'Scheduled interior and exterior service visits',
-                  'Pest activity log and service documentation',
+                  'Pest activity monitoring and reporting',
                   'Staff training recommendations',
                   'Emergency call response with priority scheduling',
-                  'Compliance documentation for health inspections',
+                  'NJ DOH compliance support program',
                   'Annual review and program adjustment',
                 ].map(item => (
                   <li key={item} className="flex items-start gap-3">
@@ -80,7 +80,7 @@ export default function CommercialPage() {
             </div>
             <div className="bg-navy rounded-xl p-8 text-white">
               <h3 className="text-xl font-bold mb-4">Request a Commercial Proposal</h3>
-              <p className="text-blue-100 mb-6">We will conduct a free facility assessment and provide a written commercial pest management proposal within 24 hours.</p>
+              <p className="text-blue-100 mb-6">We conduct a free facility assessment for commercial clients and can discuss a customized pest management proposal with you directly.</p>
               <Link href="/contact" className="block bg-primary text-white text-center px-6 py-3 rounded font-bold hover:bg-ctahover transition-colors">
                 Book a Commercial Inspection
               </Link>

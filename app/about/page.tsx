@@ -52,7 +52,7 @@ const faqSchema = {
       name: 'Do you serve commercial properties in Middlesex County?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. We provide commercial pest control services to restaurants, office buildings, warehouses, multi-family housing, schools, and healthcare facilities throughout Middlesex County. Our commercial programs include scheduled inspections, treatment, and full documentation for health code compliance.',
+        text: 'Yes. We provide commercial pest control services to restaurants, office buildings, warehouses, multi-family housing, schools, and healthcare facilities throughout Middlesex County. Our commercial programs include scheduled inspections, treatment, and NJ DOH compliance support.',
       },
     },
     {
@@ -212,7 +212,7 @@ export default function AboutPage() {
               When we arrive at your property, we begin with a thorough inspection. We identify the specific pest species, assess the extent of the infestation, and investigate entry points and conducive conditions. That inspection drives every treatment recommendation. We don&apos;t apply chemicals on a fixed schedule regardless of need — we treat based on what we find.
             </p>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Our technicians explain every step of the treatment plan before beginning, including what products will be used, where they will be applied, and any precautions for your household. After treatment, we provide written documentation and schedule follow-up to confirm the infestation has been resolved.
+              Our technicians explain every step of the treatment plan before beginning, including what products will be used, where they will be applied, and any precautions for your household. After treatment, we communicate directly with you and schedule follow-up to confirm the infestation has been resolved.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
@@ -221,7 +221,7 @@ export default function AboutPage() {
                 'Exclusion work to address entry points',
                 'Targeted application — minimal chemical use',
                 'Full pre-treatment explanation to client',
-                'Written service documentation provided',
+                'Direct service communication with your team',
                 'Follow-up to confirm successful results',
                 'Ongoing monitoring programs available',
               ].map(item => (

@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     q: "How much does cockroach treatment cost in Middlesex County?",
-    a: "Most cockroach treatments in Middlesex County cost $300–$450 depending on severity and species. Severe German cockroach infestations may require multiple visits.",
+    a: "Cockroach treatment costs depend on severity and species. Severe German cockroach infestations may require multiple visits. Call for a free phone assessment.",
   },
   {
     q: "How many treatments will I need?",
@@ -55,8 +55,8 @@ export default function CockroachTreatmentQuotePage() {
                 Cockroaches are a serious health hazard — they contaminate food, trigger asthma, and spread bacteria. Our licensed technicians use targeted gel baits, IGRs, and crack & crevice treatments to eliminate infestations fast in Middlesex County homes and businesses.
               </p>
               <div className="bg-white/10 rounded-lg p-4 border border-white/20 mb-6">
-                <p className="text-yellow-300 font-semibold text-sm mb-1">Typical Cost</p>
-                <p className="text-2xl font-bold text-white">$300–$450</p>
+                <p className="text-yellow-300 font-semibold text-sm mb-1">Free Estimate</p>
+                <p className="text-2xl font-bold text-white">Call for Pricing</p>
                 <p className="text-gray-300 text-sm">per treatment &middot; free estimate before any work</p>
               </div>
               <p className="text-gray-200 text-sm">

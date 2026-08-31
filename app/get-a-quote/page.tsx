@@ -20,18 +20,18 @@ const WHY_US = [
   { icon: '\u26a1', title: 'Same-Day Service', body: 'Many jobs booked and treated the same day you call \u2014 no waiting around for a pest problem to get worse.' },
   { icon: '\u2705', title: 'Licensed & Insured', body: 'Fully licensed in New Jersey. Every technician is background-checked and trained for safe, effective treatments.' },
   { icon: '\uD83D\uDD12', title: 'Discreet Visits', body: "Unmarked vehicles available on request. We respect your privacy and your neighbors' curiosity." },
-  { icon: '\uD83D\uDCAF', title: 'Satisfaction Guarantee', body: 'If pests come back between scheduled visits, so do we \u2014 at no extra charge.' },
+  { icon: '\uD83D\uDCAF', title: 'Service Agreement', body: 'Every service includes a service agreement \u2014 terms depend on the service and are confirmed on the call.' },
   { icon: '\uD83D\uDCDE', title: 'Real People Answer', body: 'Call or submit this form and a real person follows up \u2014 usually within minutes during business hours.' },
 ];
 
 const QUOTE_SERVICES = [
-  { name: 'Bed Bug Treatment', slug: 'bed-bug-treatment', icon: '🛏️', price: '$1,200–$4,500' },
-  { name: 'Ant Control', slug: 'ant-exterminator', icon: '🐜', price: '$300–$450' },
-  { name: 'Rodent Control', slug: 'rodent-control', icon: '🐀', price: '$300–$450' },
-  { name: 'Cockroach Exterminator', slug: 'cockroach-exterminator', icon: '🪳', price: '$300–$450' },
-  { name: 'Mosquito Treatment', slug: 'mosquito-treatment', icon: '🦟', price: '$125–$150/visit' },
-  { name: 'Termite Treatment', slug: 'termite-treatment', icon: '🪵', price: '$800–$2,500' },
-  { name: 'Wasp & Hornet Removal', slug: 'wasp-hornet-removal', icon: '🐝', price: '$300–$450' },
+  { name: 'Bed Bug Treatment', slug: 'bed-bug-treatment', icon: '🛏️', price: '' },
+  { name: 'Ant Control', slug: 'ant-exterminator', icon: '🐜', price: '' },
+  { name: 'Rodent Control', slug: 'rodent-control', icon: '🐀', price: '' },
+  { name: 'Cockroach Exterminator', slug: 'cockroach-exterminator', icon: '🪳', price: '' },
+  { name: 'Mosquito Treatment', slug: 'mosquito-treatment', icon: '🦟', price: '' },
+  { name: 'Termite Treatment', slug: 'termite-treatment', icon: '🪵', price: '' },
+  { name: 'Wasp & Hornet Removal', slug: 'wasp-hornet-removal', icon: '🐝', price: '' },
 ];
 
 const COMMON_PESTS = [
@@ -132,7 +132,7 @@ export default function GetAQuotePage() {
         <div className="container-main">
           <h2 className="text-3xl font-bold text-dark text-center mb-4">Get a Quote by Service</h2>
           <p className="text-center text-gray-600 mb-10">
-            Select your pest problem for pricing, FAQs, and a free same-day estimate.
+            Select your pest problem for details, FAQs, and a free same-day estimate.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {QUOTE_SERVICES.map((svc) => (
@@ -143,7 +143,6 @@ export default function GetAQuotePage() {
               >
                 <span className="text-4xl">{svc.icon}</span>
                 <span className="font-bold text-dark text-sm">{svc.name}</span>
-                <span className="text-primary text-xs font-semibold">{svc.price}</span>
                 <span className="text-xs text-gray-500">Free Estimate →</span>
               </Link>
             ))}
