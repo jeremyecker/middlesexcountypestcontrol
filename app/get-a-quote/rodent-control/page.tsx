@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     q: "How much does rodent control cost in Middlesex County?",
-    a: "Most rodent control programs in Middlesex County cost $300–$450 and include both extermination and basic exclusion work to seal entry points. Larger properties or severe infestations may cost more.",
+    a: "Rodent control costs depend on the scope of the infestation and exclusion work needed. Larger properties or severe infestations may require additional visits. Call for a free phone assessment.",
   },
   {
     q: "What does exclusion work mean?",
@@ -55,8 +55,8 @@ export default function RodentControlQuotePage() {
                 Mice and rats don&rsquo;t just cause property damage — they spread diseases and contaminate food. Our licensed technicians identify entry points, eliminate active infestations, and seal up your home so rodents can&rsquo;t return.
               </p>
               <div className="bg-white/10 rounded-lg p-4 border border-white/20 mb-6">
-                <p className="text-yellow-300 font-semibold text-sm mb-1">Typical Cost</p>
-                <p className="text-2xl font-bold text-white">$300–$450</p>
+                <p className="text-yellow-300 font-semibold text-sm mb-1">Free Estimate</p>
+                <p className="text-2xl font-bold text-white">Call for Pricing</p>
                 <p className="text-gray-300 text-sm">includes basic exclusion &middot; free estimate before any work</p>
               </div>
               <p className="text-gray-200 text-sm">

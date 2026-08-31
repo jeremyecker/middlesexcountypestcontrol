@@ -32,7 +32,7 @@ const SERVICES_INFO: Record<string, { label: string; description: string }> = {
   },
   'termite-treatment': {
     label: 'Termite Treatment',
-    description: `Licensed termite treatment serving Middlesex County, NJ. Free inspection included. Call ${PHONE}.`,
+    description: `Licensed termite treatment serving Middlesex County, NJ. Free estimate included. Call ${PHONE}.`,
   },
 };
 

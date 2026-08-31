@@ -194,7 +194,7 @@ export default function WildlifeServicePage({ params }: { params: { slug: string
 
             <div>
               <div className="bg-navy rounded-xl p-6 text-white sticky top-24">
-                <h3 className="text-xl font-bold mb-4">Get a Free Inspection</h3>
+                <h3 className="text-xl font-bold mb-4">Get a Free Quote</h3>
                 <p className="text-blue-100 text-sm mb-6">Serving all of Middlesex County, NJ.</p>
                 <Link href="/contact" className="block bg-primary text-white text-center px-6 py-3 rounded font-bold hover:bg-ctahover transition-colors mb-3">
                   Book Now

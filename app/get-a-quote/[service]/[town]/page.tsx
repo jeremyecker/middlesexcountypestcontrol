@@ -17,22 +17,22 @@ const SERVICES_MAP: Record<string, ServiceConfig> = {
   'bed-bug-treatment': {
     label: 'Bed Bug Treatment',
     h1: (t) => `Free Bed Bug Treatment Quote in ${t}, ${GEO}`,
-    pricing: '$1,200\u2013$4,500', pricingNote: 'heat or chemical treatment',
-    intro: (t) => `Bed bugs are 100% treatable. Our licensed technicians serve ${t} with both heat and chemical treatment options, backed by a satisfaction guarantee.`,
+    pricing: '', pricingNote: 'heat or chemical treatment',
+    intro: (t) => `Bed bugs are 100% treatable. Our licensed technicians serve ${t} with both heat and chemical treatment options.`,
     faqs: (t) => [
-      { q: `How much does bed bug treatment cost in ${t}?`, a: `Bed bug treatment in Middlesex County runs $1,200\u2013$4,500 depending on home size and treatment method. We provide a free inspection and quote before any work begins.` },
+      { q: `How much does bed bug treatment cost in ${t}?`, a: `Bed bug treatment costs depend on home size and treatment method. Call for a free phone assessment and a clear price before any work begins.` },
       { q: 'Heat vs. chemical treatment?', a: 'Heat treatment kills all life stages in a single visit at 120\u00b0F+. Chemical treatment uses EPA-registered pesticides over 1\u20132 visits. We recommend the best fit after inspection.' },
-      { q: 'Do you guarantee your bed bug treatments?', a: 'Yes \u2014 if bed bugs return within the warranty period, we come back at no additional charge.' },
+      { q: 'Is bed bug treatment covered by a service agreement?', a: 'Every service includes a service agreement \u2014 terms depend on the service and are confirmed on the call.' },
       { q: 'Do you treat apartments and multi-unit buildings?', a: `Yes. We regularly treat apartments, condos, and multi-unit residential buildings throughout Middlesex County.` },
     ],
   },
   'ant-exterminator': {
     label: 'Ant Control',
     h1: (t) => `Free Ant Control Quote in ${t}, ${GEO}`,
-    pricing: '$300\u2013$450', pricingNote: 'one-time or seasonal plan',
+    pricing: '', pricingNote: 'one-time or seasonal plan',
     intro: (t) => `Ants are one of the most common pest calls across Middlesex County each spring. Our licensed technicians serve ${t}, eliminating colonies at the source.`,
     faqs: (t) => [
-      { q: `How much does ant control cost in ${t}?`, a: `Ant control in Middlesex County typically runs $300\u2013$450 for a one-time service. Seasonal prevention plans are also available.` },
+      { q: `How much does ant control cost in ${t}?`, a: `Ant control costs depend on species and scope. Seasonal prevention plans are also available. Call for a free phone assessment.` },
       { q: 'Why do ants keep coming back?', a: 'Over-the-counter sprays only kill forager ants \u2014 they don\u2019t reach the colony. Our treatments target the source.' },
       { q: 'How long does ant treatment take?', a: 'Most treatments take 45\u201390 minutes, covering interior entry points and the full exterior perimeter.' },
       { q: 'Are your products safe for kids and pets?', a: 'We use EPA-registered products applied by licensed technicians. We\u2019ll advise on any precautions before and after treatment.' },
@@ -41,10 +41,10 @@ const SERVICES_MAP: Record<string, ServiceConfig> = {
   'rodent-control': {
     label: 'Rodent Control',
     h1: (t) => `Free Rodent Control Quote in ${t}, ${GEO}`,
-    pricing: '$300\u2013$450', pricingNote: 'removal + exclusion included',
+    pricing: '', pricingNote: 'removal + exclusion included',
     intro: (t) => `Mice and rats are a persistent problem across Middlesex County. Our service for ${t} residents includes removal, exclusion, and follow-up to keep rodents out for good.`,
     faqs: (t) => [
-      { q: `How much does rodent control cost in ${t}?`, a: `Rodent control in Middlesex County runs $300\u2013$450, including both removal and exclusion work.` },
+      { q: `How much does rodent control cost in ${t}?`, a: `Rodent control costs depend on the scope of the infestation and exclusion work needed. Call for a free phone assessment and a clear price before any work begins.` },
       { q: 'Is exclusion included?', a: 'Yes \u2014 exclusion is always included. Trapping alone doesn\u2019t solve the problem long-term.' },
       { q: 'How do mice get inside?', a: 'Mice squeeze through gaps as small as a dime \u2014 around pipes, foundation cracks, dryer vents, and door gaps. Our exclusion service seals all of these.' },
       { q: 'How long does resolution take?', a: 'Most problems are resolved within 1\u20132 visits with traps, exclusion, and a follow-up confirmation.' },
@@ -53,10 +53,10 @@ const SERVICES_MAP: Record<string, ServiceConfig> = {
   'cockroach-exterminator': {
     label: 'Cockroach Exterminator',
     h1: (t) => `Free Cockroach Exterminator Quote in ${t}, ${GEO}`,
-    pricing: '$300\u2013$450', pricingNote: 'one-time or ongoing plan',
+    pricing: '', pricingNote: 'one-time or ongoing plan',
     intro: (t) => `Cockroaches can establish quickly in Middlesex County homes \u2014 especially in ${t}. Our targeted treatments eliminate infestations and break the reproductive cycle.`,
     faqs: (t) => [
-      { q: `How much does cockroach extermination cost in ${t}?`, a: `Cockroach extermination in Middlesex County runs $300\u2013$450 for a one-time treatment. Ongoing plans are available for recurring issues.` },
+      { q: `How much does cockroach extermination cost in ${t}?`, a: `Cockroach extermination costs depend on the scope of the infestation. Ongoing plans are available for recurring issues. Call for a free phone assessment.` },
       { q: 'Why are cockroaches so hard to eliminate?', a: 'Cockroaches hide in walls, appliances, and drains. Our gel baits and growth regulators break the cycle where store-bought products fail.' },
       { q: 'How long does treatment take?', a: 'A standard treatment takes 1\u20132 hours, focusing on kitchen, bathroom, and utility areas.' },
       { q: 'Do I need to leave during treatment?', a: 'For most treatments, no. We\u2019ll advise you in advance if any precautions are needed.' },
@@ -65,10 +65,10 @@ const SERVICES_MAP: Record<string, ServiceConfig> = {
   'mosquito-treatment': {
     label: 'Mosquito Treatment',
     h1: (t) => `Free Mosquito Treatment Quote in ${t}, ${GEO}`,
-    pricing: '$125\u2013$150/visit', pricingNote: 'seasonal program available',
+    pricing: '', pricingNote: 'seasonal program available',
     intro: (t) => `Middlesex County gets heavy mosquito pressure each summer. Our barrier treatments protect yards in ${t} all season long.`,
     faqs: (t) => [
-      { q: `How much does mosquito treatment cost in ${t}?`, a: `Mosquito barrier treatments in Middlesex County run $125\u2013$150 per visit. Our seasonal program covers May through September.` },
+      { q: `How much does mosquito treatment cost in ${t}?`, a: `Mosquito barrier treatment pricing depends on your property size and program frequency. Our seasonal program covers May through September. Call for a free phone assessment.` },
       { q: 'How does barrier treatment work?', a: 'We apply a barrier spray to shrubs, trees, and grass where mosquitoes rest. Treatments stay effective for 3\u20134 weeks.' },
       { q: 'When should I start?', a: 'We recommend starting in late April or early May before mosquito season peaks.' },
       { q: 'Is it safe for kids and pets?', a: 'Yes. Keep people and pets off treated areas for 30\u201360 minutes while the treatment dries.' },
@@ -77,10 +77,10 @@ const SERVICES_MAP: Record<string, ServiceConfig> = {
   'wasp-hornet-removal': {
     label: 'Wasp & Hornet Removal',
     h1: (t) => `Free Wasp & Hornet Removal Quote in ${t}, ${GEO}`,
-    pricing: '$300\u2013$450', pricingNote: 'nest removal included',
+    pricing: '', pricingNote: 'nest removal included',
     intro: (t) => `Wasps and hornets build nests across Middlesex County each summer. Our technicians safely remove nests from homes in ${t} and prevent rebuilding.`,
     faqs: (t) => [
-      { q: `How much does wasp and hornet removal cost in ${t}?`, a: `Wasp and hornet removal in Middlesex County runs $300\u2013$450, including nest removal.` },
+      { q: `How much does wasp and hornet removal cost in ${t}?`, a: `Wasp and hornet removal pricing depends on nest location and accessibility. Call for a free phone assessment and a clear price before any work begins.` },
       { q: 'Is it safe to remove a nest myself?', a: 'Disturbing an active nest without proper equipment can trigger a dangerous swarm. Let our technicians handle it safely.' },
       { q: 'Will wasps come back?', a: 'Treated nest sites are unattractive to new queens. Inspect your property each spring for early-season nests.' },
       { q: 'What stinging insects are common here?', a: 'Yellow jackets, bald-faced hornets, paper wasps, and European hornets are all common in Middlesex County.' },
@@ -89,10 +89,10 @@ const SERVICES_MAP: Record<string, ServiceConfig> = {
   'termite-treatment': {
     label: 'Termite Treatment',
     h1: (t) => `Free Termite Treatment Quote in ${t}, ${GEO}`,
-    pricing: '$800\u2013$2,500', pricingNote: 'free inspection included',
+    pricing: '', pricingNote: 'call for a quote',
     intro: (t) => `Termites are a serious risk in Middlesex County \u2014 especially in older wood-frame homes in ${t}. Our licensed technicians provide thorough inspections and proven treatments.`,
     faqs: (t) => [
-      { q: `How much does termite treatment cost in ${t}?`, a: `Termite treatment in Middlesex County runs $800\u2013$2,500 depending on home size and infestation level. We include a free inspection before any quote.` },
+      { q: `How much does termite treatment cost in ${t}?`, a: `Termite treatment costs depend on home size, construction type, and infestation level. Call for a free phone assessment and a clear price before any work begins.` },
       { q: 'What are signs of termites?', a: 'Mud tubes along foundation walls, hollow-sounding wood, discarded wings near windowsills, and frass resembling sawdust.' },
       { q: 'Liquid treatment vs. bait stations?', a: 'Liquid termiticide creates a chemical barrier around your foundation. Bait stations use slow-acting bait workers carry back to the colony. We recommend the best option for your home.' },
       { q: 'How long does treatment take?', a: 'Liquid treatments take 4\u20138 hours. Bait station installation takes 2\u20133 hours with monitoring every 3\u20136 months.' },
@@ -320,7 +320,7 @@ export async function generateMetadata(
   if (!svc) return {};
   const townName = getTownName(params.town);
   const title = `Free ${svc.label} Quote in ${townName}, NJ`;
-  const description = `Licensed ${svc.label.toLowerCase()} serving ${townName}, Middlesex County. ${svc.pricing} \u2014 free estimate, same-day service available.`;
+  const description = `Licensed ${svc.label.toLowerCase()} serving ${townName}, Middlesex County. Free estimate, same-day service available.`;
   return {
     title: { absolute: title },
     description,
@@ -347,8 +347,8 @@ export default function ServiceTownQuotePage(
               </h1>
               <p className="text-gray-200 text-lg mb-6 leading-relaxed">{svc.intro(townName)}</p>
               <div className="bg-white/10 rounded-lg p-4 border border-white/20 mb-6">
-                <p className="text-yellow-300 font-semibold text-sm mb-1">Typical Cost</p>
-                <p className="text-2xl font-bold text-white">{svc.pricing}</p>
+                <p className="text-yellow-300 font-semibold text-sm mb-1">Free Estimate</p>
+                <p className="text-2xl font-bold text-white">Call for Pricing</p>
                 <p className="text-gray-300 text-sm">{svc.pricingNote} &middot; free estimate before any work</p>
               </div>
               <p className="text-gray-200 text-sm">

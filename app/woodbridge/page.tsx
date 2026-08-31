@@ -80,7 +80,7 @@ const FAQS = [
   },
   {
     q: 'How much does pest control cost in Woodbridge, NJ?',
-    a: 'Pest control costs in Woodbridge vary by pest and infestation size. General pest control typically runs $150–$350 for a standard treatment. Bed bug heat treatment averages $800–$2,500 for an apartment. Termite liquid treatment for an average Woodbridge home runs $800–$2,000. Rodent control with exclusion typically totals $600–$2,000 depending on the number of entry points. We provide free estimates — call (732) 856-5142 for an exact quote.',
+    a: 'Pest control costs in Woodbridge vary by pest and infestation size. Call (732) 856-5142 for a free phone assessment and a clear price before any work begins.',
   },
   {
     q: 'Do you service Woodbridge apartments and condos?',
@@ -161,7 +161,7 @@ export default function WoodbridgePage() {
       <section className="bg-green-800 py-4">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-6 text-white text-sm">
-            {['NJDEP Licensed & Insured', 'Same-Day Service Available', 'Free Estimates', 'Satisfaction Guaranteed'].map((t) => (
+            {['NJDEP Licensed & Insured', 'Same-Day Service Available', 'Free Estimates', 'Service Agreements Included'].map((t) => (
               <div key={t} className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-300" />
                 <span>{t}</span>
@@ -283,7 +283,7 @@ export default function WoodbridgePage() {
             Ready to Get Rid of Pests in Woodbridge?
           </h2>
           <p className="text-green-200 mb-8">
-            Same-day service available throughout Woodbridge Township, NJ. Licensed technicians, guaranteed results.
+            Same-day service available throughout Woodbridge Township, NJ. Licensed technicians, professional results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

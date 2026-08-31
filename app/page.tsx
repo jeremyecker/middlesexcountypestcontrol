@@ -82,7 +82,7 @@ const homepageFaqs = [
   },
   {
     q: 'How much does pest control cost in Middlesex County?',
-    a: 'Most residential pest control treatments in Middlesex County range from $150\u2013$400 depending on pest type and infestation size. Termite treatment and bed bug heat treatments are typically higher. Contact us for a free quote.',
+    a: 'Pest control costs in Middlesex County vary by pest type and infestation size. Call for a free phone assessment and a clear price before any work begins.',
   },
   {
     q: 'Do you offer same-day pest control in Middlesex County?',
@@ -302,7 +302,7 @@ export default function HomePage() {
               <div className="p-10 flex flex-col justify-center">
                 <h2 className="text-3xl font-bold text-white mb-4">Commercial Pest Control</h2>
                 <p className="text-gray-200 leading-relaxed mb-6">
-                  Restaurants, office buildings, warehouses, schools \u2014 we provide comprehensive commercial pest management programs with full NJ DOH compliance documentation. Protect your Middlesex County business reputation.
+                  Restaurants, office buildings, warehouses, schools — we provide comprehensive commercial pest management programs with NJ DOH compliance support. Protect your Middlesex County business reputation.
                 </p>
                 <Link
                   href="/commercial"

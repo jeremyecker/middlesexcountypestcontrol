@@ -88,7 +88,7 @@ Effective rat control requires a three-part approach: elimination of the existin
 
 Middlesex County Pest Control's rodent control programs address all three phases. Our technicians are experienced in the specific rat pressures throughout Middlesex County — from waterfront industrial areas to suburban residential neighborhoods.
 
-Contact us for a free rodent inspection throughout Middlesex County.`,
+Call for a free phone assessment throughout Middlesex County.`,
     faqs: [
       { q: 'How do rats get into homes in Middlesex County?', a: 'Rats enter through gaps around pipes, under doors, through foundation cracks, and through utility line entries. They can squeeze through a gap the size of a quarter.' },
       { q: 'How do I know if I have rats vs. mice?', a: 'Rat droppings are much larger (3/4") than mouse droppings (1/4"). Rat gnaw marks are larger and deeper. Rats are larger and heavier — you\'ll hear louder movement in walls.' },
@@ -218,7 +218,7 @@ We also offer one-time treatment for specific events — backyard parties, outdo
 
 ## Mosquito-Borne Disease in Middlesex County
 
-The Middlesex County Mosquito Control Commission monitors for West Nile virus and Eastern Equine Encephalitis (EEE) throughout the season. Professional mosquito control reduces your family's exposure to these pathogens. If you are concerned about mosquito activity near your home in Edison or Piscataway, contact Middlesex County Pest Control for a free yard assessment.`,
+The Middlesex County Mosquito Control Commission monitors for West Nile virus and Eastern Equine Encephalitis (EEE) throughout the season. Professional mosquito control reduces your family's exposure to these pathogens. If you are concerned about mosquito activity near your home in Edison or Piscataway, call Middlesex County Pest Control for a free phone assessment.`,
     faqs: [
       { q: 'How often do I need mosquito treatment?', a: 'Monthly treatments from May through October provide continuous control. Some clients opt for every-3-week service during peak summer months.' },
       { q: 'Is the treatment family-friendly?', a: 'Yes. Our professional mosquito barrier treatments use EPA-registered products applied by licensed technicians. Treated areas are ready for re-entry when dry, typically 30 minutes.' },
@@ -268,7 +268,7 @@ Carpenter ants indicate moisture-damaged wood. Finding the moisture source is as
 
 Effective professional ant treatment begins with species identification. The right bait formulation, application method, and follow-up schedule depends entirely on the species involved.
 
-Middlesex County Pest Control treats all common ant species throughout Middlesex County. Contact us for a free inspection if you're dealing with persistent ant activity.`,
+Middlesex County Pest Control treats all common ant species throughout Middlesex County. Call for a free phone assessment if you're dealing with persistent ant activity.`,
     faqs: [
       { q: 'Why are ants so hard to control with store products?', a: 'Spray products kill worker ants on contact but don\'t reach the colony. Professional bait treatments are carried back to the queen and eliminate the source.' },
       { q: 'Are carpenter ants dangerous?', a: 'Carpenter ants don\'t eat wood but excavate it for nesting, causing structural damage over time. An indoor carpenter ant colony requires prompt professional treatment.' },

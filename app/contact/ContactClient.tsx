@@ -225,7 +225,7 @@ export default function ContactPageClient() {
                     "We'll call you within 60 minutes of your submission",
                     'Same-day and next-day appointments available',
                     'Upfront pricing — no surprises',
-                    'Licensed, insured technician at your door',
+                    'Licensed, insured technicians at your door',
                     'Full explanation of treatment and process',
                   ].map(item => (
                     <li key={item} className="flex items-start gap-3">

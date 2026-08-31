@@ -41,7 +41,7 @@ const EDISON_SERVICES = [
     slug: 'termites',
     emoji: '🪵',
     title: 'Termite Treatment',
-    desc: 'Protect your Edison home with liquid barrier or bait station termite treatments. Free inspections available for residential and commercial properties.',
+    desc: 'Protect your Edison home with liquid barrier or bait station termite treatments. Call for a free phone assessment.',
   },
   {
     slug: 'mosquitoes',
@@ -80,7 +80,7 @@ const FAQS = [
   },
   {
     q: 'How much does pest control cost in Edison, NJ?',
-    a: 'Pest control costs in Edison vary by pest and infestation size. General pest control typically runs $150–$350 for a standard treatment. Bed bug heat treatment averages $800–$2,500 for an apartment. Termite liquid treatment for an average Edison home runs $800–$2,000. Rodent control with exclusion typically totals $600–$2,000 depending on the number of entry points. We provide free estimates — call (732) 856-5142 for an exact quote.',
+    a: 'Pest control costs in Edison vary by pest and infestation size. Call (732) 856-5142 for a free phone assessment and a clear price before any work begins.',
   },
   {
     q: 'Do you service Edison apartments and condos?',
@@ -206,8 +206,8 @@ export default function EdisonPage() {
           <div className="flex flex-wrap justify-center gap-6 md:gap-12 text-center">
             {[
               { num: '6+', label: 'Years in Middlesex County' },
-              { num: '5,000+', label: 'Edison Homes Treated' },
-              { num: '4.9★', label: 'Average Rating' },
+              { num: 'Same-Day', label: 'Service Available' },
+              { num: '25', label: 'Municipalities Served' },
               { num: '100%', label: 'Licensed & Insured' },
             ].map((stat) => (
               <div key={stat.label}>
@@ -242,7 +242,7 @@ export default function EdisonPage() {
         <div className="container-main">
           <h2 className="text-3xl font-bold text-dark text-center mb-3">Pest Control Services in Edison</h2>
           <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
-            Full-service pest management for Edison homes and businesses. Every service backed by our satisfaction guarantee.
+            Full-service pest management for Edison homes and businesses. Every service includes a service agreement.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {EDISON_SERVICES.map((service) => (
@@ -306,8 +306,8 @@ export default function EdisonPage() {
               'Local Middlesex County experts who know Edison\'s pest patterns',
               'Same-day dispatch available throughout Edison Township',
               'NJDEP-licensed technicians — fully insured',
-              'Transparent pricing with written estimates before treatment',
-              'Satisfaction guarantee — we return if the problem isn\'t resolved',
+              'Transparent, upfront pricing confirmed before treatment',
+              'Service agreements included on every job',
               'English, Spanish, and other languages available on request',
               'Serving residential and commercial properties of all sizes',
               'Safe, EPA-registered products applied by certified professionals',

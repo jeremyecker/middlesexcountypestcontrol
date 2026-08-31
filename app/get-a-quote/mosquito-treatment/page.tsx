@@ -7,11 +7,11 @@ import { PHONE, PHONE_RAW, DOMAIN } from '@/lib/data';
 export const metadata: Metadata = {
   title: { absolute: "Free Mosquito Treatment Quote | Middlesex County, NJ" },
   description:
-    "Licensed mosquito control in Middlesex County, NJ. Seasonal yard treatments from $125–$150/visit. Free quote — same-day service available.",
+    "Licensed mosquito control in Middlesex County, NJ. Seasonal yard treatments available. Free quote — same-day service available.",
   alternates: { canonical: `${DOMAIN}/get-a-quote/mosquito-treatment` },
   openGraph: {
     title: "Free Mosquito Treatment Quote | Middlesex County, NJ",
-    description: "Licensed mosquito control in Middlesex County, NJ. Seasonal yard treatments from $125–$150/visit. Free quote — same-day service available.",
+    description: "Licensed mosquito control in Middlesex County, NJ. Seasonal yard treatments available. Free quote — same-day service available.",
     url: `${DOMAIN}/get-a-quote/mosquito-treatment`,
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Middlesex County pest control' }],
   },
@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     q: "How much does mosquito treatment cost in Middlesex County?",
-    a: "Individual treatments cost $125–$150/visit. Many customers opt for seasonal programs for the best value and consistent protection throughout the summer.",
+    a: "Pricing depends on your property size and program type. Many customers opt for seasonal programs for the best value and consistent protection throughout the summer. Call for a free phone assessment.",
   },
   {
     q: "Is the mosquito spray safe for kids and pets?",
@@ -55,8 +55,8 @@ export default function MosquitoTreatmentQuotePage() {
                 Take back your yard this season. Our licensed technicians provide barrier spray treatments that dramatically reduce mosquito populations on your property throughout the summer.
               </p>
               <div className="bg-white/10 rounded-lg p-4 border border-white/20 mb-6">
-                <p className="text-yellow-300 font-semibold text-sm mb-1">Typical Cost</p>
-                <p className="text-2xl font-bold text-white">$125–$150/visit</p>
+                <p className="text-yellow-300 font-semibold text-sm mb-1">Free Estimate</p>
+                <p className="text-2xl font-bold text-white">Call for Pricing</p>
                 <p className="text-gray-300 text-sm">seasonal, per visit &middot; free estimate before any work</p>
               </div>
               <p className="text-gray-200 text-sm">

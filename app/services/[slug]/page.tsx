@@ -27,7 +27,7 @@ const serviceDetails: Record<string, {
     heroDesc: 'Professional bed bug extermination for Middlesex County homes and apartments.',
     intro: 'Bed bugs are one of the most disruptive pests Middlesex County homeowners can face. These blood-feeding insects are hitchhikers — they spread through luggage, used furniture, and multi-family housing. Once established, they are extremely difficult to eliminate without professional treatment. Middlesex County Pest Control uses proven heat and chemical treatment protocols to eliminate bed bug infestations completely.',
     signs: ['Small rust-colored stains on mattress seams and sheets', 'Tiny white eggs or shed skins in mattress folds', 'Waking up with itchy welts in a line or cluster', 'Sweet, musty odor in the bedroom', 'Live bugs in mattress seams, box spring corners, or behind headboards'],
-    process: ['Thorough inspection of all sleeping areas and furniture', 'Identification of infestation scope and harborage sites', 'Treatment using heat, chemical, or combined methods', 'Post-treatment inspection at 2 weeks', 'Written service documentation'],
+    process: ['Thorough inspection of all sleeping areas and furniture', 'Identification of infestation scope and harborage sites', 'Treatment using heat, chemical, or combined methods', 'Post-treatment inspection at 2 weeks', 'Post-treatment follow-up inspection'],
     faqs: [
       { q: 'How long does bed bug treatment take?', a: 'Most bed bug treatments take 4–6 hours depending on the size of the infestation. Heat treatments may take a full day.' },
       { q: 'Do I need to leave my home during treatment?', a: 'Yes — you and your pets should be out of the home during treatment and for several hours after, depending on the method used.' },

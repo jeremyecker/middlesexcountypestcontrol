@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     q: "How much does wasp and hornet removal cost in Middlesex County?",
-    a: "Most wasp and hornet removal jobs in Middlesex County cost $300–$450 depending on nest size, location, and species. Ground nests (yellow jackets) may cost more due to treatment complexity.",
+    a: "Wasp and hornet removal costs depend on nest size, location, and species. Ground nests (yellow jackets) may cost more due to treatment complexity. Call for a free phone assessment.",
   },
   {
     q: "Do you remove the nest after treatment?",
@@ -55,8 +55,8 @@ export default function WaspRemovalQuotePage() {
                 Don&rsquo;t risk getting stung — wasp and hornet nests need professional treatment. Our licensed technicians handle paper wasps, yellow jackets, bald-faced hornets, and European hornets safely throughout Middlesex County.
               </p>
               <div className="bg-white/10 rounded-lg p-4 border border-white/20 mb-6">
-                <p className="text-yellow-300 font-semibold text-sm mb-1">Typical Cost</p>
-                <p className="text-2xl font-bold text-white">$300–$450</p>
+                <p className="text-yellow-300 font-semibold text-sm mb-1">Free Estimate</p>
+                <p className="text-2xl font-bold text-white">Call for Pricing</p>
                 <p className="text-gray-300 text-sm">per nest removal &middot; free estimate before any work</p>
               </div>
               <p className="text-gray-200 text-sm">

@@ -7,11 +7,11 @@ import { PHONE, PHONE_RAW, DOMAIN } from '@/lib/data';
 export const metadata: Metadata = {
   title: { absolute: "Free Termite Treatment Quote | Middlesex County, NJ" },
   description:
-    "Licensed termite exterminators in Middlesex County, NJ. Liquid barrier & bait station options. Free inspection — same-day service available.",
+    "Licensed termite exterminators in Middlesex County, NJ. Liquid barrier & bait station options. Free estimate — same-day service available.",
   alternates: { canonical: `${DOMAIN}/get-a-quote/termite-treatment` },
   openGraph: {
     title: "Free Termite Treatment Quote | Middlesex County, NJ",
-    description: "Licensed termite exterminators in Middlesex County, NJ. Liquid barrier & bait station options. Free inspection — same-day service available.",
+    description: "Licensed termite exterminators in Middlesex County, NJ. Liquid barrier & bait station options. Free estimate — same-day service available.",
     url: `${DOMAIN}/get-a-quote/termite-treatment`,
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Middlesex County pest control' }],
   },
@@ -20,11 +20,11 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "What types of termite treatment do you offer?",
-    a: "We offer liquid barrier treatment (Termidor® or equivalent) which creates a protection zone around your home's foundation, and bait station systems which eliminate the colony over time. We'll recommend the best option after a free inspection.",
+    a: "We offer liquid barrier treatment (Termidor® or equivalent) which creates a protection zone around your home's foundation, and bait station systems which eliminate the colony over time. We'll recommend the best option after a phone assessment.",
   },
   {
     q: "How much does termite treatment cost in Middlesex County?",
-    a: "Termite treatment in Middlesex County typically costs $800–$2,500 depending on your home's size, construction type, and infestation severity. We provide a free inspection and detailed quote before any work begins.",
+    a: "Termite treatment costs depend on your home's size, construction type, and infestation severity. Call for a free phone assessment and a clear price before any work begins.",
   },
   {
     q: "Do I need to leave my home during termite treatment?",
@@ -55,9 +55,9 @@ export default function TermiteTreatmentQuotePage() {
                 Termites cause billions of dollars in structural damage every year — and most homeowners don&rsquo;t realize they have an infestation until it&rsquo;s already serious. Our licensed technicians offer both liquid barrier treatment and bait station systems for Middlesex County homes.
               </p>
               <div className="bg-white/10 rounded-lg p-4 border border-white/20 mb-6">
-                <p className="text-yellow-300 font-semibold text-sm mb-1">Typical Cost</p>
-                <p className="text-2xl font-bold text-white">$800–$2,500</p>
-                <p className="text-gray-300 text-sm">free inspection before any quote &middot; free estimate before any work</p>
+                <p className="text-yellow-300 font-semibold text-sm mb-1">Free Estimate</p>
+                <p className="text-2xl font-bold text-white">Call for Pricing</p>
+                <p className="text-gray-300 text-sm">call for a quote &middot; free estimate before any work</p>
               </div>
               <p className="text-gray-200 text-sm">
                 Call us: <a href={`tel:${PHONE_RAW}`} className="text-yellow-300 font-semibold hover:underline">{PHONE}</a>

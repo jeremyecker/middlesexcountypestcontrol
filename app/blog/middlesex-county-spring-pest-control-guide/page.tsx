@@ -269,7 +269,7 @@ export default function SpringPestControlGuidePage() {
               </p>
 
               <p>
-                Professional pest control services in Middlesex County can provide targeted treatments, ongoing monitoring, and guaranteed results that protect your home and family throughout the pest-heavy spring and summer months.
+                Professional pest control services in Middlesex County can provide targeted treatments, ongoing monitoring, and professional results that protect your home and family throughout the pest-heavy spring and summer months.
               </p>
 
               {/* FAQ Section */}
@@ -301,7 +301,7 @@ export default function SpringPestControlGuidePage() {
                     {PHONE}
                   </a>
                   <p className="text-sm text-gray-300 text-center mb-6">
-                    Call now for a free inspection
+                    Call now for a free phone assessment
                   </p>
                   <Link
                     href="/contact"
@@ -368,7 +368,7 @@ export default function SpringPestControlGuidePage() {
             Ready to Protect Your Home This Spring?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Schedule your free pest inspection today and get ahead of spring pests before they become a problem.
+            Schedule your free phone assessment today and get ahead of spring pests before they become a problem.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
